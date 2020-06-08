@@ -22,7 +22,7 @@ namespace DncZeus.Api.Controllers
         }
 
         /// <summary>
-        /// 测试日志
+        /// 测试日志1
         /// </summary>
         /// <returns></returns>
         // GET: /<controller>/
