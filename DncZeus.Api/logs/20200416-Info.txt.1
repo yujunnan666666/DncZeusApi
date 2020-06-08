@@ -1,0 +1,223 @@
+2020-04-16 17:49:24,114 [1] INFO  Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager [(null)]  - User profile is available. Using 'C:\Users\June\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-04-16 17:49:25,064 [10] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 OPTIONS http://localhost:54321/api/v1/account/profile  
+2020-04-16 17:49:25,065 [7] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 GET http://localhost:54321/swagger/index.html  
+2020-04-16 17:49:25,068 [9] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 DEBUG http://localhost:54321/  0
+2020-04-16 17:49:25,069 [11] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 OPTIONS http://localhost:54321/api/v1/save_error_logger  
+2020-04-16 17:49:25,100 [9] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 36.957ms 200 
+2020-04-16 17:49:25,180 [10] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-04-16 17:49:25,182 [11] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-04-16 17:49:25,214 [11] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 130.8522ms 204 
+2020-04-16 17:49:25,215 [10] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 130.5365ms 204 
+2020-04-16 17:49:25,218 [12] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 GET http://localhost:54321/api/v1/account/profile  
+2020-04-16 17:49:25,304 [12] INFO  Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler [(null)]  - Successfully validated the token.
+2020-04-16 17:49:25,309 [12] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-04-16 17:49:25,503 [12] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Route matched with {action = "Profile", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Profile() on controller DncZeus.Api.Controllers.AccountController (DncZeus.Api).
+2020-04-16 17:49:25,518 [12] INFO  Microsoft.AspNetCore.Authorization.DefaultAuthorizationService [(null)]  - Authorization was successful.
+2020-04-16 17:49:25,526 [7] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 462.4748ms 200 text/html
+2020-04-16 17:49:25,965 [8] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 GET http://localhost:54321/swagger/v3/swagger.json  
+2020-04-16 17:49:26,354 [8] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 374.4397ms 200 application/json;charset=utf-8
+2020-04-16 17:49:26,987 [12] INFO  Microsoft.EntityFrameworkCore.Infrastructure [(null)]  - Entity Framework Core 2.1.14-servicing-32113 initialized 'DncZeusDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: RowNumberPaging 
+2020-04-16 17:49:27,143 [12] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executing action method DncZeus.Api.Controllers.AccountController.Profile (DncZeus.Api) - Validation state: Valid
+2020-04-16 17:49:27,505 [9] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (55ms) [Parameters=[@__Parse_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='6000000']
+SELECT TOP(1) [x].[ID], [x].[Code], [x].[Name], [x].[credate], [x].[creuser], [x].[moddate], [x].[moduser]
+FROM [MisOrganization] AS [x]
+WHERE [x].[ID] = @__Parse_0
+2020-04-16 17:49:27,699 [7] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (87ms) [Parameters=[@__guid_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='6000000']
+SELECT TOP(1) [x].[Guid], [x].[EmpName], [x].[EmpNo], [x].[code], [x].[credate], [x].[creuser], [x].[depname], [x].[depno], [x].[email], [x].[enabled], [x].[jobname], [x].[jobno], [x].[moddate], [x].[moduser], [x].[pwd], [x].[telno], [x].[userLogo], [x].[username], [x].[userno], [x].[utype], [x].[wxAccount], [x].[wxId], [x].[wxMail], [x].[wxName], [x].[wxPhone], [x].[wxPwd]
+FROM [Secuser] AS [x]
+WHERE [x].[Guid] = @__guid_0
+2020-04-16 17:49:27,773 [12] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (29ms) [Parameters=[], CommandType='Text', CommandTimeout='6000000']
+SELECT [x].[Guid], [x].[Alias], [x].[BeforeCloseFun], [x].[Component], [x].[CreatedByUserGuid], [x].[CreatedByUserName], [x].[CreatedOn], [x].[Description], [x].[HideInMenu], [x].[Icon], [x].[IsDefaultRouter], [x].[IsDeleted], [x].[Level], [x].[ModifiedByUserGuid], [x].[ModifiedByUserName], [x].[ModifiedOn], [x].[Name], [x].[NotCache], [x].[ParentGuid], [x].[ParentName], [x].[Sort], [x].[Status], [x].[Url]
+FROM [DncMenu] AS [x]
+WHERE ([x].[IsDeleted] = 0) AND ([x].[Status] = 1)
+2020-04-16 17:49:27,878 [12] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (39ms) [Parameters=[@__user_Guid_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='6000000']
+SELECT [b].[butno], [b0].[prgno]
+FROM [Secuprg] AS [x]
+INNER JOIN [Secbutton] AS [b] ON [x].[butid] = [b].[Guid]
+INNER JOIN [Secprg] AS [b0] ON [x].[prgid] = [b0].[Guid]
+WHERE [x].[userid] = @__user_Guid_0
+ORDER BY [b0].[prgno]
+2020-04-16 17:49:27,921 [12] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (23ms) [Parameters=[@__groupid_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='6000000']
+SELECT [b].[butno], [b0].[prgno]
+FROM [Secgprg] AS [x]
+INNER JOIN [Secbutton] AS [b] ON [x].[butid] = [b].[Guid]
+INNER JOIN [Secprg] AS [b0] ON [x].[prgid] = [b0].[Guid]
+WHERE CONVERT(VARCHAR(36), [x].[groupid]) = @__groupid_0
+ORDER BY [b0].[prgno]
+2020-04-16 17:49:27,927 [12] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action method DncZeus.Api.Controllers.AccountController.Profile (DncZeus.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 779.7774ms.
+2020-04-16 17:49:27,937 [12] INFO  Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor [(null)]  - Executing ObjectResult, writing value of type 'DncZeus.Api.Models.Response.ResponseModel'.
+2020-04-16 17:49:27,957 [12] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action DncZeus.Api.Controllers.AccountController.Profile (DncZeus.Api) in 2447.8831ms
+2020-04-16 17:49:27,960 [12] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 2741.4564ms 200 application/json; charset=utf-8
+2020-04-16 17:49:27,969 [7] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 OPTIONS http://localhost:54321/api/v5/sec/uprg/LoadMenuTree?api-version=5  
+2020-04-16 17:49:27,973 [7] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-04-16 17:49:27,981 [7] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 8.258ms 204 
+2020-04-16 17:49:27,987 [8] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 GET http://localhost:54321/api/v5/sec/uprg/LoadMenuTree?api-version=5  
+2020-04-16 17:49:27,991 [8] INFO  Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler [(null)]  - Successfully validated the token.
+2020-04-16 17:49:27,997 [8] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-04-16 17:49:28,010 [8] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Route matched with {action = "LoadMenuTree", controller = "Uprg"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult LoadMenuTree() on controller DncZeus.Api.Controllers.Api.Sec.UprgController (DncZeus.Api).
+2020-04-16 17:49:28,014 [8] INFO  Microsoft.EntityFrameworkCore.Infrastructure [(null)]  - Entity Framework Core 2.1.14-servicing-32113 initialized 'DncZeusDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: RowNumberPaging 
+2020-04-16 17:49:28,306 [8] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executing action method DncZeus.Api.Controllers.Api.Sec.UprgController.LoadMenuTree (DncZeus.Api) - Validation state: Valid
+2020-04-16 17:49:28,394 [8] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (66ms) [Parameters=[], CommandType='Text', CommandTimeout='6000000']
+SELECT [p].[Guid], [p].[enabled], [p].[icon], [p].[sysname], [p].[sysno], [p].[sysorder]
+FROM [Secsys] AS [p]
+ORDER BY [p].[sysorder]
+2020-04-16 17:49:28,433 [8] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (22ms) [Parameters=[], CommandType='Text', CommandTimeout='6000000']
+SELECT [p].[Guid], [p].[enabled], [p].[funname], [p].[funno], [p].[funorder], [p].[icon], [p].[sysid]
+FROM [Secfun] AS [p]
+ORDER BY [p].[funorder]
+2020-04-16 17:49:28,480 [8] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (29ms) [Parameters=[], CommandType='Text', CommandTimeout='6000000']
+SELECT [x].[Guid], [x].[enabled], [x].[funid], [x].[icon], [x].[mainid], [x].[prgcomp], [x].[prgname], [x].[prgno], [x].[prgorder], [x].[prgtype], [x].[program], [x].[runtype], [x].[sysid]
+FROM [Secprg] AS [x]
+WHERE [x].[enabled] = 'Y'
+ORDER BY [x].[prgorder]
+2020-04-16 17:49:28,529 [8] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (31ms) [Parameters=[], CommandType='Text', CommandTimeout='6000000']
+SELECT [p].[Guid], [p].[butid], [p].[butname], [p].[butno], [p].[butorder], [p].[funid], [p].[prgid], [p].[sysid]
+FROM [Secprgbut] AS [p]
+ORDER BY [p].[butorder]
+2020-04-16 17:49:28,548 [8] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action method DncZeus.Api.Controllers.Api.Sec.UprgController.LoadMenuTree (DncZeus.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 236.8471ms.
+2020-04-16 17:49:28,554 [8] INFO  Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor [(null)]  - Executing ObjectResult, writing value of type 'DncZeus.Api.Models.Response.ResponseModel'.
+2020-04-16 17:49:28,582 [8] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action DncZeus.Api.Controllers.Api.Sec.UprgController.LoadMenuTree (DncZeus.Api) in 567.2312ms
+2020-04-16 17:49:28,587 [8] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 597.7431ms 200 application/json; charset=utf-8
+2020-04-16 17:49:29,132 [7] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 OPTIONS http://localhost:54321/api/v5/mis/value/list?api-version=5  
+2020-04-16 17:49:29,139 [18] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 OPTIONS http://localhost:54321/api/v6/pmc/plannote/list?api-version=6  
+2020-04-16 17:49:29,144 [9] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 OPTIONS http://localhost:54321/api/v5/mis/message/GetUnreadCount?api-version=5&userno=1u001  
+2020-04-16 17:49:29,191 [18] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-04-16 17:49:29,195 [9] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-04-16 17:49:29,197 [7] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-04-16 17:49:29,200 [18] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 64.2619ms 204 
+2020-04-16 17:49:29,203 [9] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 65.8557ms 204 
+2020-04-16 17:49:29,225 [10] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 POST http://localhost:54321/api/v6/pmc/plannote/list?api-version=6 application/json;charset=UTF-8 178
+2020-04-16 17:49:29,260 [7] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 80.4883ms 204 
+2020-04-16 17:49:29,264 [10] INFO  Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler [(null)]  - Successfully validated the token.
+2020-04-16 17:49:29,267 [9] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 GET http://localhost:54321/api/v5/mis/message/GetUnreadCount?api-version=5&userno=1u001  
+2020-04-16 17:49:29,268 [12] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 POST http://localhost:54321/api/v5/mis/value/list?api-version=5 application/json;charset=UTF-8 133
+2020-04-16 17:49:29,271 [10] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-04-16 17:49:29,274 [9] INFO  Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler [(null)]  - Successfully validated the token.
+2020-04-16 17:49:29,279 [12] INFO  Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler [(null)]  - Successfully validated the token.
+2020-04-16 17:49:29,281 [9] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-04-16 17:49:29,283 [12] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-04-16 17:49:29,293 [9] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Route matched with {action = "GetUnreadCount", controller = "Message"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetUnreadCount(System.String) on controller DncZeus.Api.Controllers.Api.Mis.MessageController (DncZeus.Api).
+2020-04-16 17:49:29,294 [10] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Route matched with {action = "List", controller = "Plannote"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult List(DncZeus.Api.RequestPayload.Pmc.Plannote.PlannoteRequestPayload) on controller DncZeus.Api.Controllers.Api.Pmc.PlannoteController (DncZeus.Api).
+2020-04-16 17:49:29,296 [12] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Route matched with {action = "List", controller = "Value"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult List(DncZeus.Api.RequestPayload.Mis.Value.ValueRequestPayload) on controller DncZeus.Api.Controllers.Api.Mis.ValueController (DncZeus.Api).
+2020-04-16 17:49:29,297 [9] INFO  Microsoft.EntityFrameworkCore.Infrastructure [(null)]  - Entity Framework Core 2.1.14-servicing-32113 initialized 'DncZeusDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: RowNumberPaging 
+2020-04-16 17:49:29,299 [10] INFO  Microsoft.EntityFrameworkCore.Infrastructure [(null)]  - Entity Framework Core 2.1.14-servicing-32113 initialized 'DncZeusDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: RowNumberPaging 
+2020-04-16 17:49:29,301 [12] INFO  Microsoft.EntityFrameworkCore.Infrastructure [(null)]  - Entity Framework Core 2.1.14-servicing-32113 initialized 'DncZeusDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: RowNumberPaging 
+2020-04-16 17:49:29,334 [9] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executing action method DncZeus.Api.Controllers.Api.Mis.MessageController.GetUnreadCount (DncZeus.Api) - Validation state: Valid
+2020-04-16 17:49:29,380 [9] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (26ms) [Parameters=[@__userno_0='?' (Size = 20) (DbType = AnsiString)], CommandType='Text', CommandTimeout='6000000']
+SELECT COUNT(*)
+FROM [Mismessage] AS [x]
+WHERE ([x].[receiveUserno] = @__userno_0) AND ([x].[readStatus] = CAST(1 AS tinyint))
+2020-04-16 17:49:29,385 [9] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action method DncZeus.Api.Controllers.Api.Mis.MessageController.GetUnreadCount (DncZeus.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 48.7016ms.
+2020-04-16 17:49:29,418 [9] INFO  Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor [(null)]  - Executing ObjectResult, writing value of type 'DncZeus.Api.Models.Response.ResponseResultModel'.
+2020-04-16 17:49:29,419 [10] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executing action method DncZeus.Api.Controllers.Api.Pmc.PlannoteController.List (DncZeus.Api) - Validation state: Valid
+2020-04-16 17:49:29,421 [12] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executing action method DncZeus.Api.Controllers.Api.Mis.ValueController.List (DncZeus.Api) - Validation state: Valid
+2020-04-16 17:49:29,433 [9] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action DncZeus.Api.Controllers.Api.Mis.MessageController.GetUnreadCount (DncZeus.Api) in 134.7928ms
+2020-04-16 17:49:29,439 [9] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 175.9496ms 200 application/json; charset=utf-8
+2020-04-16 17:49:29,652 [12] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (44ms) [Parameters=[@__payload_misKindId_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='Text', CommandTimeout='6000000']
+SELECT [t].[ID], [t].[MisCkindID], [t].[MisOrganizationID], [t].[cdesc], [t].[code], [t].[credate], [t].[creuser], [t].[extendCode1], [t].[extendCode2], [t].[extendCode3], [t].[extendCode4], [t].[extendCode5], [t].[extendCode6], [t].[extendCode7], [t].[extendCode8], [t].[extendCode9], [t].[extendName1], [t].[extendName2], [t].[extendName3], [t].[extendName4], [t].[extendName5], [t].[extendName6], [t].[extendName7], [t].[extendName8], [t].[extendName9], [t].[isEnabled], [t].[moddate], [t].[moduser], [t].[ID0], [t].[Code0], [t].[Name], [t].[credate0], [t].[creuser0], [t].[moddate0], [t].[moduser0], [t].[ID1], [t].[Icon], [t].[MisCatalogID], [t].[ckdesc], [t].[ckind], [t].[clen], [t].[credate1], [t].[creuser1], [t].[isEnabled0], [t].[isOrgValid], [t].[moddate1], [t].[moduser1], [t].[trseq]
+FROM (
+    SELECT [x].[ID], [x].[MisCkindID], [x].[MisOrganizationID], [x].[cdesc], [x].[code], [x].[credate], [x].[creuser], [x].[extendCode1], [x].[extendCode2], [x].[extendCode3], [x].[extendCode4], [x].[extendCode5], [x].[extendCode6], [x].[extendCode7], [x].[extendCode8], [x].[extendCode9], [x].[extendName1], [x].[extendName2], [x].[extendName3], [x].[extendName4], [x].[extendName5], [x].[extendName6], [x].[extendName7], [x].[extendName8], [x].[extendName9], [x].[isEnabled], [x].[moddate], [x].[moduser], [x.MisOrganization].[ID] AS [ID0], [x.MisOrganization].[Code] AS [Code0], [x.MisOrganization].[Name], [x.MisOrganization].[credate] AS [credate0], [x.MisOrganization].[creuser] AS [creuser0], [x.MisOrganization].[moddate] AS [moddate0], [x.MisOrganization].[moduser] AS [moduser0], [x.MisCkind].[ID] AS [ID1], [x.MisCkind].[Icon], [x.MisCkind].[MisCatalogID], [x.MisCkind].[ckdesc], [x.MisCkind].[ckind], [x.MisCkind].[clen], [x.MisCkind].[credate] AS [credate1], [x.MisCkind].[creuser] AS [creuser1], [x.MisCkind].[isEnabled] AS [isEnabled0], [x.MisCkind].[isOrgValid], [x.MisCkind].[moddate] AS [moddate1], [x.MisCkind].[moduser] AS [moduser1], [x.MisCkind].[trseq], ROW_NUMBER() OVER(ORDER BY @@RowCount) AS [__RowNumber__]
+    FROM [MisCode] AS [x]
+    LEFT JOIN [MisOrganization] AS [x.MisOrganization] ON [x].[MisOrganizationID] = [x.MisOrganization].[ID]
+    LEFT JOIN [MisCkind] AS [x.MisCkind] ON [x].[MisCkindID] = [x.MisCkind].[ID]
+    WHERE [x].[MisCkindID] = @__payload_misKindId_0
+) AS [t]
+WHERE ([t].[__RowNumber__] > @__p_1) AND ([t].[__RowNumber__] <= (@__p_1 + @__p_2))
+2020-04-16 17:49:29,727 [12] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (23ms) [Parameters=[@__payload_misKindId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='6000000']
+SELECT COUNT(*)
+FROM [MisCode] AS [x]
+WHERE [x].[MisCkindID] = @__payload_misKindId_0
+2020-04-16 17:49:29,729 [12] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action method DncZeus.Api.Controllers.Api.Mis.ValueController.List (DncZeus.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 299.3205ms.
+2020-04-16 17:49:29,732 [12] INFO  Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor [(null)]  - Executing ObjectResult, writing value of type 'DncZeus.Api.Models.Response.ResponseResultModel'.
+2020-04-16 17:49:29,754 [12] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action DncZeus.Api.Controllers.Api.Mis.ValueController.List (DncZeus.Api) in 453.8392ms
+2020-04-16 17:49:29,760 [12] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 493.5434ms 200 application/json; charset=utf-8
+2020-04-16 17:49:32,829 [10] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (3,352ms) [Parameters=[], CommandType='Text', CommandTimeout='6000000']
+exec sp_pmc_plannoteList '2020-4-16'
+2020-04-16 17:49:32,885 [10] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (26ms) [Parameters=[], CommandType='Text', CommandTimeout='6000000']
+exec sp_pmc_plannoteList '2020-4-16'
+2020-04-16 17:49:32,888 [10] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action method DncZeus.Api.Controllers.Api.Pmc.PlannoteController.List (DncZeus.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 3463.8105ms.
+2020-04-16 17:49:32,891 [10] INFO  Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor [(null)]  - Executing ObjectResult, writing value of type 'DncZeus.Api.Models.Response.ResponseResultModel'.
+2020-04-16 17:49:32,905 [10] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action DncZeus.Api.Controllers.Api.Pmc.PlannoteController.List (DncZeus.Api) in 3606.9013ms
+2020-04-16 17:49:32,910 [10] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 3703.0708ms 200 application/json; charset=utf-8
+2020-04-16 17:49:59,015 [7] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 OPTIONS http://localhost:54321/api/v5/mis/message/GetUnreadCount?api-version=5&userno=1u001  
+2020-04-16 17:49:59,027 [7] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-04-16 17:49:59,034 [7] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 16.1687ms 204 
+2020-04-16 17:49:59,049 [9] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 GET http://localhost:54321/api/v5/mis/message/GetUnreadCount?api-version=5&userno=1u001  
+2020-04-16 17:49:59,052 [9] INFO  Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler [(null)]  - Successfully validated the token.
+2020-04-16 17:49:59,054 [9] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-04-16 17:49:59,058 [9] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Route matched with {action = "GetUnreadCount", controller = "Message"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetUnreadCount(System.String) on controller DncZeus.Api.Controllers.Api.Mis.MessageController (DncZeus.Api).
+2020-04-16 17:49:59,060 [9] INFO  Microsoft.EntityFrameworkCore.Infrastructure [(null)]  - Entity Framework Core 2.1.14-servicing-32113 initialized 'DncZeusDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: RowNumberPaging 
+2020-04-16 17:49:59,079 [9] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executing action method DncZeus.Api.Controllers.Api.Mis.MessageController.GetUnreadCount (DncZeus.Api) - Validation state: Valid
+2020-04-16 17:49:59,102 [9] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (20ms) [Parameters=[@__userno_0='?' (Size = 20) (DbType = AnsiString)], CommandType='Text', CommandTimeout='6000000']
+SELECT COUNT(*)
+FROM [Mismessage] AS [x]
+WHERE ([x].[receiveUserno] = @__userno_0) AND ([x].[readStatus] = CAST(1 AS tinyint))
+2020-04-16 17:49:59,115 [9] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action method DncZeus.Api.Controllers.Api.Mis.MessageController.GetUnreadCount (DncZeus.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 24.5453ms.
+2020-04-16 17:49:59,119 [9] INFO  Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor [(null)]  - Executing ObjectResult, writing value of type 'DncZeus.Api.Models.Response.ResponseResultModel'.
+2020-04-16 17:49:59,124 [9] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action DncZeus.Api.Controllers.Api.Mis.MessageController.GetUnreadCount (DncZeus.Api) in 61.6134ms
+2020-04-16 17:49:59,127 [9] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 77.4376ms 200 application/json; charset=utf-8
+2020-04-16 17:50:28,988 [9] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 OPTIONS http://localhost:54321/api/v5/mis/message/GetUnreadCount?api-version=5&userno=1u001  
+2020-04-16 17:50:28,999 [9] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-04-16 17:50:29,017 [9] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 14.1681ms 204 
+2020-04-16 17:50:29,027 [7] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 GET http://localhost:54321/api/v5/mis/message/GetUnreadCount?api-version=5&userno=1u001  
+2020-04-16 17:50:29,030 [7] INFO  Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler [(null)]  - Successfully validated the token.
+2020-04-16 17:50:29,032 [7] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-04-16 17:50:29,034 [7] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Route matched with {action = "GetUnreadCount", controller = "Message"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetUnreadCount(System.String) on controller DncZeus.Api.Controllers.Api.Mis.MessageController (DncZeus.Api).
+2020-04-16 17:50:29,036 [7] INFO  Microsoft.EntityFrameworkCore.Infrastructure [(null)]  - Entity Framework Core 2.1.14-servicing-32113 initialized 'DncZeusDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: RowNumberPaging 
+2020-04-16 17:50:29,057 [7] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executing action method DncZeus.Api.Controllers.Api.Mis.MessageController.GetUnreadCount (DncZeus.Api) - Validation state: Valid
+2020-04-16 17:50:29,081 [7] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (21ms) [Parameters=[@__userno_0='?' (Size = 20) (DbType = AnsiString)], CommandType='Text', CommandTimeout='6000000']
+SELECT COUNT(*)
+FROM [Mismessage] AS [x]
+WHERE ([x].[receiveUserno] = @__userno_0) AND ([x].[readStatus] = CAST(1 AS tinyint))
+2020-04-16 17:50:29,083 [7] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action method DncZeus.Api.Controllers.Api.Mis.MessageController.GetUnreadCount (DncZeus.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 23.7207ms.
+2020-04-16 17:50:29,085 [7] INFO  Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor [(null)]  - Executing ObjectResult, writing value of type 'DncZeus.Api.Models.Response.ResponseResultModel'.
+2020-04-16 17:50:29,108 [7] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action DncZeus.Api.Controllers.Api.Mis.MessageController.GetUnreadCount (DncZeus.Api) in 51.2262ms
+2020-04-16 17:50:29,120 [7] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 98.603ms 200 application/json; charset=utf-8
+2020-04-16 17:50:58,988 [24] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 OPTIONS http://localhost:54321/api/v5/mis/message/GetUnreadCount?api-version=5&userno=1u001  
+2020-04-16 17:50:59,000 [24] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-04-16 17:50:59,015 [24] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 28.0438ms 204 
+2020-04-16 17:50:59,018 [7] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 GET http://localhost:54321/api/v5/mis/message/GetUnreadCount?api-version=5&userno=1u001  
+2020-04-16 17:50:59,023 [7] INFO  Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler [(null)]  - Successfully validated the token.
+2020-04-16 17:50:59,026 [7] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-04-16 17:50:59,028 [7] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Route matched with {action = "GetUnreadCount", controller = "Message"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetUnreadCount(System.String) on controller DncZeus.Api.Controllers.Api.Mis.MessageController (DncZeus.Api).
+2020-04-16 17:50:59,031 [7] INFO  Microsoft.EntityFrameworkCore.Infrastructure [(null)]  - Entity Framework Core 2.1.14-servicing-32113 initialized 'DncZeusDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: RowNumberPaging 
+2020-04-16 17:50:59,051 [7] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executing action method DncZeus.Api.Controllers.Api.Mis.MessageController.GetUnreadCount (DncZeus.Api) - Validation state: Valid
+2020-04-16 17:50:59,081 [7] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (27ms) [Parameters=[@__userno_0='?' (Size = 20) (DbType = AnsiString)], CommandType='Text', CommandTimeout='6000000']
+SELECT COUNT(*)
+FROM [Mismessage] AS [x]
+WHERE ([x].[receiveUserno] = @__userno_0) AND ([x].[readStatus] = CAST(1 AS tinyint))
+2020-04-16 17:50:59,083 [7] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action method DncZeus.Api.Controllers.Api.Mis.MessageController.GetUnreadCount (DncZeus.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 29.499ms.
+2020-04-16 17:50:59,086 [7] INFO  Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor [(null)]  - Executing ObjectResult, writing value of type 'DncZeus.Api.Models.Response.ResponseResultModel'.
+2020-04-16 17:50:59,090 [7] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action DncZeus.Api.Controllers.Api.Mis.MessageController.GetUnreadCount (DncZeus.Api) in 57.4051ms
+2020-04-16 17:50:59,094 [7] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 74.2001ms 200 application/json; charset=utf-8
+2020-04-16 17:51:21,716 [24] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 OPTIONS http://localhost:54321/api/v5/mis/message/CheckUndo?api-version=5&day=2020-4-16  
+2020-04-16 17:51:21,754 [24] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-04-16 17:51:21,761 [24] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 41.8585ms 204 
+2020-04-16 17:51:21,764 [24] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 GET http://localhost:54321/api/v5/mis/message/CheckUndo?api-version=5&day=2020-4-16  
+2020-04-16 17:51:21,776 [24] INFO  Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler [(null)]  - Successfully validated the token.
+2020-04-16 17:51:21,779 [24] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-04-16 17:51:21,783 [24] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Route matched with {action = "CheckUndo", controller = "Message"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CheckUndo(System.String) on controller DncZeus.Api.Controllers.Api.Mis.MessageController (DncZeus.Api).
+2020-04-16 17:51:21,785 [24] INFO  Microsoft.EntityFrameworkCore.Infrastructure [(null)]  - Entity Framework Core 2.1.14-servicing-32113 initialized 'DncZeusDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: RowNumberPaging 
+2020-04-16 17:51:21,808 [24] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executing action method DncZeus.Api.Controllers.Api.Mis.MessageController.CheckUndo (DncZeus.Api) - Validation state: Valid
+2020-04-16 17:51:28,989 [7] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 OPTIONS http://localhost:54321/api/v5/mis/message/GetUnreadCount?api-version=5&userno=1u001  
+2020-04-16 17:51:28,992 [7] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-04-16 17:51:28,996 [7] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 6.9742ms 204 
+2020-04-16 17:51:29,098 [7] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 GET http://localhost:54321/api/v5/mis/message/GetUnreadCount?api-version=5&userno=1u001  
+2020-04-16 17:51:29,103 [7] INFO  Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler [(null)]  - Successfully validated the token.
+2020-04-16 17:51:29,107 [7] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-04-16 17:51:29,110 [7] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Route matched with {action = "GetUnreadCount", controller = "Message"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetUnreadCount(System.String) on controller DncZeus.Api.Controllers.Api.Mis.MessageController (DncZeus.Api).
+2020-04-16 17:51:29,114 [7] INFO  Microsoft.EntityFrameworkCore.Infrastructure [(null)]  - Entity Framework Core 2.1.14-servicing-32113 initialized 'DncZeusDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: RowNumberPaging 
+2020-04-16 17:51:29,134 [7] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executing action method DncZeus.Api.Controllers.Api.Mis.MessageController.GetUnreadCount (DncZeus.Api) - Validation state: Valid
+2020-04-16 17:51:29,159 [7] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (21ms) [Parameters=[@__userno_0='?' (Size = 20) (DbType = AnsiString)], CommandType='Text', CommandTimeout='6000000']
+SELECT COUNT(*)
+FROM [Mismessage] AS [x]
+WHERE ([x].[receiveUserno] = @__userno_0) AND ([x].[readStatus] = CAST(1 AS tinyint))
+2020-04-16 17:51:29,161 [7] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action method DncZeus.Api.Controllers.Api.Mis.MessageController.GetUnreadCount (DncZeus.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 25.1407ms.
+2020-04-16 17:51:29,164 [7] INFO  Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor [(null)]  - Executing ObjectResult, writing value of type 'DncZeus.Api.Models.Response.ResponseResultModel'.
+2020-04-16 17:51:29,167 [7] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action DncZeus.Api.Controllers.Api.Mis.MessageController.GetUnreadCount (DncZeus.Api) in 53.8645ms
+2020-04-16 17:51:29,185 [7] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 82.023ms 200 application/json; charset=utf-8
+2020-04-16 17:51:32,850 [24] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (5,483ms) [Parameters=[], CommandType='Text', CommandTimeout='6000000']
+exec sp_pmc_plannoteList '2020-4-16'
+2020-04-16 17:52:18,739 [29] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 OPTIONS http://localhost:54321/api/v5/mis/message/GetUnreadCount?api-version=5&userno=1u001  
+2020-04-16 17:52:18,764 [29] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-04-16 17:52:18,775 [29] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 35.1027ms 204 

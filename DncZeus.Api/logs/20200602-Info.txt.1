@@ -1,0 +1,1166 @@
+2020-06-02 17:29:50,923 [1] INFO  Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager [(null)]  - User profile is available. Using 'C:\Users\June\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-06-02 17:29:51,421 [10] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 DEBUG http://localhost:54321/  0
+2020-06-02 17:29:51,422 [9] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 GET http://localhost:54321/swagger/index.html  
+2020-06-02 17:29:51,450 [10] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 22.8831ms 200 
+2020-06-02 17:29:51,782 [9] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 362.6937ms 200 text/html
+2020-06-02 17:29:51,930 [9] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 GET http://localhost:54321/swagger/v3/swagger.json  
+2020-06-02 17:29:52,197 [9] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 264.5671ms 200 application/json;charset=utf-8
+2020-06-02 17:30:03,817 [10] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 OPTIONS http://localhost:54321/api/v5/mis/message/GetUnreadCount?api-version=5&userno=admin  
+2020-06-02 17:30:03,819 [10] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-06-02 17:30:03,822 [10] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 5.4673ms 204 
+2020-06-02 17:30:03,828 [7] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 GET http://localhost:54321/api/v5/mis/message/GetUnreadCount?api-version=5&userno=admin  
+2020-06-02 17:30:03,839 [7] INFO  Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler [(null)]  - Successfully validated the token.
+2020-06-02 17:30:03,842 [7] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-06-02 17:30:03,896 [7] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Route matched with {action = "GetUnreadCount", controller = "Message"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetUnreadCount(System.String) on controller DncZeus.Api.Controllers.Api.Mis.MessageController (DncZeus.Api).
+2020-06-02 17:30:04,554 [7] INFO  Microsoft.EntityFrameworkCore.Infrastructure [(null)]  - Entity Framework Core 2.1.14-servicing-32113 initialized 'DncZeusDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: RowNumberPaging 
+2020-06-02 17:30:04,820 [12] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 OPTIONS http://localhost:54321/api/v5/mis/message/GetUnreadCount?api-version=5&userno=admin  
+2020-06-02 17:30:04,822 [12] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-06-02 17:30:04,823 [7] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executing action method DncZeus.Api.Controllers.Api.Mis.MessageController.GetUnreadCount (DncZeus.Api) - Validation state: Valid
+2020-06-02 17:30:04,826 [12] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 5.5319ms 204 
+2020-06-02 17:30:05,008 [7] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (31ms) [Parameters=[@__userno_0='?' (Size = 20) (DbType = AnsiString)], CommandType='Text', CommandTimeout='6000000']
+SELECT COUNT(*)
+FROM [Mismessage] AS [x]
+WHERE ([x].[receiveUserno] = @__userno_0) AND ([x].[readStatus] = CAST(1 AS tinyint))
+2020-06-02 17:30:05,020 [7] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action method DncZeus.Api.Controllers.Api.Mis.MessageController.GetUnreadCount (DncZeus.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 191.833ms.
+2020-06-02 17:30:05,028 [7] INFO  Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor [(null)]  - Executing ObjectResult, writing value of type 'DncZeus.Api.Models.Response.ResponseResultModel'.
+2020-06-02 17:30:05,036 [7] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action DncZeus.Api.Controllers.Api.Mis.MessageController.GetUnreadCount (DncZeus.Api) in 1136.7957ms
+2020-06-02 17:30:05,038 [12] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 GET http://localhost:54321/api/v5/mis/message/GetUnreadCount?api-version=5&userno=admin  
+2020-06-02 17:30:05,040 [7] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 1211.3068ms 200 application/json; charset=utf-8
+2020-06-02 17:30:05,042 [12] INFO  Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler [(null)]  - Successfully validated the token.
+2020-06-02 17:30:05,044 [12] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-06-02 17:30:05,047 [12] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Route matched with {action = "GetUnreadCount", controller = "Message"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetUnreadCount(System.String) on controller DncZeus.Api.Controllers.Api.Mis.MessageController (DncZeus.Api).
+2020-06-02 17:30:05,052 [12] INFO  Microsoft.EntityFrameworkCore.Infrastructure [(null)]  - Entity Framework Core 2.1.14-servicing-32113 initialized 'DncZeusDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: RowNumberPaging 
+2020-06-02 17:30:05,087 [12] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executing action method DncZeus.Api.Controllers.Api.Mis.MessageController.GetUnreadCount (DncZeus.Api) - Validation state: Valid
+2020-06-02 17:30:05,113 [12] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (20ms) [Parameters=[@__userno_0='?' (Size = 20) (DbType = AnsiString)], CommandType='Text', CommandTimeout='6000000']
+SELECT COUNT(*)
+FROM [Mismessage] AS [x]
+WHERE ([x].[receiveUserno] = @__userno_0) AND ([x].[readStatus] = CAST(1 AS tinyint))
+2020-06-02 17:30:05,116 [12] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action method DncZeus.Api.Controllers.Api.Mis.MessageController.GetUnreadCount (DncZeus.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 26.695ms.
+2020-06-02 17:30:05,119 [12] INFO  Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor [(null)]  - Executing ObjectResult, writing value of type 'DncZeus.Api.Models.Response.ResponseResultModel'.
+2020-06-02 17:30:05,123 [12] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action DncZeus.Api.Controllers.Api.Mis.MessageController.GetUnreadCount (DncZeus.Api) in 72.86ms
+2020-06-02 17:30:05,128 [12] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 88.8126ms 200 application/json; charset=utf-8
+2020-06-02 17:30:23,315 [8] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 OPTIONS http://localhost:54321/api/v1/account/profile  
+2020-06-02 17:30:23,326 [8] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-06-02 17:30:23,330 [8] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 13.8827ms 204 
+2020-06-02 17:30:23,366 [8] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 GET http://localhost:54321/api/v1/account/profile  
+2020-06-02 17:30:23,383 [8] INFO  Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler [(null)]  - Successfully validated the token.
+2020-06-02 17:30:23,388 [8] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-06-02 17:30:23,395 [8] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Route matched with {action = "Profile", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Profile() on controller DncZeus.Api.Controllers.AccountController (DncZeus.Api).
+2020-06-02 17:30:23,405 [8] INFO  Microsoft.AspNetCore.Authorization.DefaultAuthorizationService [(null)]  - Authorization was successful.
+2020-06-02 17:30:23,412 [8] INFO  Microsoft.EntityFrameworkCore.Infrastructure [(null)]  - Entity Framework Core 2.1.14-servicing-32113 initialized 'DncZeusDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: RowNumberPaging 
+2020-06-02 17:30:23,440 [8] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executing action method DncZeus.Api.Controllers.AccountController.Profile (DncZeus.Api) - Validation state: Valid
+2020-06-02 17:30:23,541 [7] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (50ms) [Parameters=[@__Parse_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='6000000']
+SELECT TOP(1) [x].[ID], [x].[Code], [x].[Name], [x].[credate], [x].[creuser], [x].[moddate], [x].[moduser]
+FROM [MisOrganization] AS [x]
+WHERE [x].[ID] = @__Parse_0
+2020-06-02 17:30:23,636 [9] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (33ms) [Parameters=[@__guid_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='6000000']
+SELECT TOP(1) [x].[Guid], [x].[EmpName], [x].[EmpNo], [x].[code], [x].[credate], [x].[creuser], [x].[depname], [x].[depno], [x].[email], [x].[enabled], [x].[jobname], [x].[jobno], [x].[moddate], [x].[moduser], [x].[pwd], [x].[telno], [x].[userLogo], [x].[username], [x].[userno], [x].[utype], [x].[wxAccount], [x].[wxId], [x].[wxMail], [x].[wxName], [x].[wxPhone], [x].[wxPwd]
+FROM [Secuser] AS [x]
+WHERE [x].[Guid] = @__guid_0
+2020-06-02 17:30:23,697 [8] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (25ms) [Parameters=[], CommandType='Text', CommandTimeout='6000000']
+SELECT [x].[Guid], [x].[Alias], [x].[BeforeCloseFun], [x].[Component], [x].[CreatedByUserGuid], [x].[CreatedByUserName], [x].[CreatedOn], [x].[Description], [x].[HideInMenu], [x].[Icon], [x].[IsDefaultRouter], [x].[IsDeleted], [x].[Level], [x].[ModifiedByUserGuid], [x].[ModifiedByUserName], [x].[ModifiedOn], [x].[Name], [x].[NotCache], [x].[ParentGuid], [x].[ParentName], [x].[Sort], [x].[Status], [x].[Url]
+FROM [DncMenu] AS [x]
+WHERE ([x].[IsDeleted] = 0) AND ([x].[Status] = 1)
+2020-06-02 17:30:23,797 [8] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (26ms) [Parameters=[@__user_Guid_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='6000000']
+SELECT [b].[butno], [b0].[prgno]
+FROM [Secuprg] AS [x]
+INNER JOIN [Secbutton] AS [b] ON [x].[butid] = [b].[Guid]
+INNER JOIN [Secprg] AS [b0] ON [x].[prgid] = [b0].[Guid]
+WHERE [x].[userid] = @__user_Guid_0
+ORDER BY [b0].[prgno]
+2020-06-02 17:30:23,839 [8] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (25ms) [Parameters=[@__groupid_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='6000000']
+SELECT [b].[butno], [b0].[prgno]
+FROM [Secgprg] AS [x]
+INNER JOIN [Secbutton] AS [b] ON [x].[butid] = [b].[Guid]
+INNER JOIN [Secprg] AS [b0] ON [x].[prgid] = [b0].[Guid]
+WHERE CONVERT(VARCHAR(36), [x].[groupid]) = @__groupid_0
+ORDER BY [b0].[prgno]
+2020-06-02 17:30:23,844 [8] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action method DncZeus.Api.Controllers.AccountController.Profile (DncZeus.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 400.521ms.
+2020-06-02 17:30:23,847 [8] INFO  Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor [(null)]  - Executing ObjectResult, writing value of type 'DncZeus.Api.Models.Response.ResponseModel'.
+2020-06-02 17:30:23,861 [8] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action DncZeus.Api.Controllers.AccountController.Profile (DncZeus.Api) in 461.4757ms
+2020-06-02 17:30:23,863 [8] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 497.467ms 200 application/json; charset=utf-8
+2020-06-02 17:30:23,870 [8] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 OPTIONS http://localhost:54321/api/v5/sec/uprg/LoadMenuTree?api-version=5  
+2020-06-02 17:30:23,873 [8] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-06-02 17:30:23,877 [8] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 5.542ms 204 
+2020-06-02 17:30:23,880 [7] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 GET http://localhost:54321/api/v5/sec/uprg/LoadMenuTree?api-version=5  
+2020-06-02 17:30:23,882 [7] INFO  Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler [(null)]  - Successfully validated the token.
+2020-06-02 17:30:23,884 [7] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-06-02 17:30:23,888 [7] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Route matched with {action = "LoadMenuTree", controller = "Uprg"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult LoadMenuTree() on controller DncZeus.Api.Controllers.Api.Sec.UprgController (DncZeus.Api).
+2020-06-02 17:30:23,892 [7] INFO  Microsoft.EntityFrameworkCore.Infrastructure [(null)]  - Entity Framework Core 2.1.14-servicing-32113 initialized 'DncZeusDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: RowNumberPaging 
+2020-06-02 17:30:23,915 [7] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executing action method DncZeus.Api.Controllers.Api.Sec.UprgController.LoadMenuTree (DncZeus.Api) - Validation state: Valid
+2020-06-02 17:30:23,949 [7] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (23ms) [Parameters=[], CommandType='Text', CommandTimeout='6000000']
+SELECT [p].[Guid], [p].[enabled], [p].[icon], [p].[sysname], [p].[sysno], [p].[sysorder]
+FROM [Secsys] AS [p]
+ORDER BY [p].[sysorder]
+2020-06-02 17:30:23,982 [7] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (21ms) [Parameters=[], CommandType='Text', CommandTimeout='6000000']
+SELECT [p].[Guid], [p].[enabled], [p].[funname], [p].[funno], [p].[funorder], [p].[icon], [p].[sysid]
+FROM [Secfun] AS [p]
+ORDER BY [p].[funorder]
+2020-06-02 17:30:24,017 [7] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (23ms) [Parameters=[], CommandType='Text', CommandTimeout='6000000']
+SELECT [x].[Guid], [x].[enabled], [x].[funid], [x].[icon], [x].[mainid], [x].[prgcomp], [x].[prgname], [x].[prgno], [x].[prgorder], [x].[prgtype], [x].[program], [x].[runtype], [x].[sysid]
+FROM [Secprg] AS [x]
+WHERE [x].[enabled] = 'Y'
+ORDER BY [x].[prgorder]
+2020-06-02 17:30:24,053 [7] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (21ms) [Parameters=[], CommandType='Text', CommandTimeout='6000000']
+SELECT [p].[Guid], [p].[butid], [p].[butname], [p].[butno], [p].[butorder], [p].[funid], [p].[prgid], [p].[sysid]
+FROM [Secprgbut] AS [p]
+ORDER BY [p].[butorder]
+2020-06-02 17:30:24,064 [7] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action method DncZeus.Api.Controllers.Api.Sec.UprgController.LoadMenuTree (DncZeus.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 145.6735ms.
+2020-06-02 17:30:24,069 [7] INFO  Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor [(null)]  - Executing ObjectResult, writing value of type 'DncZeus.Api.Models.Response.ResponseModel'.
+2020-06-02 17:30:24,093 [7] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action DncZeus.Api.Controllers.Api.Sec.UprgController.LoadMenuTree (DncZeus.Api) in 197.368ms
+2020-06-02 17:30:24,099 [7] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 216.2505ms 200 application/json; charset=utf-8
+2020-06-02 17:30:24,603 [7] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 OPTIONS http://localhost:54321/api/v5/mis/message/GetUnreadCount?api-version=5&userno=admin  
+2020-06-02 17:30:24,626 [8] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 OPTIONS http://localhost:54321/api/v8/man/factory/list?api-version=8  
+2020-06-02 17:30:24,628 [12] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 OPTIONS http://localhost:54321/api/v8/man/workshop/list?api-version=8  
+2020-06-02 17:30:24,633 [7] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-06-02 17:30:24,635 [8] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-06-02 17:30:24,641 [12] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-06-02 17:30:24,645 [7] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 36.0032ms 204 
+2020-06-02 17:30:24,648 [8] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 42.8322ms 204 
+2020-06-02 17:30:24,656 [7] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 GET http://localhost:54321/api/v5/mis/message/GetUnreadCount?api-version=5&userno=admin  
+2020-06-02 17:30:24,657 [12] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 27.2465ms 204 
+2020-06-02 17:30:24,659 [8] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 POST http://localhost:54321/api/v8/man/factory/list?api-version=8 application/json;charset=UTF-8 96
+2020-06-02 17:30:24,663 [12] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 POST http://localhost:54321/api/v8/man/workshop/list?api-version=8 application/json;charset=UTF-8 139
+2020-06-02 17:30:24,664 [7] INFO  Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler [(null)]  - Successfully validated the token.
+2020-06-02 17:30:24,666 [8] INFO  Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler [(null)]  - Successfully validated the token.
+2020-06-02 17:30:24,668 [12] INFO  Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler [(null)]  - Successfully validated the token.
+2020-06-02 17:30:24,670 [7] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-06-02 17:30:24,673 [8] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-06-02 17:30:24,677 [12] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-06-02 17:30:24,678 [7] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Route matched with {action = "GetUnreadCount", controller = "Message"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetUnreadCount(System.String) on controller DncZeus.Api.Controllers.Api.Mis.MessageController (DncZeus.Api).
+2020-06-02 17:30:24,681 [7] INFO  Microsoft.EntityFrameworkCore.Infrastructure [(null)]  - Entity Framework Core 2.1.14-servicing-32113 initialized 'DncZeusDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: RowNumberPaging 
+2020-06-02 17:30:24,684 [8] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Route matched with {action = "List", controller = "Factory"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult List(DncZeus.Api.RequestPayload.Man.Factory.FactoryRequestPayload) on controller DncZeus.Api.Controllers.Api.Weixin.FactoryController (DncZeus.Api).
+2020-06-02 17:30:24,716 [7] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executing action method DncZeus.Api.Controllers.Api.Mis.MessageController.GetUnreadCount (DncZeus.Api) - Validation state: Valid
+2020-06-02 17:30:24,718 [8] INFO  Microsoft.EntityFrameworkCore.Infrastructure [(null)]  - Entity Framework Core 2.1.14-servicing-32113 initialized 'DncZeusDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: RowNumberPaging 
+2020-06-02 17:30:24,721 [12] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Route matched with {action = "List", controller = "Workshop"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult List(DncZeus.Api.RequestPayload.Man.Workshop.WorkshopRequestPayload) on controller DncZeus.Api.Controllers.Api.Weixin.WorkshopController (DncZeus.Api).
+2020-06-02 17:30:24,754 [12] INFO  Microsoft.EntityFrameworkCore.Infrastructure [(null)]  - Entity Framework Core 2.1.14-servicing-32113 initialized 'DncZeusDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: RowNumberPaging 
+2020-06-02 17:30:24,762 [7] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (34ms) [Parameters=[@__userno_0='?' (Size = 20) (DbType = AnsiString)], CommandType='Text', CommandTimeout='6000000']
+SELECT COUNT(*)
+FROM [Mismessage] AS [x]
+WHERE ([x].[receiveUserno] = @__userno_0) AND ([x].[readStatus] = CAST(1 AS tinyint))
+2020-06-02 17:30:24,766 [7] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action method DncZeus.Api.Controllers.Api.Mis.MessageController.GetUnreadCount (DncZeus.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 41.2917ms.
+2020-06-02 17:30:24,770 [7] INFO  Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor [(null)]  - Executing ObjectResult, writing value of type 'DncZeus.Api.Models.Response.ResponseResultModel'.
+2020-06-02 17:30:24,773 [7] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action DncZeus.Api.Controllers.Api.Mis.MessageController.GetUnreadCount (DncZeus.Api) in 91.3667ms
+2020-06-02 17:30:24,777 [7] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 122.3257ms 200 application/json; charset=utf-8
+2020-06-02 17:30:24,855 [8] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executing action method DncZeus.Api.Controllers.Api.Weixin.FactoryController.List (DncZeus.Api) - Validation state: Valid
+2020-06-02 17:30:24,857 [12] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executing action method DncZeus.Api.Controllers.Api.Weixin.WorkshopController.List (DncZeus.Api) - Validation state: Valid
+2020-06-02 17:30:24,898 [8] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (25ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='6000000']
+SELECT [t].[Guid], [t].[OrgID], [t].[cadre], [t].[code], [t].[countType], [t].[credate], [t].[creuser], [t].[logistic], [t].[moddate], [t].[moduser], [t].[name], [t].[pertargetOut], [t].[worker]
+FROM (
+    SELECT [m].[Guid], [m].[OrgID], [m].[cadre], [m].[code], [m].[countType], [m].[credate], [m].[creuser], [m].[logistic], [m].[moddate], [m].[moduser], [m].[name], [m].[pertargetOut], [m].[worker], ROW_NUMBER() OVER(ORDER BY @@RowCount) AS [__RowNumber__]
+    FROM [ManFactory] AS [m]
+) AS [t]
+WHERE ([t].[__RowNumber__] > @__p_0) AND ([t].[__RowNumber__] <= (@__p_0 + @__p_1))
+2020-06-02 17:30:24,965 [12] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (57ms) [Parameters=[@p0='?', @p1='?', @p2='?' (DbType = DateTime2), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='Text', CommandTimeout='6000000']
+SELECT [t].[Guid], [t].[countType], [t].[credate], [t].[creuser], [t].[factoryGuid], [t].[factoryPrice], [t].[itemCode], [t].[itemName], [t].[lineGuid], [t].[ordCode], [t].[ordQty], [t].[qty], [t].[rate], [t].[remark], [t].[sumQty], [t].[workDate]
+FROM (
+    SELECT [w].[Guid], [w].[countType], [w].[credate], [w].[creuser], [w].[factoryGuid], [w].[factoryPrice], [w].[itemCode], [w].[itemName], [w].[lineGuid], [w].[ordCode], [w].[ordQty], [w].[qty], [w].[rate], [w].[remark], [w].[sumQty], [w].[workDate], ROW_NUMBER() OVER(ORDER BY @@RowCount) AS [__RowNumber__]
+    FROM (
+        select b.Guid,b.factoryGuid,b.countType,b.ordCode,b.itemCode,b.itemName,b.factoryPrice,b.ordQty,b.creuser,b.credate,line.remark,line.workDate,isnull(line.qty,0) as qty,line.Guid as lineGuid,
+                                        (select sum(qty) from ManWorkshopOutLine as l where l.workshopOutGuid=b.Guid ) as sumqty,d.rate
+                                        from ManWorkshopOut as b
+                                        left join (select * from ManWorkshopOutLine where  credate in (select max(credate) from [dbo].[ManWorkshopOutLine] as a where a.workDate=@p2 group by a.workshopOutGuid)) AS line ON (line.workshopOutGuid = b.Guid)
+                                        left join ManOutSplit as c on(c.factoryGuid=b.factoryGuid and c.ordCode=b.ordCode and c.itemCode=b.itemCode)
+        left join ManOutSplitLine as d on(d.workProcessGuid=c.Guid and d.ProcessGuid=@p1)
+        where  b.workProcessGuid=@p1 
+    ) AS [w]
+) AS [t]
+WHERE ([t].[__RowNumber__] > @__p_1) AND ([t].[__RowNumber__] <= (@__p_1 + @__p_2))
+2020-06-02 17:30:24,967 [8] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (25ms) [Parameters=[], CommandType='Text', CommandTimeout='6000000']
+SELECT COUNT(*)
+FROM [ManFactory] AS [m]
+2020-06-02 17:30:24,969 [8] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action method DncZeus.Api.Controllers.Api.Weixin.FactoryController.List (DncZeus.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 110.945ms.
+2020-06-02 17:30:24,973 [8] INFO  Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor [(null)]  - Executing ObjectResult, writing value of type 'DncZeus.Api.Models.Response.ResponseResultModel'.
+2020-06-02 17:30:25,002 [8] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action DncZeus.Api.Controllers.Api.Weixin.FactoryController.List (DncZeus.Api) in 286.6874ms
+2020-06-02 17:30:25,005 [8] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 345.7966ms 200 application/json; charset=utf-8
+2020-06-02 17:30:25,007 [12] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (32ms) [Parameters=[@p0='?', @p1='?', @p2='?' (DbType = DateTime2)], CommandType='Text', CommandTimeout='6000000']
+SELECT COUNT(*)
+FROM (
+    select b.Guid,b.factoryGuid,b.countType,b.ordCode,b.itemCode,b.itemName,b.factoryPrice,b.ordQty,b.creuser,b.credate,line.remark,line.workDate,isnull(line.qty,0) as qty,line.Guid as lineGuid,
+                                    (select sum(qty) from ManWorkshopOutLine as l where l.workshopOutGuid=b.Guid ) as sumqty,d.rate
+                                    from ManWorkshopOut as b
+                                    left join (select * from ManWorkshopOutLine where  credate in (select max(credate) from [dbo].[ManWorkshopOutLine] as a where a.workDate=@p2 group by a.workshopOutGuid)) AS line ON (line.workshopOutGuid = b.Guid)
+                                    left join ManOutSplit as c on(c.factoryGuid=b.factoryGuid and c.ordCode=b.ordCode and c.itemCode=b.itemCode)
+    left join ManOutSplitLine as d on(d.workProcessGuid=c.Guid and d.ProcessGuid=@p1)
+    where  b.workProcessGuid=@p1 
+) AS [w]
+2020-06-02 17:30:25,012 [12] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action method DncZeus.Api.Controllers.Api.Weixin.WorkshopController.List (DncZeus.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 152.1193ms.
+2020-06-02 17:30:25,016 [12] INFO  Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor [(null)]  - Executing ObjectResult, writing value of type 'DncZeus.Api.Models.Response.ResponseResultModel'.
+2020-06-02 17:30:25,021 [12] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action DncZeus.Api.Controllers.Api.Weixin.WorkshopController.List (DncZeus.Api) in 292.5586ms
+2020-06-02 17:30:25,024 [12] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 361.3402ms 200 application/json; charset=utf-8
+2020-06-02 17:30:26,077 [12] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 OPTIONS http://localhost:54321/api/v8/man/factoryworkshop/getFactoryWorkshopInfo?api-version=8  
+2020-06-02 17:30:26,079 [8] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 OPTIONS http://localhost:54321/api/v8/man/factoryworkshop/getFactoryWorkDate?api-version=8  
+2020-06-02 17:30:26,080 [9] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 OPTIONS http://localhost:54321/api/v8/man/workprocess/list?api-version=8  
+2020-06-02 17:30:26,084 [12] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-06-02 17:30:26,085 [8] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-06-02 17:30:26,091 [9] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-06-02 17:30:26,093 [12] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 12.7877ms 204 
+2020-06-02 17:30:26,105 [8] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 19.2953ms 204 
+2020-06-02 17:30:26,107 [9] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 17.733ms 204 
+2020-06-02 17:30:26,113 [10] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 POST http://localhost:54321/api/v8/man/factoryworkshop/getFactoryWorkDate?api-version=8 application/json;charset=UTF-8 131
+2020-06-02 17:30:26,115 [8] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 POST http://localhost:54321/api/v8/man/workprocess/list?api-version=8 application/json;charset=UTF-8 150
+2020-06-02 17:30:26,117 [9] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 POST http://localhost:54321/api/v8/man/factoryworkshop/getFactoryWorkshopInfo?api-version=8 application/json;charset=UTF-8 139
+2020-06-02 17:30:26,122 [10] INFO  Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler [(null)]  - Successfully validated the token.
+2020-06-02 17:30:26,123 [8] INFO  Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler [(null)]  - Successfully validated the token.
+2020-06-02 17:30:26,126 [9] INFO  Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler [(null)]  - Successfully validated the token.
+2020-06-02 17:30:26,130 [10] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-06-02 17:30:26,131 [8] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-06-02 17:30:26,134 [9] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-06-02 17:30:26,138 [10] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Route matched with {action = "GetFactoryWorkDate", controller = "FactoryWorkshop"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetFactoryWorkDate(DncZeus.Api.RequestPayload.Man.FactoryWorkshop.FactoryWorkshopRequestPayload) on controller DncZeus.Api.Controllers.Api.Weixin.FactoryWorkshopController (DncZeus.Api).
+2020-06-02 17:30:26,141 [10] INFO  Microsoft.EntityFrameworkCore.Infrastructure [(null)]  - Entity Framework Core 2.1.14-servicing-32113 initialized 'DncZeusDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: RowNumberPaging 
+2020-06-02 17:30:26,144 [8] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Route matched with {action = "List", controller = "Workprocess"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult List(DncZeus.Api.RequestPayload.Man.Workprocess.WorkprocessRequestPayload) on controller DncZeus.Api.Controllers.Api.Weixin.WorkprocessController (DncZeus.Api).
+2020-06-02 17:30:26,146 [9] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Route matched with {action = "GetFactoryWorkshopInfo", controller = "FactoryWorkshop"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetFactoryWorkshopInfo(DncZeus.Api.RequestPayload.Man.FactoryWorkshop.FactoryWorkshopRequestPayload) on controller DncZeus.Api.Controllers.Api.Weixin.FactoryWorkshopController (DncZeus.Api).
+2020-06-02 17:30:26,150 [8] INFO  Microsoft.EntityFrameworkCore.Infrastructure [(null)]  - Entity Framework Core 2.1.14-servicing-32113 initialized 'DncZeusDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: RowNumberPaging 
+2020-06-02 17:30:26,155 [9] INFO  Microsoft.EntityFrameworkCore.Infrastructure [(null)]  - Entity Framework Core 2.1.14-servicing-32113 initialized 'DncZeusDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: RowNumberPaging 
+2020-06-02 17:30:26,229 [10] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executing action method DncZeus.Api.Controllers.Api.Weixin.FactoryWorkshopController.GetFactoryWorkDate (DncZeus.Api) - Validation state: Valid
+2020-06-02 17:30:26,231 [9] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executing action method DncZeus.Api.Controllers.Api.Weixin.FactoryWorkshopController.GetFactoryWorkshopInfo (DncZeus.Api) - Validation state: Valid
+2020-06-02 17:30:26,232 [8] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executing action method DncZeus.Api.Controllers.Api.Weixin.WorkprocessController.List (DncZeus.Api) - Validation state: Valid
+2020-06-02 17:30:26,299 [9] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (55ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (DbType = DateTime2)], CommandType='Text', CommandTimeout='6000000']
+
+select a.factoryGuid,a.yearPlanOutQty,isnull(b.monPlanOutQty,0) as 'monPlanOutQty',isnull(c.monAddDoneOutQty,0) as 'monAddDoneOutQty',isnull(d.sumPeople,0) as 'sumPeople',isnull(e.yearAddPlanOutQty,0) as 'yearAddPlanOutQty',isnull(f.yearAddDoneOutQty,0) as 'yearAddDoneOutQty',isnull(g.todayDoneOutQty,0) as 'todayDoneOutQty'  from(select sum(outqty) as 'yearPlanOutQty',factoryGuid from ManFactoryMonPlan  where factoryGuid in(@p0) and YY=@p1 GROUP BY factoryGuid) as a
+left join (
+	select outqty as 'monPlanOutQty',factoryGuid from ManFactoryMonPlan where factoryGuid in(@p0) and YY=@p1 and MM=@p2
+	) as b on (b.factoryGuid=a.factoryGuid)
+left join (
+	select sum(outline.qty) as 'monAddDoneOutQty',out.factoryGuid from ManWorkshopOut as out 
+	inner join ManWorkshopOutLine as outline on (outline.workshopOutGuid=out.Guid)
+	where out.factoryGuid in(@p0) and outline.workDate BETWEEN (SELECT   DATEADD(mm, DATEDIFF(mm, 0, GETDATE()), 0)) and (SELECT   DATEADD(d, - 1, DATEADD(mm, DATEDIFF(mm, 0, GETDATE())+1, 0)))
+	group by out.factoryGuid
+) as c on (c.factoryGuid=b.factoryGuid)
+left join (
+	select cadre+logistic+worker as 'sumPeople',Guid as 'factoryGuid' from ManFactory where Guid in(@p0)
+) as d on(d.factoryGuid=c.factoryGuid)
+left join (
+	select sum(outqty) as 'yearAddPlanOutQty',factoryGuid from ManFactoryMonPlan where factoryGuid in(@p0) and YY=@p1 and CONVERT(INT,MM)<=CONVERT(INT,@p2) GROUP BY factoryGuid
+) as e on(e.factoryGuid=d.factoryGuid)
+left join (
+	select sum(outline.qty) as 'yearAddDoneOutQty',factoryGuid from ManWorkshopOut as out 
+inner join ManWorkshopOutLine as outline on (outline.workshopOutGuid=out.Guid)
+where out.factoryGuid in(@p0) and outline.workDate <=(SELECT   DATEADD(d, - 1, DATEADD(mm, DATEDIFF(mm, 0, GETDATE())+1, 0))) GROUP BY factoryGuid
+) as f on(f.factoryGuid=e.factoryGuid)
+left join (
+select sum(outline.qty) as 'todayDoneOutQty',out.factoryGuid,out.Guid from ManWorkshopOut as out 
+inner join ManWorkshopOutLine as outline on (outline.workshopOutGuid=out.Guid)
+where out.factoryGuid in(@p0) and  DATEDIFF(day,outline.workDate,@p3)=0 GROUP BY out.Guid,out.factoryGuid
+) as g on(g.factoryGuid=f.factoryGuid)
+2020-06-02 17:30:26,300 [10] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (32ms) [Parameters=[@__payload_factoryGuid_0='?' (DbType = Guid), @__payload_workDate_1='?' (DbType = DateTime2)], CommandType='Text', CommandTimeout='6000000']
+SELECT TOP(1) [x].[Guid], [x].[OrgID], [x].[cadre], [x].[cadreLeave], [x].[cadreRest], [x].[credate], [x].[creuser], [x].[factoryGuid], [x].[logistic], [x].[logisticLeave], [x].[logisticRest], [x].[moddate], [x].[moduser], [x].[workDate], [x].[worker], [x].[workerLeave], [x].[workerReste]
+FROM [ManFactoryWorkdate] AS [x]
+WHERE ([x].[factoryGuid] = @__payload_factoryGuid_0) AND ([x].[workDate] = @__payload_workDate_1)
+2020-06-02 17:30:26,335 [9] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action method DncZeus.Api.Controllers.Api.Weixin.FactoryWorkshopController.GetFactoryWorkshopInfo (DncZeus.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 74.2855ms.
+2020-06-02 17:30:26,337 [9] INFO  Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor [(null)]  - Executing ObjectResult, writing value of type 'DncZeus.Api.Models.Response.ResponseResultModel'.
+2020-06-02 17:30:26,340 [8] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (27ms) [Parameters=[@__payload_factoryGuid_0='?' (DbType = Guid), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='Text', CommandTimeout='6000000']
+SELECT [t].[Guid], [t].[OrgID], [t].[factoryGuid], [t].[workCode], [t].[workName], [t].[rate], [t].[isvalid], [t].[credate], [t].[creuser], [t].[moddate], [t].[moduser], [t].[factoryName]
+FROM (
+    SELECT [a].[Guid], [a].[OrgID], [a].[factoryGuid], [a].[workCode], [a].[workName], [a].[rate], [a].[isvalid], [a].[credate], [a].[creuser], [a].[moddate], [a].[moduser], [b].[name] AS [factoryName], ROW_NUMBER() OVER(ORDER BY [a].[factoryGuid], [a].[workCode]) AS [__RowNumber__]
+    FROM [ManWorkProcess] AS [a]
+    INNER JOIN [ManFactory] AS [b] ON [a].[factoryGuid] = [b].[Guid]
+    WHERE [a].[factoryGuid] = @__payload_factoryGuid_0
+) AS [t]
+WHERE ([t].[__RowNumber__] > @__p_1) AND ([t].[__RowNumber__] <= (@__p_1 + @__p_2))
+2020-06-02 17:30:26,346 [9] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action DncZeus.Api.Controllers.Api.Weixin.FactoryWorkshopController.GetFactoryWorkshopInfo (DncZeus.Api) in 194.5557ms
+2020-06-02 17:30:26,349 [9] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 235.2768ms 200 application/json; charset=utf-8
+2020-06-02 17:30:26,383 [8] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (25ms) [Parameters=[@__payload_factoryGuid_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='6000000']
+SELECT COUNT(*)
+FROM [ManWorkProcess] AS [a]
+INNER JOIN [ManFactory] AS [b] ON [a].[factoryGuid] = [b].[Guid]
+WHERE [a].[factoryGuid] = @__payload_factoryGuid_0
+2020-06-02 17:30:26,385 [8] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action method DncZeus.Api.Controllers.Api.Weixin.WorkprocessController.List (DncZeus.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 150.1194ms.
+2020-06-02 17:30:26,387 [8] INFO  Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor [(null)]  - Executing ObjectResult, writing value of type 'DncZeus.Api.Models.Response.ResponseResultModel'.
+2020-06-02 17:30:26,400 [8] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action DncZeus.Api.Controllers.Api.Weixin.WorkprocessController.List (DncZeus.Api) in 249.6938ms
+2020-06-02 17:30:26,402 [8] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 289.4685ms 200 application/json; charset=utf-8
+2020-06-02 17:30:26,411 [10] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action method DncZeus.Api.Controllers.Api.Weixin.FactoryWorkshopController.GetFactoryWorkDate (DncZeus.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 177.0676ms.
+2020-06-02 17:30:26,414 [10] INFO  Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor [(null)]  - Executing ObjectResult, writing value of type 'DncZeus.Api.Models.Response.ResponseModel'.
+2020-06-02 17:30:26,420 [10] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action DncZeus.Api.Controllers.Api.Weixin.FactoryWorkshopController.GetFactoryWorkDate (DncZeus.Api) in 279.2614ms
+2020-06-02 17:30:26,422 [10] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 313.1946ms 200 application/json; charset=utf-8
+2020-06-02 17:30:30,758 [7] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 OPTIONS http://localhost:54321/api/v8/man/workshop/list?api-version=8  
+2020-06-02 17:30:30,762 [7] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-06-02 17:30:30,765 [7] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 7.1179ms 204 
+2020-06-02 17:30:30,769 [7] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 POST http://localhost:54321/api/v8/man/workshop/list?api-version=8 application/json;charset=UTF-8 175
+2020-06-02 17:30:30,771 [7] INFO  Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler [(null)]  - Successfully validated the token.
+2020-06-02 17:30:30,773 [7] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-06-02 17:30:30,776 [7] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Route matched with {action = "List", controller = "Workshop"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult List(DncZeus.Api.RequestPayload.Man.Workshop.WorkshopRequestPayload) on controller DncZeus.Api.Controllers.Api.Weixin.WorkshopController (DncZeus.Api).
+2020-06-02 17:30:30,781 [7] INFO  Microsoft.EntityFrameworkCore.Infrastructure [(null)]  - Entity Framework Core 2.1.14-servicing-32113 initialized 'DncZeusDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: RowNumberPaging 
+2020-06-02 17:30:30,800 [7] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executing action method DncZeus.Api.Controllers.Api.Weixin.WorkshopController.List (DncZeus.Api) - Validation state: Valid
+2020-06-02 17:30:30,835 [7] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (32ms) [Parameters=[@p0='?', @p1='?' (DbType = Guid), @p2='?' (DbType = DateTime2), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='Text', CommandTimeout='6000000']
+SELECT [t].[Guid], [t].[countType], [t].[credate], [t].[creuser], [t].[factoryGuid], [t].[factoryPrice], [t].[itemCode], [t].[itemName], [t].[lineGuid], [t].[ordCode], [t].[ordQty], [t].[qty], [t].[rate], [t].[remark], [t].[sumQty], [t].[workDate]
+FROM (
+    SELECT [w].[Guid], [w].[countType], [w].[credate], [w].[creuser], [w].[factoryGuid], [w].[factoryPrice], [w].[itemCode], [w].[itemName], [w].[lineGuid], [w].[ordCode], [w].[ordQty], [w].[qty], [w].[rate], [w].[remark], [w].[sumQty], [w].[workDate], ROW_NUMBER() OVER(ORDER BY @@RowCount) AS [__RowNumber__]
+    FROM (
+        select b.Guid,b.factoryGuid,b.countType,b.ordCode,b.itemCode,b.itemName,b.factoryPrice,b.ordQty,b.creuser,b.credate,line.remark,line.workDate,isnull(line.qty,0) as qty,line.Guid as lineGuid,
+                                        (select sum(qty) from ManWorkshopOutLine as l where l.workshopOutGuid=b.Guid ) as sumqty,d.rate
+                                        from ManWorkshopOut as b
+                                        left join (select * from ManWorkshopOutLine where  credate in (select max(credate) from [dbo].[ManWorkshopOutLine] as a where a.workDate=@p2 group by a.workshopOutGuid)) AS line ON (line.workshopOutGuid = b.Guid)
+                                        left join ManOutSplit as c on(c.factoryGuid=b.factoryGuid and c.ordCode=b.ordCode and c.itemCode=b.itemCode)
+        left join ManOutSplitLine as d on(d.workProcessGuid=c.Guid and d.ProcessGuid=@p1)
+        where  b.workProcessGuid=@p1 
+    ) AS [w]
+) AS [t]
+WHERE ([t].[__RowNumber__] > @__p_1) AND ([t].[__RowNumber__] <= (@__p_1 + @__p_2))
+2020-06-02 17:30:30,870 [7] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (30ms) [Parameters=[@p0='?', @p1='?' (DbType = Guid), @p2='?' (DbType = DateTime2)], CommandType='Text', CommandTimeout='6000000']
+SELECT COUNT(*)
+FROM (
+    select b.Guid,b.factoryGuid,b.countType,b.ordCode,b.itemCode,b.itemName,b.factoryPrice,b.ordQty,b.creuser,b.credate,line.remark,line.workDate,isnull(line.qty,0) as qty,line.Guid as lineGuid,
+                                    (select sum(qty) from ManWorkshopOutLine as l where l.workshopOutGuid=b.Guid ) as sumqty,d.rate
+                                    from ManWorkshopOut as b
+                                    left join (select * from ManWorkshopOutLine where  credate in (select max(credate) from [dbo].[ManWorkshopOutLine] as a where a.workDate=@p2 group by a.workshopOutGuid)) AS line ON (line.workshopOutGuid = b.Guid)
+                                    left join ManOutSplit as c on(c.factoryGuid=b.factoryGuid and c.ordCode=b.ordCode and c.itemCode=b.itemCode)
+    left join ManOutSplitLine as d on(d.workProcessGuid=c.Guid and d.ProcessGuid=@p1)
+    where  b.workProcessGuid=@p1 
+) AS [w]
+2020-06-02 17:30:30,874 [7] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action method DncZeus.Api.Controllers.Api.Weixin.WorkshopController.List (DncZeus.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 71.3687ms.
+2020-06-02 17:30:30,876 [7] INFO  Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor [(null)]  - Executing ObjectResult, writing value of type 'DncZeus.Api.Models.Response.ResponseResultModel'.
+2020-06-02 17:30:30,883 [7] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action DncZeus.Api.Controllers.Api.Weixin.WorkshopController.List (DncZeus.Api) in 104.456ms
+2020-06-02 17:30:30,887 [7] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 116.8807ms 200 application/json; charset=utf-8
+2020-06-02 17:30:33,000 [8] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 POST http://localhost:54321/api/v8/man/workshop/list?api-version=8 application/json;charset=UTF-8 175
+2020-06-02 17:30:33,004 [8] INFO  Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler [(null)]  - Successfully validated the token.
+2020-06-02 17:30:33,005 [8] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-06-02 17:30:33,007 [8] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Route matched with {action = "List", controller = "Workshop"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult List(DncZeus.Api.RequestPayload.Man.Workshop.WorkshopRequestPayload) on controller DncZeus.Api.Controllers.Api.Weixin.WorkshopController (DncZeus.Api).
+2020-06-02 17:30:33,010 [8] INFO  Microsoft.EntityFrameworkCore.Infrastructure [(null)]  - Entity Framework Core 2.1.14-servicing-32113 initialized 'DncZeusDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: RowNumberPaging 
+2020-06-02 17:30:33,030 [8] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executing action method DncZeus.Api.Controllers.Api.Weixin.WorkshopController.List (DncZeus.Api) - Validation state: Valid
+2020-06-02 17:30:33,050 [8] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (18ms) [Parameters=[@p0='?', @p1='?' (DbType = Guid), @p2='?' (DbType = DateTime2), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='Text', CommandTimeout='6000000']
+SELECT [t].[Guid], [t].[countType], [t].[credate], [t].[creuser], [t].[factoryGuid], [t].[factoryPrice], [t].[itemCode], [t].[itemName], [t].[lineGuid], [t].[ordCode], [t].[ordQty], [t].[qty], [t].[rate], [t].[remark], [t].[sumQty], [t].[workDate]
+FROM (
+    SELECT [w].[Guid], [w].[countType], [w].[credate], [w].[creuser], [w].[factoryGuid], [w].[factoryPrice], [w].[itemCode], [w].[itemName], [w].[lineGuid], [w].[ordCode], [w].[ordQty], [w].[qty], [w].[rate], [w].[remark], [w].[sumQty], [w].[workDate], ROW_NUMBER() OVER(ORDER BY @@RowCount) AS [__RowNumber__]
+    FROM (
+        select b.Guid,b.factoryGuid,b.countType,b.ordCode,b.itemCode,b.itemName,b.factoryPrice,b.ordQty,b.creuser,b.credate,line.remark,line.workDate,isnull(line.qty,0) as qty,line.Guid as lineGuid,
+                                        (select sum(qty) from ManWorkshopOutLine as l where l.workshopOutGuid=b.Guid ) as sumqty,d.rate
+                                        from ManWorkshopOut as b
+                                        left join (select * from ManWorkshopOutLine where  credate in (select max(credate) from [dbo].[ManWorkshopOutLine] as a where a.workDate=@p2 group by a.workshopOutGuid)) AS line ON (line.workshopOutGuid = b.Guid)
+                                        left join ManOutSplit as c on(c.factoryGuid=b.factoryGuid and c.ordCode=b.ordCode and c.itemCode=b.itemCode)
+        left join ManOutSplitLine as d on(d.workProcessGuid=c.Guid and d.ProcessGuid=@p1)
+        where  b.workProcessGuid=@p1 
+    ) AS [w]
+) AS [t]
+WHERE ([t].[__RowNumber__] > @__p_1) AND ([t].[__RowNumber__] <= (@__p_1 + @__p_2))
+2020-06-02 17:30:33,071 [8] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (18ms) [Parameters=[@p0='?', @p1='?' (DbType = Guid), @p2='?' (DbType = DateTime2)], CommandType='Text', CommandTimeout='6000000']
+SELECT COUNT(*)
+FROM (
+    select b.Guid,b.factoryGuid,b.countType,b.ordCode,b.itemCode,b.itemName,b.factoryPrice,b.ordQty,b.creuser,b.credate,line.remark,line.workDate,isnull(line.qty,0) as qty,line.Guid as lineGuid,
+                                    (select sum(qty) from ManWorkshopOutLine as l where l.workshopOutGuid=b.Guid ) as sumqty,d.rate
+                                    from ManWorkshopOut as b
+                                    left join (select * from ManWorkshopOutLine where  credate in (select max(credate) from [dbo].[ManWorkshopOutLine] as a where a.workDate=@p2 group by a.workshopOutGuid)) AS line ON (line.workshopOutGuid = b.Guid)
+                                    left join ManOutSplit as c on(c.factoryGuid=b.factoryGuid and c.ordCode=b.ordCode and c.itemCode=b.itemCode)
+    left join ManOutSplitLine as d on(d.workProcessGuid=c.Guid and d.ProcessGuid=@p1)
+    where  b.workProcessGuid=@p1 
+) AS [w]
+2020-06-02 17:30:33,073 [8] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action method DncZeus.Api.Controllers.Api.Weixin.WorkshopController.List (DncZeus.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 40.3563ms.
+2020-06-02 17:30:33,076 [8] INFO  Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor [(null)]  - Executing ObjectResult, writing value of type 'DncZeus.Api.Models.Response.ResponseResultModel'.
+2020-06-02 17:30:33,079 [8] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action DncZeus.Api.Controllers.Api.Weixin.WorkshopController.List (DncZeus.Api) in 68.9303ms
+2020-06-02 17:30:33,081 [8] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 81.1502ms 200 application/json; charset=utf-8
+2020-06-02 17:30:34,741 [7] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 POST http://localhost:54321/api/v8/man/workshop/list?api-version=8 application/json;charset=UTF-8 175
+2020-06-02 17:30:34,744 [7] INFO  Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler [(null)]  - Successfully validated the token.
+2020-06-02 17:30:34,746 [7] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-06-02 17:30:34,749 [7] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Route matched with {action = "List", controller = "Workshop"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult List(DncZeus.Api.RequestPayload.Man.Workshop.WorkshopRequestPayload) on controller DncZeus.Api.Controllers.Api.Weixin.WorkshopController (DncZeus.Api).
+2020-06-02 17:30:34,751 [7] INFO  Microsoft.EntityFrameworkCore.Infrastructure [(null)]  - Entity Framework Core 2.1.14-servicing-32113 initialized 'DncZeusDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: RowNumberPaging 
+2020-06-02 17:30:34,768 [7] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executing action method DncZeus.Api.Controllers.Api.Weixin.WorkshopController.List (DncZeus.Api) - Validation state: Valid
+2020-06-02 17:30:34,789 [7] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (18ms) [Parameters=[@p0='?', @p1='?' (DbType = Guid), @p2='?' (DbType = DateTime2), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='Text', CommandTimeout='6000000']
+SELECT [t].[Guid], [t].[countType], [t].[credate], [t].[creuser], [t].[factoryGuid], [t].[factoryPrice], [t].[itemCode], [t].[itemName], [t].[lineGuid], [t].[ordCode], [t].[ordQty], [t].[qty], [t].[rate], [t].[remark], [t].[sumQty], [t].[workDate]
+FROM (
+    SELECT [w].[Guid], [w].[countType], [w].[credate], [w].[creuser], [w].[factoryGuid], [w].[factoryPrice], [w].[itemCode], [w].[itemName], [w].[lineGuid], [w].[ordCode], [w].[ordQty], [w].[qty], [w].[rate], [w].[remark], [w].[sumQty], [w].[workDate], ROW_NUMBER() OVER(ORDER BY @@RowCount) AS [__RowNumber__]
+    FROM (
+        select b.Guid,b.factoryGuid,b.countType,b.ordCode,b.itemCode,b.itemName,b.factoryPrice,b.ordQty,b.creuser,b.credate,line.remark,line.workDate,isnull(line.qty,0) as qty,line.Guid as lineGuid,
+                                        (select sum(qty) from ManWorkshopOutLine as l where l.workshopOutGuid=b.Guid ) as sumqty,d.rate
+                                        from ManWorkshopOut as b
+                                        left join (select * from ManWorkshopOutLine where  credate in (select max(credate) from [dbo].[ManWorkshopOutLine] as a where a.workDate=@p2 group by a.workshopOutGuid)) AS line ON (line.workshopOutGuid = b.Guid)
+                                        left join ManOutSplit as c on(c.factoryGuid=b.factoryGuid and c.ordCode=b.ordCode and c.itemCode=b.itemCode)
+        left join ManOutSplitLine as d on(d.workProcessGuid=c.Guid and d.ProcessGuid=@p1)
+        where  b.workProcessGuid=@p1 
+    ) AS [w]
+) AS [t]
+WHERE ([t].[__RowNumber__] > @__p_1) AND ([t].[__RowNumber__] <= (@__p_1 + @__p_2))
+2020-06-02 17:30:34,813 [7] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (21ms) [Parameters=[@p0='?', @p1='?' (DbType = Guid), @p2='?' (DbType = DateTime2)], CommandType='Text', CommandTimeout='6000000']
+SELECT COUNT(*)
+FROM (
+    select b.Guid,b.factoryGuid,b.countType,b.ordCode,b.itemCode,b.itemName,b.factoryPrice,b.ordQty,b.creuser,b.credate,line.remark,line.workDate,isnull(line.qty,0) as qty,line.Guid as lineGuid,
+                                    (select sum(qty) from ManWorkshopOutLine as l where l.workshopOutGuid=b.Guid ) as sumqty,d.rate
+                                    from ManWorkshopOut as b
+                                    left join (select * from ManWorkshopOutLine where  credate in (select max(credate) from [dbo].[ManWorkshopOutLine] as a where a.workDate=@p2 group by a.workshopOutGuid)) AS line ON (line.workshopOutGuid = b.Guid)
+                                    left join ManOutSplit as c on(c.factoryGuid=b.factoryGuid and c.ordCode=b.ordCode and c.itemCode=b.itemCode)
+    left join ManOutSplitLine as d on(d.workProcessGuid=c.Guid and d.ProcessGuid=@p1)
+    where  b.workProcessGuid=@p1 
+) AS [w]
+2020-06-02 17:30:34,817 [7] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action method DncZeus.Api.Controllers.Api.Weixin.WorkshopController.List (DncZeus.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 45.8493ms.
+2020-06-02 17:30:34,820 [7] INFO  Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor [(null)]  - Executing ObjectResult, writing value of type 'DncZeus.Api.Models.Response.ResponseResultModel'.
+2020-06-02 17:30:34,823 [7] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action DncZeus.Api.Controllers.Api.Weixin.WorkshopController.List (DncZeus.Api) in 71.4074ms
+2020-06-02 17:30:34,827 [7] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 85.0242ms 200 application/json; charset=utf-8
+2020-06-02 17:30:41,767 [15] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 OPTIONS http://localhost:54321/api/v8/man/workshop/queryGoodsByOrder?api-version=8  
+2020-06-02 17:30:41,769 [15] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-06-02 17:30:41,772 [15] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 4.0743ms 204 
+2020-06-02 17:30:41,778 [15] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 POST http://localhost:54321/api/v8/man/workshop/queryGoodsByOrder?api-version=8 application/json;charset=UTF-8 18
+2020-06-02 17:30:41,782 [15] INFO  Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler [(null)]  - Successfully validated the token.
+2020-06-02 17:30:41,784 [15] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-06-02 17:30:41,788 [15] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Route matched with {action = "QueryGoodsByOrder", controller = "Workshop"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult QueryGoodsByOrder(DncZeus.Api.ViewModels.Man.Workshop.QuerySfModel) on controller DncZeus.Api.Controllers.Api.Weixin.WorkshopController (DncZeus.Api).
+2020-06-02 17:30:41,794 [15] INFO  Microsoft.EntityFrameworkCore.Infrastructure [(null)]  - Entity Framework Core 2.1.14-servicing-32113 initialized 'DncZeusDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: RowNumberPaging 
+2020-06-02 17:30:41,822 [15] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executing action method DncZeus.Api.Controllers.Api.Weixin.WorkshopController.QueryGoodsByOrder (DncZeus.Api) - Validation state: Valid
+2020-06-02 17:30:44,120 [15] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (2,282ms) [Parameters=[@p0='?' (Size = 4000)], CommandType='Text', CommandTimeout='6000000']
+select t1.fOrdNo as 'fNo',t4.fGoodsCode,t4.fGoodsName,t3.fOrdQty as 'fQty',t3.fUnitCode
+,case when isnull(t3._x_f002,0) = 0 then t3.fUP else t3._x_f002 end * case when charindex('PMC',t1.fordno) = 1 then 1 else 0.97 end   as fUP
+from SF.DCF19_MY.dbo.t_copd_ordmst t1
+inner join SF.DCF19_MY.dbo.t_COPD_OrdItem t3 on t1.fOrdNo = t3.fOrdNo
+inner join SF.DCF19_MY.dbo.t_BOMM_GoodsMst t4 on t3.fGoodsID = t4.fGoodsID
+where t1.fOrdNo =@p0
+2020-06-02 17:30:44,659 [15] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (531ms) [Parameters=[@p0='?' (Size = 4000)], CommandType='Text', CommandTimeout='6000000']
+SELECT COUNT(*)
+FROM (
+    select t1.fOrdNo as 'fNo',t4.fGoodsCode,t4.fGoodsName,t3.fOrdQty as 'fQty',t3.fUnitCode
+    ,case when isnull(t3._x_f002,0) = 0 then t3.fUP else t3._x_f002 end * case when charindex('PMC',t1.fordno) = 1 then 1 else 0.97 end   as fUP
+    from SF.DCF19_MY.dbo.t_copd_ordmst t1
+    inner join SF.DCF19_MY.dbo.t_COPD_OrdItem t3 on t1.fOrdNo = t3.fOrdNo
+    inner join SF.DCF19_MY.dbo.t_BOMM_GoodsMst t4 on t3.fGoodsID = t4.fGoodsID
+    where t1.fOrdNo =@p0 
+) AS [s]
+2020-06-02 17:30:44,662 [15] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action method DncZeus.Api.Controllers.Api.Weixin.WorkshopController.QueryGoodsByOrder (DncZeus.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 2837.2724ms.
+2020-06-02 17:30:44,665 [15] INFO  Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor [(null)]  - Executing ObjectResult, writing value of type 'DncZeus.Api.Models.Response.ResponseResultModel'.
+2020-06-02 17:30:44,670 [15] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action DncZeus.Api.Controllers.Api.Weixin.WorkshopController.QueryGoodsByOrder (DncZeus.Api) in 2879.4058ms
+2020-06-02 17:30:44,672 [15] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 2896.8032ms 200 application/json; charset=utf-8
+2020-06-02 17:30:54,491 [8] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 OPTIONS http://localhost:54321/api/v5/mis/message/GetUnreadCount?api-version=5&userno=admin  
+2020-06-02 17:30:54,495 [8] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-06-02 17:30:54,499 [8] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 6.9057ms 204 
+2020-06-02 17:30:54,503 [9] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 GET http://localhost:54321/api/v5/mis/message/GetUnreadCount?api-version=5&userno=admin  
+2020-06-02 17:30:54,506 [9] INFO  Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler [(null)]  - Successfully validated the token.
+2020-06-02 17:30:54,509 [9] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-06-02 17:30:54,513 [9] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Route matched with {action = "GetUnreadCount", controller = "Message"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetUnreadCount(System.String) on controller DncZeus.Api.Controllers.Api.Mis.MessageController (DncZeus.Api).
+2020-06-02 17:30:54,517 [9] INFO  Microsoft.EntityFrameworkCore.Infrastructure [(null)]  - Entity Framework Core 2.1.14-servicing-32113 initialized 'DncZeusDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: RowNumberPaging 
+2020-06-02 17:30:54,535 [9] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executing action method DncZeus.Api.Controllers.Api.Mis.MessageController.GetUnreadCount (DncZeus.Api) - Validation state: Valid
+2020-06-02 17:30:54,561 [9] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (22ms) [Parameters=[@__userno_0='?' (Size = 20) (DbType = AnsiString)], CommandType='Text', CommandTimeout='6000000']
+SELECT COUNT(*)
+FROM [Mismessage] AS [x]
+WHERE ([x].[receiveUserno] = @__userno_0) AND ([x].[readStatus] = CAST(1 AS tinyint))
+2020-06-02 17:30:54,565 [9] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action method DncZeus.Api.Controllers.Api.Mis.MessageController.GetUnreadCount (DncZeus.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 26.0493ms.
+2020-06-02 17:30:54,567 [9] INFO  Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor [(null)]  - Executing ObjectResult, writing value of type 'DncZeus.Api.Models.Response.ResponseResultModel'.
+2020-06-02 17:30:54,570 [9] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action DncZeus.Api.Controllers.Api.Mis.MessageController.GetUnreadCount (DncZeus.Api) in 54.0005ms
+2020-06-02 17:30:54,573 [9] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 69.4372ms 200 application/json; charset=utf-8
+2020-06-02 17:30:57,226 [7] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 OPTIONS http://localhost:54321/api/v8/man/workshop/create?api-version=8  
+2020-06-02 17:30:57,231 [7] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-06-02 17:30:57,235 [7] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 8.5597ms 204 
+2020-06-02 17:30:57,239 [7] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 POST http://localhost:54321/api/v8/man/workshop/create?api-version=8 application/json;charset=UTF-8 333
+2020-06-02 17:30:57,242 [7] INFO  Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler [(null)]  - Successfully validated the token.
+2020-06-02 17:30:57,249 [7] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-06-02 17:30:57,254 [7] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Route matched with {action = "Create", controller = "Workshop"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Create(DncZeus.Api.ViewModels.Man.Workshop.WorkshopCreateViewModel) on controller DncZeus.Api.Controllers.Api.Weixin.WorkshopController (DncZeus.Api).
+2020-06-02 17:30:57,256 [7] INFO  Microsoft.EntityFrameworkCore.Infrastructure [(null)]  - Entity Framework Core 2.1.14-servicing-32113 initialized 'DncZeusDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: RowNumberPaging 
+2020-06-02 17:30:57,287 [7] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executing action method DncZeus.Api.Controllers.Api.Weixin.WorkshopController.Create (DncZeus.Api) - Validation state: Valid
+2020-06-02 17:30:57,323 [7] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (25ms) [Parameters=[@__model_factoryGuid_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='6000000']
+SELECT TOP(1) [x].[Guid], [x].[OrgID], [x].[cadre], [x].[code], [x].[countType], [x].[credate], [x].[creuser], [x].[logistic], [x].[moddate], [x].[moduser], [x].[name], [x].[pertargetOut], [x].[worker]
+FROM [ManFactory] AS [x]
+WHERE [x].[Guid] = @__model_factoryGuid_0
+2020-06-02 17:30:57,372 [7] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (23ms) [Parameters=[@__model_ordCode_0='?' (Size = 20) (DbType = AnsiString), @__model_itemCode_1='?' (Size = 20) (DbType = AnsiString)], CommandType='Text', CommandTimeout='6000000']
+SELECT TOP(1) [x].[Guid], [x].[OrgID], [x].[countType], [x].[credate], [x].[creuser], [x].[factoryGuid], [x].[itemCode], [x].[itemName], [x].[moddate], [x].[moduser], [x].[ordCode], [x].[status]
+FROM [ManOutSplit] AS [x]
+WHERE ([x].[ordCode] = @__model_ordCode_0) AND ([x].[itemCode] = @__model_itemCode_1)
+2020-06-02 17:30:57,466 [7] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (25ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Int32), @p2='?' (Size = 1) (DbType = Byte), @p3='?' (DbType = DateTime2), @p4='?' (Size = 20), @p5='?' (DbType = Guid), @p6='?' (Size = 20) (DbType = AnsiString), @p7='?' (Size = 200) (DbType = AnsiString), @p8='?' (DbType = DateTime2), @p9='?' (Size = 20), @p10='?' (Size = 20) (DbType = AnsiString), @p11='?' (Size = 1) (DbType = Byte)], CommandType='Text', CommandTimeout='6000000']
+SET NOCOUNT ON;
+INSERT INTO [ManOutSplit] ([Guid], [OrgID], [countType], [credate], [creuser], [factoryGuid], [itemCode], [itemName], [moddate], [moduser], [ordCode], [status])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11);
+2020-06-02 17:30:57,495 [7] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (26ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Int32), @p2='?' (Size = 1) (DbType = Byte), @p3='?' (DbType = DateTime2), @p4='?' (Size = 20), @p5='?' (DbType = Guid), @p6='?' (DbType = Decimal), @p7='?' (Size = 20) (DbType = AnsiString), @p8='?' (Size = 200) (DbType = AnsiString), @p9='?' (Size = 20) (DbType = AnsiString), @p10='?' (DbType = Int32), @p11='?' (DbType = Int32), @p12='?' (DbType = Guid)], CommandType='Text', CommandTimeout='6000000']
+SET NOCOUNT ON;
+INSERT INTO [ManWorkshopOut] ([Guid], [OrgID], [countType], [credate], [creuser], [factoryGuid], [factoryPrice], [itemCode], [itemName], [ordCode], [ordQty], [sumQty], [workProcessGuid])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12);
+2020-06-02 17:30:57,517 [7] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (20ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTime2), @p2='?' (Size = 20), @p3='?' (DbType = DateTime2), @p4='?' (Size = 20), @p5='?' (DbType = Decimal), @p6='?' (Size = 200) (DbType = AnsiString), @p7='?' (DbType = DateTime2), @p8='?' (DbType = Guid)], CommandType='Text', CommandTimeout='6000000']
+SET NOCOUNT ON;
+INSERT INTO [ManWorkshopOutLine] ([Guid], [credate], [creuser], [moddate], [moduser], [qty], [remark], [workDate], [workshopOutGuid])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8);
+2020-06-02 17:30:57,522 [7] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action method DncZeus.Api.Controllers.Api.Weixin.WorkshopController.Create (DncZeus.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 232.1366ms.
+2020-06-02 17:30:57,524 [7] INFO  Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor [(null)]  - Executing ObjectResult, writing value of type 'DncZeus.Api.Models.Response.ResponseModel'.
+2020-06-02 17:30:57,528 [7] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action DncZeus.Api.Controllers.Api.Weixin.WorkshopController.Create (DncZeus.Api) in 270.1411ms
+2020-06-02 17:30:57,531 [7] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 292.7654ms 200 application/json; charset=utf-8
+2020-06-02 17:30:57,551 [8] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 OPTIONS http://localhost:54321/api/v8/man/workshop/list?api-version=8  
+2020-06-02 17:30:57,556 [8] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-06-02 17:30:57,563 [8] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 10.3907ms 204 
+2020-06-02 17:30:57,573 [9] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 POST http://localhost:54321/api/v8/man/workshop/list?api-version=8 application/json;charset=UTF-8 175
+2020-06-02 17:30:57,578 [9] INFO  Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler [(null)]  - Successfully validated the token.
+2020-06-02 17:30:57,581 [9] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-06-02 17:30:57,584 [9] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Route matched with {action = "List", controller = "Workshop"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult List(DncZeus.Api.RequestPayload.Man.Workshop.WorkshopRequestPayload) on controller DncZeus.Api.Controllers.Api.Weixin.WorkshopController (DncZeus.Api).
+2020-06-02 17:30:57,587 [9] INFO  Microsoft.EntityFrameworkCore.Infrastructure [(null)]  - Entity Framework Core 2.1.14-servicing-32113 initialized 'DncZeusDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: RowNumberPaging 
+2020-06-02 17:30:57,606 [9] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executing action method DncZeus.Api.Controllers.Api.Weixin.WorkshopController.List (DncZeus.Api) - Validation state: Valid
+2020-06-02 17:30:57,641 [9] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (32ms) [Parameters=[@p0='?', @p1='?' (DbType = Guid), @p2='?' (DbType = DateTime2), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='Text', CommandTimeout='6000000']
+SELECT [t].[Guid], [t].[countType], [t].[credate], [t].[creuser], [t].[factoryGuid], [t].[factoryPrice], [t].[itemCode], [t].[itemName], [t].[lineGuid], [t].[ordCode], [t].[ordQty], [t].[qty], [t].[rate], [t].[remark], [t].[sumQty], [t].[workDate]
+FROM (
+    SELECT [w].[Guid], [w].[countType], [w].[credate], [w].[creuser], [w].[factoryGuid], [w].[factoryPrice], [w].[itemCode], [w].[itemName], [w].[lineGuid], [w].[ordCode], [w].[ordQty], [w].[qty], [w].[rate], [w].[remark], [w].[sumQty], [w].[workDate], ROW_NUMBER() OVER(ORDER BY @@RowCount) AS [__RowNumber__]
+    FROM (
+        select b.Guid,b.factoryGuid,b.countType,b.ordCode,b.itemCode,b.itemName,b.factoryPrice,b.ordQty,b.creuser,b.credate,line.remark,line.workDate,isnull(line.qty,0) as qty,line.Guid as lineGuid,
+                                        (select sum(qty) from ManWorkshopOutLine as l where l.workshopOutGuid=b.Guid ) as sumqty,d.rate
+                                        from ManWorkshopOut as b
+                                        left join (select * from ManWorkshopOutLine where  credate in (select max(credate) from [dbo].[ManWorkshopOutLine] as a where a.workDate=@p2 group by a.workshopOutGuid)) AS line ON (line.workshopOutGuid = b.Guid)
+                                        left join ManOutSplit as c on(c.factoryGuid=b.factoryGuid and c.ordCode=b.ordCode and c.itemCode=b.itemCode)
+        left join ManOutSplitLine as d on(d.workProcessGuid=c.Guid and d.ProcessGuid=@p1)
+        where  b.workProcessGuid=@p1 
+    ) AS [w]
+) AS [t]
+WHERE ([t].[__RowNumber__] > @__p_1) AND ([t].[__RowNumber__] <= (@__p_1 + @__p_2))
+2020-06-02 17:30:57,676 [9] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (30ms) [Parameters=[@p0='?', @p1='?' (DbType = Guid), @p2='?' (DbType = DateTime2)], CommandType='Text', CommandTimeout='6000000']
+SELECT COUNT(*)
+FROM (
+    select b.Guid,b.factoryGuid,b.countType,b.ordCode,b.itemCode,b.itemName,b.factoryPrice,b.ordQty,b.creuser,b.credate,line.remark,line.workDate,isnull(line.qty,0) as qty,line.Guid as lineGuid,
+                                    (select sum(qty) from ManWorkshopOutLine as l where l.workshopOutGuid=b.Guid ) as sumqty,d.rate
+                                    from ManWorkshopOut as b
+                                    left join (select * from ManWorkshopOutLine where  credate in (select max(credate) from [dbo].[ManWorkshopOutLine] as a where a.workDate=@p2 group by a.workshopOutGuid)) AS line ON (line.workshopOutGuid = b.Guid)
+                                    left join ManOutSplit as c on(c.factoryGuid=b.factoryGuid and c.ordCode=b.ordCode and c.itemCode=b.itemCode)
+    left join ManOutSplitLine as d on(d.workProcessGuid=c.Guid and d.ProcessGuid=@p1)
+    where  b.workProcessGuid=@p1 
+) AS [w]
+2020-06-02 17:30:57,679 [9] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action method DncZeus.Api.Controllers.Api.Weixin.WorkshopController.List (DncZeus.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 69.7704ms.
+2020-06-02 17:30:57,681 [9] INFO  Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor [(null)]  - Executing ObjectResult, writing value of type 'DncZeus.Api.Models.Response.ResponseResultModel'.
+2020-06-02 17:30:57,683 [9] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action DncZeus.Api.Controllers.Api.Weixin.WorkshopController.List (DncZeus.Api) in 96.3775ms
+2020-06-02 17:30:57,685 [9] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 112.6455ms 200 application/json; charset=utf-8
+2020-06-02 17:31:08,685 [12] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 OPTIONS http://localhost:54321/api/v8/man/outsplit/list?api-version=8  
+2020-06-02 17:31:08,687 [12] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-06-02 17:31:08,690 [12] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 5.6537ms 204 
+2020-06-02 17:31:08,715 [8] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 POST http://localhost:54321/api/v8/man/outsplit/list?api-version=8 application/json;charset=UTF-8 160
+2020-06-02 17:31:08,721 [8] INFO  Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler [(null)]  - Successfully validated the token.
+2020-06-02 17:31:08,726 [8] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-06-02 17:31:08,734 [8] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Route matched with {action = "List", controller = "Outsplit"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult List(DncZeus.Api.RequestPayload.Man.OutSplit.OutsplitRequestPayload) on controller DncZeus.Api.Controllers.Api.Weixin.OutsplitController (DncZeus.Api).
+2020-06-02 17:31:08,737 [8] INFO  Microsoft.EntityFrameworkCore.Infrastructure [(null)]  - Entity Framework Core 2.1.14-servicing-32113 initialized 'DncZeusDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: RowNumberPaging 
+2020-06-02 17:31:08,763 [8] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executing action method DncZeus.Api.Controllers.Api.Weixin.OutsplitController.List (DncZeus.Api) - Validation state: Valid
+2020-06-02 17:31:08,802 [8] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (29ms) [Parameters=[@__payload_factoryGuid_0='?' (DbType = Guid), @__payload_status_1='?' (Size = 1) (DbType = Byte)], CommandType='Text', CommandTimeout='6000000']
+SELECT [x].[Guid], [x].[OrgID], [x].[countType], [x].[credate], [x].[creuser], [x].[factoryGuid], [x].[itemCode], [x].[itemName], [x].[moddate], [x].[moduser], [x].[ordCode], [x].[status]
+FROM [ManOutSplit] AS [x]
+WHERE ([x].[factoryGuid] = @__payload_factoryGuid_0) AND ([x].[status] = @__payload_status_1)
+2020-06-02 17:31:08,848 [8] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (27ms) [Parameters=[@__item_Guid_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='6000000']
+SELECT [b].[Guid] AS [Guid0], [b0].[Guid] AS [processGuid], [b0].[workCode], [b0].[workName], [b0].[rate] AS [rate0], [b].[rate] AS [rate2]
+FROM [ManOutSplit] AS [x]
+INNER JOIN [ManOutSplitLine] AS [b] ON [x].[Guid] = [b].[workProcessGuid]
+INNER JOIN [ManWorkProcess] AS [b0] ON [b].[ProcessGuid] = [b0].[Guid]
+WHERE [x].[Guid] = @__item_Guid_0
+2020-06-02 17:31:08,873 [8] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (21ms) [Parameters=[@__item_Guid_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='6000000']
+SELECT [b].[Guid] AS [Guid0], [b0].[Guid] AS [processGuid], [b0].[workCode], [b0].[workName], [b0].[rate] AS [rate0], [b].[rate] AS [rate2]
+FROM [ManOutSplit] AS [x]
+INNER JOIN [ManOutSplitLine] AS [b] ON [x].[Guid] = [b].[workProcessGuid]
+INNER JOIN [ManWorkProcess] AS [b0] ON [b].[ProcessGuid] = [b0].[Guid]
+WHERE [x].[Guid] = @__item_Guid_0
+2020-06-02 17:31:08,879 [8] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action method DncZeus.Api.Controllers.Api.Weixin.OutsplitController.List (DncZeus.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 113.0226ms.
+2020-06-02 17:31:08,881 [8] INFO  Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor [(null)]  - Executing ObjectResult, writing value of type 'Newtonsoft.Json.Linq.JObject'.
+2020-06-02 17:31:08,885 [8] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action DncZeus.Api.Controllers.Api.Weixin.OutsplitController.List (DncZeus.Api) in 148.7378ms
+2020-06-02 17:31:08,888 [8] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 173.8603ms 200 application/json; charset=utf-8
+2020-06-02 17:31:15,566 [8] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 OPTIONS http://localhost:54321/api/v8/man/workshop/list?api-version=8  
+2020-06-02 17:31:15,569 [8] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-06-02 17:31:15,577 [8] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 5.8341ms 204 
+2020-06-02 17:31:15,583 [8] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 POST http://localhost:54321/api/v8/man/workshop/list?api-version=8 application/json;charset=UTF-8 175
+2020-06-02 17:31:15,586 [8] INFO  Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler [(null)]  - Successfully validated the token.
+2020-06-02 17:31:15,590 [8] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-06-02 17:31:15,597 [8] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Route matched with {action = "List", controller = "Workshop"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult List(DncZeus.Api.RequestPayload.Man.Workshop.WorkshopRequestPayload) on controller DncZeus.Api.Controllers.Api.Weixin.WorkshopController (DncZeus.Api).
+2020-06-02 17:31:15,600 [8] INFO  Microsoft.EntityFrameworkCore.Infrastructure [(null)]  - Entity Framework Core 2.1.14-servicing-32113 initialized 'DncZeusDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: RowNumberPaging 
+2020-06-02 17:31:15,619 [8] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executing action method DncZeus.Api.Controllers.Api.Weixin.WorkshopController.List (DncZeus.Api) - Validation state: Valid
+2020-06-02 17:31:15,658 [8] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (35ms) [Parameters=[@p0='?', @p1='?' (DbType = Guid), @p2='?' (DbType = DateTime2), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='Text', CommandTimeout='6000000']
+SELECT [t].[Guid], [t].[countType], [t].[credate], [t].[creuser], [t].[factoryGuid], [t].[factoryPrice], [t].[itemCode], [t].[itemName], [t].[lineGuid], [t].[ordCode], [t].[ordQty], [t].[qty], [t].[rate], [t].[remark], [t].[sumQty], [t].[workDate]
+FROM (
+    SELECT [w].[Guid], [w].[countType], [w].[credate], [w].[creuser], [w].[factoryGuid], [w].[factoryPrice], [w].[itemCode], [w].[itemName], [w].[lineGuid], [w].[ordCode], [w].[ordQty], [w].[qty], [w].[rate], [w].[remark], [w].[sumQty], [w].[workDate], ROW_NUMBER() OVER(ORDER BY @@RowCount) AS [__RowNumber__]
+    FROM (
+        select b.Guid,b.factoryGuid,b.countType,b.ordCode,b.itemCode,b.itemName,b.factoryPrice,b.ordQty,b.creuser,b.credate,line.remark,line.workDate,isnull(line.qty,0) as qty,line.Guid as lineGuid,
+                                        (select sum(qty) from ManWorkshopOutLine as l where l.workshopOutGuid=b.Guid ) as sumqty,d.rate
+                                        from ManWorkshopOut as b
+                                        left join (select * from ManWorkshopOutLine where  credate in (select max(credate) from [dbo].[ManWorkshopOutLine] as a where a.workDate=@p2 group by a.workshopOutGuid)) AS line ON (line.workshopOutGuid = b.Guid)
+                                        left join ManOutSplit as c on(c.factoryGuid=b.factoryGuid and c.ordCode=b.ordCode and c.itemCode=b.itemCode)
+        left join ManOutSplitLine as d on(d.workProcessGuid=c.Guid and d.ProcessGuid=@p1)
+        where  b.workProcessGuid=@p1 
+    ) AS [w]
+) AS [t]
+WHERE ([t].[__RowNumber__] > @__p_1) AND ([t].[__RowNumber__] <= (@__p_1 + @__p_2))
+2020-06-02 17:31:15,691 [8] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (28ms) [Parameters=[@p0='?', @p1='?' (DbType = Guid), @p2='?' (DbType = DateTime2)], CommandType='Text', CommandTimeout='6000000']
+SELECT COUNT(*)
+FROM (
+    select b.Guid,b.factoryGuid,b.countType,b.ordCode,b.itemCode,b.itemName,b.factoryPrice,b.ordQty,b.creuser,b.credate,line.remark,line.workDate,isnull(line.qty,0) as qty,line.Guid as lineGuid,
+                                    (select sum(qty) from ManWorkshopOutLine as l where l.workshopOutGuid=b.Guid ) as sumqty,d.rate
+                                    from ManWorkshopOut as b
+                                    left join (select * from ManWorkshopOutLine where  credate in (select max(credate) from [dbo].[ManWorkshopOutLine] as a where a.workDate=@p2 group by a.workshopOutGuid)) AS line ON (line.workshopOutGuid = b.Guid)
+                                    left join ManOutSplit as c on(c.factoryGuid=b.factoryGuid and c.ordCode=b.ordCode and c.itemCode=b.itemCode)
+    left join ManOutSplitLine as d on(d.workProcessGuid=c.Guid and d.ProcessGuid=@p1)
+    where  b.workProcessGuid=@p1 
+) AS [w]
+2020-06-02 17:31:15,695 [8] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action method DncZeus.Api.Controllers.Api.Weixin.WorkshopController.List (DncZeus.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 73.4001ms.
+2020-06-02 17:31:15,697 [8] INFO  Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor [(null)]  - Executing ObjectResult, writing value of type 'DncZeus.Api.Models.Response.ResponseResultModel'.
+2020-06-02 17:31:15,700 [8] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action DncZeus.Api.Controllers.Api.Weixin.WorkshopController.List (DncZeus.Api) in 100.1355ms
+2020-06-02 17:31:15,702 [8] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 119.5849ms 200 application/json; charset=utf-8
+2020-06-02 17:31:16,681 [7] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 POST http://localhost:54321/api/v8/man/workshop/list?api-version=8 application/json;charset=UTF-8 175
+2020-06-02 17:31:16,686 [7] INFO  Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler [(null)]  - Successfully validated the token.
+2020-06-02 17:31:16,691 [7] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-06-02 17:31:16,695 [7] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Route matched with {action = "List", controller = "Workshop"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult List(DncZeus.Api.RequestPayload.Man.Workshop.WorkshopRequestPayload) on controller DncZeus.Api.Controllers.Api.Weixin.WorkshopController (DncZeus.Api).
+2020-06-02 17:31:16,699 [7] INFO  Microsoft.EntityFrameworkCore.Infrastructure [(null)]  - Entity Framework Core 2.1.14-servicing-32113 initialized 'DncZeusDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: RowNumberPaging 
+2020-06-02 17:31:16,718 [7] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executing action method DncZeus.Api.Controllers.Api.Weixin.WorkshopController.List (DncZeus.Api) - Validation state: Valid
+2020-06-02 17:31:16,737 [7] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (16ms) [Parameters=[@p0='?', @p1='?' (DbType = Guid), @p2='?' (DbType = DateTime2), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='Text', CommandTimeout='6000000']
+SELECT [t].[Guid], [t].[countType], [t].[credate], [t].[creuser], [t].[factoryGuid], [t].[factoryPrice], [t].[itemCode], [t].[itemName], [t].[lineGuid], [t].[ordCode], [t].[ordQty], [t].[qty], [t].[rate], [t].[remark], [t].[sumQty], [t].[workDate]
+FROM (
+    SELECT [w].[Guid], [w].[countType], [w].[credate], [w].[creuser], [w].[factoryGuid], [w].[factoryPrice], [w].[itemCode], [w].[itemName], [w].[lineGuid], [w].[ordCode], [w].[ordQty], [w].[qty], [w].[rate], [w].[remark], [w].[sumQty], [w].[workDate], ROW_NUMBER() OVER(ORDER BY @@RowCount) AS [__RowNumber__]
+    FROM (
+        select b.Guid,b.factoryGuid,b.countType,b.ordCode,b.itemCode,b.itemName,b.factoryPrice,b.ordQty,b.creuser,b.credate,line.remark,line.workDate,isnull(line.qty,0) as qty,line.Guid as lineGuid,
+                                        (select sum(qty) from ManWorkshopOutLine as l where l.workshopOutGuid=b.Guid ) as sumqty,d.rate
+                                        from ManWorkshopOut as b
+                                        left join (select * from ManWorkshopOutLine where  credate in (select max(credate) from [dbo].[ManWorkshopOutLine] as a where a.workDate=@p2 group by a.workshopOutGuid)) AS line ON (line.workshopOutGuid = b.Guid)
+                                        left join ManOutSplit as c on(c.factoryGuid=b.factoryGuid and c.ordCode=b.ordCode and c.itemCode=b.itemCode)
+        left join ManOutSplitLine as d on(d.workProcessGuid=c.Guid and d.ProcessGuid=@p1)
+        where  b.workProcessGuid=@p1 
+    ) AS [w]
+) AS [t]
+WHERE ([t].[__RowNumber__] > @__p_1) AND ([t].[__RowNumber__] <= (@__p_1 + @__p_2))
+2020-06-02 17:31:16,758 [7] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (18ms) [Parameters=[@p0='?', @p1='?' (DbType = Guid), @p2='?' (DbType = DateTime2)], CommandType='Text', CommandTimeout='6000000']
+SELECT COUNT(*)
+FROM (
+    select b.Guid,b.factoryGuid,b.countType,b.ordCode,b.itemCode,b.itemName,b.factoryPrice,b.ordQty,b.creuser,b.credate,line.remark,line.workDate,isnull(line.qty,0) as qty,line.Guid as lineGuid,
+                                    (select sum(qty) from ManWorkshopOutLine as l where l.workshopOutGuid=b.Guid ) as sumqty,d.rate
+                                    from ManWorkshopOut as b
+                                    left join (select * from ManWorkshopOutLine where  credate in (select max(credate) from [dbo].[ManWorkshopOutLine] as a where a.workDate=@p2 group by a.workshopOutGuid)) AS line ON (line.workshopOutGuid = b.Guid)
+                                    left join ManOutSplit as c on(c.factoryGuid=b.factoryGuid and c.ordCode=b.ordCode and c.itemCode=b.itemCode)
+    left join ManOutSplitLine as d on(d.workProcessGuid=c.Guid and d.ProcessGuid=@p1)
+    where  b.workProcessGuid=@p1 
+) AS [w]
+2020-06-02 17:31:16,761 [7] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action method DncZeus.Api.Controllers.Api.Weixin.WorkshopController.List (DncZeus.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 40.4404ms.
+2020-06-02 17:31:16,764 [7] INFO  Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor [(null)]  - Executing ObjectResult, writing value of type 'DncZeus.Api.Models.Response.ResponseResultModel'.
+2020-06-02 17:31:16,767 [7] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action DncZeus.Api.Controllers.Api.Weixin.WorkshopController.List (DncZeus.Api) in 69.6593ms
+2020-06-02 17:31:16,769 [7] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 88.4505ms 200 application/json; charset=utf-8
+2020-06-02 17:31:17,936 [9] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 POST http://localhost:54321/api/v8/man/workshop/list?api-version=8 application/json;charset=UTF-8 175
+2020-06-02 17:31:17,939 [9] INFO  Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler [(null)]  - Successfully validated the token.
+2020-06-02 17:31:17,942 [9] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-06-02 17:31:17,946 [9] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Route matched with {action = "List", controller = "Workshop"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult List(DncZeus.Api.RequestPayload.Man.Workshop.WorkshopRequestPayload) on controller DncZeus.Api.Controllers.Api.Weixin.WorkshopController (DncZeus.Api).
+2020-06-02 17:31:17,949 [9] INFO  Microsoft.EntityFrameworkCore.Infrastructure [(null)]  - Entity Framework Core 2.1.14-servicing-32113 initialized 'DncZeusDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: RowNumberPaging 
+2020-06-02 17:31:17,967 [9] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executing action method DncZeus.Api.Controllers.Api.Weixin.WorkshopController.List (DncZeus.Api) - Validation state: Valid
+2020-06-02 17:31:17,986 [9] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (17ms) [Parameters=[@p0='?', @p1='?' (DbType = Guid), @p2='?' (DbType = DateTime2), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='Text', CommandTimeout='6000000']
+SELECT [t].[Guid], [t].[countType], [t].[credate], [t].[creuser], [t].[factoryGuid], [t].[factoryPrice], [t].[itemCode], [t].[itemName], [t].[lineGuid], [t].[ordCode], [t].[ordQty], [t].[qty], [t].[rate], [t].[remark], [t].[sumQty], [t].[workDate]
+FROM (
+    SELECT [w].[Guid], [w].[countType], [w].[credate], [w].[creuser], [w].[factoryGuid], [w].[factoryPrice], [w].[itemCode], [w].[itemName], [w].[lineGuid], [w].[ordCode], [w].[ordQty], [w].[qty], [w].[rate], [w].[remark], [w].[sumQty], [w].[workDate], ROW_NUMBER() OVER(ORDER BY @@RowCount) AS [__RowNumber__]
+    FROM (
+        select b.Guid,b.factoryGuid,b.countType,b.ordCode,b.itemCode,b.itemName,b.factoryPrice,b.ordQty,b.creuser,b.credate,line.remark,line.workDate,isnull(line.qty,0) as qty,line.Guid as lineGuid,
+                                        (select sum(qty) from ManWorkshopOutLine as l where l.workshopOutGuid=b.Guid ) as sumqty,d.rate
+                                        from ManWorkshopOut as b
+                                        left join (select * from ManWorkshopOutLine where  credate in (select max(credate) from [dbo].[ManWorkshopOutLine] as a where a.workDate=@p2 group by a.workshopOutGuid)) AS line ON (line.workshopOutGuid = b.Guid)
+                                        left join ManOutSplit as c on(c.factoryGuid=b.factoryGuid and c.ordCode=b.ordCode and c.itemCode=b.itemCode)
+        left join ManOutSplitLine as d on(d.workProcessGuid=c.Guid and d.ProcessGuid=@p1)
+        where  b.workProcessGuid=@p1 
+    ) AS [w]
+) AS [t]
+WHERE ([t].[__RowNumber__] > @__p_1) AND ([t].[__RowNumber__] <= (@__p_1 + @__p_2))
+2020-06-02 17:31:18,006 [9] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (18ms) [Parameters=[@p0='?', @p1='?' (DbType = Guid), @p2='?' (DbType = DateTime2)], CommandType='Text', CommandTimeout='6000000']
+SELECT COUNT(*)
+FROM (
+    select b.Guid,b.factoryGuid,b.countType,b.ordCode,b.itemCode,b.itemName,b.factoryPrice,b.ordQty,b.creuser,b.credate,line.remark,line.workDate,isnull(line.qty,0) as qty,line.Guid as lineGuid,
+                                    (select sum(qty) from ManWorkshopOutLine as l where l.workshopOutGuid=b.Guid ) as sumqty,d.rate
+                                    from ManWorkshopOut as b
+                                    left join (select * from ManWorkshopOutLine where  credate in (select max(credate) from [dbo].[ManWorkshopOutLine] as a where a.workDate=@p2 group by a.workshopOutGuid)) AS line ON (line.workshopOutGuid = b.Guid)
+                                    left join ManOutSplit as c on(c.factoryGuid=b.factoryGuid and c.ordCode=b.ordCode and c.itemCode=b.itemCode)
+    left join ManOutSplitLine as d on(d.workProcessGuid=c.Guid and d.ProcessGuid=@p1)
+    where  b.workProcessGuid=@p1 
+) AS [w]
+2020-06-02 17:31:18,009 [9] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action method DncZeus.Api.Controllers.Api.Weixin.WorkshopController.List (DncZeus.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 40.2639ms.
+2020-06-02 17:31:18,013 [9] INFO  Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor [(null)]  - Executing ObjectResult, writing value of type 'DncZeus.Api.Models.Response.ResponseResultModel'.
+2020-06-02 17:31:18,016 [9] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action DncZeus.Api.Controllers.Api.Weixin.WorkshopController.List (DncZeus.Api) in 67.6442ms
+2020-06-02 17:31:18,019 [9] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 83.2098ms 200 application/json; charset=utf-8
+2020-06-02 17:31:21,627 [7] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 OPTIONS http://localhost:54321/api/v8/man/outsplit/list?api-version=8  
+2020-06-02 17:31:21,629 [7] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-06-02 17:31:21,632 [7] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 4.4246ms 204 
+2020-06-02 17:31:21,667 [7] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 POST http://localhost:54321/api/v8/man/outsplit/list?api-version=8 application/json;charset=UTF-8 160
+2020-06-02 17:31:21,672 [7] INFO  Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler [(null)]  - Successfully validated the token.
+2020-06-02 17:31:21,676 [7] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-06-02 17:31:21,681 [7] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Route matched with {action = "List", controller = "Outsplit"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult List(DncZeus.Api.RequestPayload.Man.OutSplit.OutsplitRequestPayload) on controller DncZeus.Api.Controllers.Api.Weixin.OutsplitController (DncZeus.Api).
+2020-06-02 17:31:21,687 [7] INFO  Microsoft.EntityFrameworkCore.Infrastructure [(null)]  - Entity Framework Core 2.1.14-servicing-32113 initialized 'DncZeusDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: RowNumberPaging 
+2020-06-02 17:31:21,711 [7] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executing action method DncZeus.Api.Controllers.Api.Weixin.OutsplitController.List (DncZeus.Api) - Validation state: Valid
+2020-06-02 17:31:21,735 [7] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (21ms) [Parameters=[@__payload_factoryGuid_0='?' (DbType = Guid), @__payload_status_1='?' (Size = 1) (DbType = Byte)], CommandType='Text', CommandTimeout='6000000']
+SELECT [x].[Guid], [x].[OrgID], [x].[countType], [x].[credate], [x].[creuser], [x].[factoryGuid], [x].[itemCode], [x].[itemName], [x].[moddate], [x].[moduser], [x].[ordCode], [x].[status]
+FROM [ManOutSplit] AS [x]
+WHERE ([x].[factoryGuid] = @__payload_factoryGuid_0) AND ([x].[status] = @__payload_status_1)
+2020-06-02 17:31:21,755 [7] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (17ms) [Parameters=[@__item_Guid_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='6000000']
+SELECT [b].[Guid] AS [Guid0], [b0].[Guid] AS [processGuid], [b0].[workCode], [b0].[workName], [b0].[rate] AS [rate0], [b].[rate] AS [rate2]
+FROM [ManOutSplit] AS [x]
+INNER JOIN [ManOutSplitLine] AS [b] ON [x].[Guid] = [b].[workProcessGuid]
+INNER JOIN [ManWorkProcess] AS [b0] ON [b].[ProcessGuid] = [b0].[Guid]
+WHERE [x].[Guid] = @__item_Guid_0
+2020-06-02 17:31:21,774 [7] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (17ms) [Parameters=[@__item_Guid_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='6000000']
+SELECT [b].[Guid] AS [Guid0], [b0].[Guid] AS [processGuid], [b0].[workCode], [b0].[workName], [b0].[rate] AS [rate0], [b].[rate] AS [rate2]
+FROM [ManOutSplit] AS [x]
+INNER JOIN [ManOutSplitLine] AS [b] ON [x].[Guid] = [b].[workProcessGuid]
+INNER JOIN [ManWorkProcess] AS [b0] ON [b].[ProcessGuid] = [b0].[Guid]
+WHERE [x].[Guid] = @__item_Guid_0
+2020-06-02 17:31:21,778 [7] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action method DncZeus.Api.Controllers.Api.Weixin.OutsplitController.List (DncZeus.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 63.3422ms.
+2020-06-02 17:31:21,780 [7] INFO  Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor [(null)]  - Executing ObjectResult, writing value of type 'Newtonsoft.Json.Linq.JObject'.
+2020-06-02 17:31:21,783 [7] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action DncZeus.Api.Controllers.Api.Weixin.OutsplitController.List (DncZeus.Api) in 99.3048ms
+2020-06-02 17:31:21,785 [7] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 119.8638ms 200 application/json; charset=utf-8
+2020-06-02 17:31:24,491 [11] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 OPTIONS http://localhost:54321/api/v5/mis/message/GetUnreadCount?api-version=5&userno=admin  
+2020-06-02 17:31:24,494 [11] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-06-02 17:31:24,497 [11] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 5.7529ms 204 
+2020-06-02 17:31:24,501 [11] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 GET http://localhost:54321/api/v5/mis/message/GetUnreadCount?api-version=5&userno=admin  
+2020-06-02 17:31:24,503 [11] INFO  Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler [(null)]  - Successfully validated the token.
+2020-06-02 17:31:24,505 [11] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-06-02 17:31:24,508 [11] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Route matched with {action = "GetUnreadCount", controller = "Message"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetUnreadCount(System.String) on controller DncZeus.Api.Controllers.Api.Mis.MessageController (DncZeus.Api).
+2020-06-02 17:31:24,511 [11] INFO  Microsoft.EntityFrameworkCore.Infrastructure [(null)]  - Entity Framework Core 2.1.14-servicing-32113 initialized 'DncZeusDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: RowNumberPaging 
+2020-06-02 17:31:24,532 [11] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executing action method DncZeus.Api.Controllers.Api.Mis.MessageController.GetUnreadCount (DncZeus.Api) - Validation state: Valid
+2020-06-02 17:31:24,561 [11] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (25ms) [Parameters=[@__userno_0='?' (Size = 20) (DbType = AnsiString)], CommandType='Text', CommandTimeout='6000000']
+SELECT COUNT(*)
+FROM [Mismessage] AS [x]
+WHERE ([x].[receiveUserno] = @__userno_0) AND ([x].[readStatus] = CAST(1 AS tinyint))
+2020-06-02 17:31:24,564 [11] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action method DncZeus.Api.Controllers.Api.Mis.MessageController.GetUnreadCount (DncZeus.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 28.7751ms.
+2020-06-02 17:31:24,568 [11] INFO  Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor [(null)]  - Executing ObjectResult, writing value of type 'DncZeus.Api.Models.Response.ResponseResultModel'.
+2020-06-02 17:31:24,571 [11] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action DncZeus.Api.Controllers.Api.Mis.MessageController.GetUnreadCount (DncZeus.Api) in 59.7099ms
+2020-06-02 17:31:24,574 [11] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 72.1079ms 200 application/json; charset=utf-8
+2020-06-02 17:31:54,492 [7] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 OPTIONS http://localhost:54321/api/v5/mis/message/GetUnreadCount?api-version=5&userno=admin  
+2020-06-02 17:31:54,500 [7] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-06-02 17:31:54,502 [7] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 10.7556ms 204 
+2020-06-02 17:31:54,523 [22] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 GET http://localhost:54321/api/v5/mis/message/GetUnreadCount?api-version=5&userno=admin  
+2020-06-02 17:31:54,528 [22] INFO  Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler [(null)]  - Successfully validated the token.
+2020-06-02 17:31:54,530 [22] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-06-02 17:31:54,532 [22] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Route matched with {action = "GetUnreadCount", controller = "Message"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetUnreadCount(System.String) on controller DncZeus.Api.Controllers.Api.Mis.MessageController (DncZeus.Api).
+2020-06-02 17:31:54,534 [22] INFO  Microsoft.EntityFrameworkCore.Infrastructure [(null)]  - Entity Framework Core 2.1.14-servicing-32113 initialized 'DncZeusDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: RowNumberPaging 
+2020-06-02 17:31:54,552 [22] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executing action method DncZeus.Api.Controllers.Api.Mis.MessageController.GetUnreadCount (DncZeus.Api) - Validation state: Valid
+2020-06-02 17:31:54,580 [22] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (24ms) [Parameters=[@__userno_0='?' (Size = 20) (DbType = AnsiString)], CommandType='Text', CommandTimeout='6000000']
+SELECT COUNT(*)
+FROM [Mismessage] AS [x]
+WHERE ([x].[receiveUserno] = @__userno_0) AND ([x].[readStatus] = CAST(1 AS tinyint))
+2020-06-02 17:31:54,583 [22] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action method DncZeus.Api.Controllers.Api.Mis.MessageController.GetUnreadCount (DncZeus.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 28.4909ms.
+2020-06-02 17:31:54,587 [22] INFO  Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor [(null)]  - Executing ObjectResult, writing value of type 'DncZeus.Api.Models.Response.ResponseResultModel'.
+2020-06-02 17:31:54,595 [22] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action DncZeus.Api.Controllers.Api.Mis.MessageController.GetUnreadCount (DncZeus.Api) in 56.253ms
+2020-06-02 17:31:54,599 [22] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 80.9562ms 200 application/json; charset=utf-8
+2020-06-02 17:32:23,650 [15] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 OPTIONS http://localhost:54321/api/v8/man/factory/list?api-version=8  
+2020-06-02 17:32:23,653 [11] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 OPTIONS http://localhost:54321/api/v8/man/workshop/list?api-version=8  
+2020-06-02 17:32:23,672 [15] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-06-02 17:32:23,677 [11] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-06-02 17:32:23,681 [15] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 26.6278ms 204 
+2020-06-02 17:32:23,686 [11] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 33.3107ms 204 
+2020-06-02 17:32:23,687 [21] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 POST http://localhost:54321/api/v8/man/factory/list?api-version=8 application/json;charset=UTF-8 96
+2020-06-02 17:32:23,701 [7] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 POST http://localhost:54321/api/v8/man/workshop/list?api-version=8 application/json;charset=UTF-8 139
+2020-06-02 17:32:23,702 [21] INFO  Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler [(null)]  - Successfully validated the token.
+2020-06-02 17:32:23,704 [7] INFO  Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler [(null)]  - Successfully validated the token.
+2020-06-02 17:32:23,707 [21] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-06-02 17:32:23,709 [7] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-06-02 17:32:23,711 [21] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Route matched with {action = "List", controller = "Factory"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult List(DncZeus.Api.RequestPayload.Man.Factory.FactoryRequestPayload) on controller DncZeus.Api.Controllers.Api.Weixin.FactoryController (DncZeus.Api).
+2020-06-02 17:32:23,735 [7] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Route matched with {action = "List", controller = "Workshop"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult List(DncZeus.Api.RequestPayload.Man.Workshop.WorkshopRequestPayload) on controller DncZeus.Api.Controllers.Api.Weixin.WorkshopController (DncZeus.Api).
+2020-06-02 17:32:23,745 [21] INFO  Microsoft.EntityFrameworkCore.Infrastructure [(null)]  - Entity Framework Core 2.1.14-servicing-32113 initialized 'DncZeusDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: RowNumberPaging 
+2020-06-02 17:32:23,747 [7] INFO  Microsoft.EntityFrameworkCore.Infrastructure [(null)]  - Entity Framework Core 2.1.14-servicing-32113 initialized 'DncZeusDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: RowNumberPaging 
+2020-06-02 17:32:23,784 [21] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executing action method DncZeus.Api.Controllers.Api.Weixin.FactoryController.List (DncZeus.Api) - Validation state: Valid
+2020-06-02 17:32:23,785 [7] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executing action method DncZeus.Api.Controllers.Api.Weixin.WorkshopController.List (DncZeus.Api) - Validation state: Valid
+2020-06-02 17:32:23,826 [21] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (37ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='6000000']
+SELECT [t].[Guid], [t].[OrgID], [t].[cadre], [t].[code], [t].[countType], [t].[credate], [t].[creuser], [t].[logistic], [t].[moddate], [t].[moduser], [t].[name], [t].[pertargetOut], [t].[worker]
+FROM (
+    SELECT [m].[Guid], [m].[OrgID], [m].[cadre], [m].[code], [m].[countType], [m].[credate], [m].[creuser], [m].[logistic], [m].[moddate], [m].[moduser], [m].[name], [m].[pertargetOut], [m].[worker], ROW_NUMBER() OVER(ORDER BY @@RowCount) AS [__RowNumber__]
+    FROM [ManFactory] AS [m]
+) AS [t]
+WHERE ([t].[__RowNumber__] > @__p_0) AND ([t].[__RowNumber__] <= (@__p_0 + @__p_1))
+2020-06-02 17:32:23,846 [7] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (58ms) [Parameters=[@p0='?', @p1='?', @p2='?' (DbType = DateTime2), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='Text', CommandTimeout='6000000']
+SELECT [t].[Guid], [t].[countType], [t].[credate], [t].[creuser], [t].[factoryGuid], [t].[factoryPrice], [t].[itemCode], [t].[itemName], [t].[lineGuid], [t].[ordCode], [t].[ordQty], [t].[qty], [t].[rate], [t].[remark], [t].[sumQty], [t].[workDate]
+FROM (
+    SELECT [w].[Guid], [w].[countType], [w].[credate], [w].[creuser], [w].[factoryGuid], [w].[factoryPrice], [w].[itemCode], [w].[itemName], [w].[lineGuid], [w].[ordCode], [w].[ordQty], [w].[qty], [w].[rate], [w].[remark], [w].[sumQty], [w].[workDate], ROW_NUMBER() OVER(ORDER BY @@RowCount) AS [__RowNumber__]
+    FROM (
+        select b.Guid,b.factoryGuid,b.countType,b.ordCode,b.itemCode,b.itemName,b.factoryPrice,b.ordQty,b.creuser,b.credate,line.remark,line.workDate,isnull(line.qty,0) as qty,line.Guid as lineGuid,
+                                        (select sum(qty) from ManWorkshopOutLine as l where l.workshopOutGuid=b.Guid ) as sumqty,d.rate
+                                        from ManWorkshopOut as b
+                                        left join (select * from ManWorkshopOutLine where  credate in (select max(credate) from [dbo].[ManWorkshopOutLine] as a where a.workDate=@p2 group by a.workshopOutGuid)) AS line ON (line.workshopOutGuid = b.Guid)
+                                        left join ManOutSplit as c on(c.factoryGuid=b.factoryGuid and c.ordCode=b.ordCode and c.itemCode=b.itemCode)
+        left join ManOutSplitLine as d on(d.workProcessGuid=c.Guid and d.ProcessGuid=@p1)
+        where  b.workProcessGuid=@p1 
+    ) AS [w]
+) AS [t]
+WHERE ([t].[__RowNumber__] > @__p_1) AND ([t].[__RowNumber__] <= (@__p_1 + @__p_2))
+2020-06-02 17:32:23,848 [21] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (19ms) [Parameters=[], CommandType='Text', CommandTimeout='6000000']
+SELECT COUNT(*)
+FROM [ManFactory] AS [m]
+2020-06-02 17:32:23,851 [21] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action method DncZeus.Api.Controllers.Api.Weixin.FactoryController.List (DncZeus.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 62.3805ms.
+2020-06-02 17:32:23,871 [21] INFO  Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor [(null)]  - Executing ObjectResult, writing value of type 'DncZeus.Api.Models.Response.ResponseResultModel'.
+2020-06-02 17:32:23,876 [21] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action DncZeus.Api.Controllers.Api.Weixin.FactoryController.List (DncZeus.Api) in 160.2276ms
+2020-06-02 17:32:23,879 [21] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 194.7233ms 200 application/json; charset=utf-8
+2020-06-02 17:32:23,882 [7] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (32ms) [Parameters=[@p0='?', @p1='?', @p2='?' (DbType = DateTime2)], CommandType='Text', CommandTimeout='6000000']
+SELECT COUNT(*)
+FROM (
+    select b.Guid,b.factoryGuid,b.countType,b.ordCode,b.itemCode,b.itemName,b.factoryPrice,b.ordQty,b.creuser,b.credate,line.remark,line.workDate,isnull(line.qty,0) as qty,line.Guid as lineGuid,
+                                    (select sum(qty) from ManWorkshopOutLine as l where l.workshopOutGuid=b.Guid ) as sumqty,d.rate
+                                    from ManWorkshopOut as b
+                                    left join (select * from ManWorkshopOutLine where  credate in (select max(credate) from [dbo].[ManWorkshopOutLine] as a where a.workDate=@p2 group by a.workshopOutGuid)) AS line ON (line.workshopOutGuid = b.Guid)
+                                    left join ManOutSplit as c on(c.factoryGuid=b.factoryGuid and c.ordCode=b.ordCode and c.itemCode=b.itemCode)
+    left join ManOutSplitLine as d on(d.workProcessGuid=c.Guid and d.ProcessGuid=@p1)
+    where  b.workProcessGuid=@p1 
+) AS [w]
+2020-06-02 17:32:23,885 [7] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action method DncZeus.Api.Controllers.Api.Weixin.WorkshopController.List (DncZeus.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 96.2191ms.
+2020-06-02 17:32:23,890 [7] INFO  Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor [(null)]  - Executing ObjectResult, writing value of type 'DncZeus.Api.Models.Response.ResponseResultModel'.
+2020-06-02 17:32:23,894 [7] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action DncZeus.Api.Controllers.Api.Weixin.WorkshopController.List (DncZeus.Api) in 148.2838ms
+2020-06-02 17:32:23,898 [7] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 195.6951ms 200 application/json; charset=utf-8
+2020-06-02 17:32:24,491 [22] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 OPTIONS http://localhost:54321/api/v5/mis/message/GetUnreadCount?api-version=5&userno=admin  
+2020-06-02 17:32:24,492 [22] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-06-02 17:32:24,495 [22] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 3.7815ms 204 
+2020-06-02 17:32:24,497 [7] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 GET http://localhost:54321/api/v5/mis/message/GetUnreadCount?api-version=5&userno=admin  
+2020-06-02 17:32:24,500 [7] INFO  Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler [(null)]  - Successfully validated the token.
+2020-06-02 17:32:24,502 [7] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-06-02 17:32:24,505 [7] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Route matched with {action = "GetUnreadCount", controller = "Message"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetUnreadCount(System.String) on controller DncZeus.Api.Controllers.Api.Mis.MessageController (DncZeus.Api).
+2020-06-02 17:32:24,507 [7] INFO  Microsoft.EntityFrameworkCore.Infrastructure [(null)]  - Entity Framework Core 2.1.14-servicing-32113 initialized 'DncZeusDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: RowNumberPaging 
+2020-06-02 17:32:24,528 [7] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executing action method DncZeus.Api.Controllers.Api.Mis.MessageController.GetUnreadCount (DncZeus.Api) - Validation state: Valid
+2020-06-02 17:32:24,552 [7] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (21ms) [Parameters=[@__userno_0='?' (Size = 20) (DbType = AnsiString)], CommandType='Text', CommandTimeout='6000000']
+SELECT COUNT(*)
+FROM [Mismessage] AS [x]
+WHERE ([x].[receiveUserno] = @__userno_0) AND ([x].[readStatus] = CAST(1 AS tinyint))
+2020-06-02 17:32:24,555 [7] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action method DncZeus.Api.Controllers.Api.Mis.MessageController.GetUnreadCount (DncZeus.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 24.2863ms.
+2020-06-02 17:32:24,558 [7] INFO  Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor [(null)]  - Executing ObjectResult, writing value of type 'DncZeus.Api.Models.Response.ResponseResultModel'.
+2020-06-02 17:32:24,562 [7] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action DncZeus.Api.Controllers.Api.Mis.MessageController.GetUnreadCount (DncZeus.Api) in 53.9374ms
+2020-06-02 17:32:24,564 [7] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 66.5574ms 200 application/json; charset=utf-8
+2020-06-02 17:32:41,129 [22] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 OPTIONS http://localhost:54321/api/v8/man/factory/list?api-version=8  
+2020-06-02 17:32:41,156 [23] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 OPTIONS http://localhost:54321/api/v8/man/workshop/list?api-version=8  
+2020-06-02 17:32:41,167 [22] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-06-02 17:32:41,170 [23] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-06-02 17:32:41,185 [22] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 55.4236ms 204 
+2020-06-02 17:32:41,186 [23] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 53.9733ms 204 
+2020-06-02 17:32:41,192 [23] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 POST http://localhost:54321/api/v8/man/workshop/list?api-version=8 application/json;charset=UTF-8 139
+2020-06-02 17:32:41,193 [7] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 POST http://localhost:54321/api/v8/man/factory/list?api-version=8 application/json;charset=UTF-8 96
+2020-06-02 17:32:41,195 [23] INFO  Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler [(null)]  - Successfully validated the token.
+2020-06-02 17:32:41,197 [7] INFO  Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler [(null)]  - Successfully validated the token.
+2020-06-02 17:32:41,199 [23] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-06-02 17:32:41,201 [7] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-06-02 17:32:41,206 [23] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Route matched with {action = "List", controller = "Workshop"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult List(DncZeus.Api.RequestPayload.Man.Workshop.WorkshopRequestPayload) on controller DncZeus.Api.Controllers.Api.Weixin.WorkshopController (DncZeus.Api).
+2020-06-02 17:32:41,208 [7] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Route matched with {action = "List", controller = "Factory"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult List(DncZeus.Api.RequestPayload.Man.Factory.FactoryRequestPayload) on controller DncZeus.Api.Controllers.Api.Weixin.FactoryController (DncZeus.Api).
+2020-06-02 17:32:41,211 [23] INFO  Microsoft.EntityFrameworkCore.Infrastructure [(null)]  - Entity Framework Core 2.1.14-servicing-32113 initialized 'DncZeusDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: RowNumberPaging 
+2020-06-02 17:32:41,214 [7] INFO  Microsoft.EntityFrameworkCore.Infrastructure [(null)]  - Entity Framework Core 2.1.14-servicing-32113 initialized 'DncZeusDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: RowNumberPaging 
+2020-06-02 17:32:41,252 [23] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executing action method DncZeus.Api.Controllers.Api.Weixin.WorkshopController.List (DncZeus.Api) - Validation state: Valid
+2020-06-02 17:32:41,254 [7] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executing action method DncZeus.Api.Controllers.Api.Weixin.FactoryController.List (DncZeus.Api) - Validation state: Valid
+2020-06-02 17:32:41,299 [23] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (44ms) [Parameters=[@p0='?', @p1='?', @p2='?' (DbType = DateTime2), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='Text', CommandTimeout='6000000']
+SELECT [t].[Guid], [t].[countType], [t].[credate], [t].[creuser], [t].[factoryGuid], [t].[factoryPrice], [t].[itemCode], [t].[itemName], [t].[lineGuid], [t].[ordCode], [t].[ordQty], [t].[qty], [t].[rate], [t].[remark], [t].[sumQty], [t].[workDate]
+FROM (
+    SELECT [w].[Guid], [w].[countType], [w].[credate], [w].[creuser], [w].[factoryGuid], [w].[factoryPrice], [w].[itemCode], [w].[itemName], [w].[lineGuid], [w].[ordCode], [w].[ordQty], [w].[qty], [w].[rate], [w].[remark], [w].[sumQty], [w].[workDate], ROW_NUMBER() OVER(ORDER BY @@RowCount) AS [__RowNumber__]
+    FROM (
+        select b.Guid,b.factoryGuid,b.countType,b.ordCode,b.itemCode,b.itemName,b.factoryPrice,b.ordQty,b.creuser,b.credate,line.remark,line.workDate,isnull(line.qty,0) as qty,line.Guid as lineGuid,
+                                        (select sum(qty) from ManWorkshopOutLine as l where l.workshopOutGuid=b.Guid ) as sumqty,d.rate
+                                        from ManWorkshopOut as b
+                                        left join (select * from ManWorkshopOutLine where  credate in (select max(credate) from [dbo].[ManWorkshopOutLine] as a where a.workDate=@p2 group by a.workshopOutGuid)) AS line ON (line.workshopOutGuid = b.Guid)
+                                        left join ManOutSplit as c on(c.factoryGuid=b.factoryGuid and c.ordCode=b.ordCode and c.itemCode=b.itemCode)
+        left join ManOutSplitLine as d on(d.workProcessGuid=c.Guid and d.ProcessGuid=@p1)
+        where  b.workProcessGuid=@p1 
+    ) AS [w]
+) AS [t]
+WHERE ([t].[__RowNumber__] > @__p_1) AND ([t].[__RowNumber__] <= (@__p_1 + @__p_2))
+2020-06-02 17:32:41,319 [7] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (26ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='6000000']
+SELECT [t].[Guid], [t].[OrgID], [t].[cadre], [t].[code], [t].[countType], [t].[credate], [t].[creuser], [t].[logistic], [t].[moddate], [t].[moduser], [t].[name], [t].[pertargetOut], [t].[worker]
+FROM (
+    SELECT [m].[Guid], [m].[OrgID], [m].[cadre], [m].[code], [m].[countType], [m].[credate], [m].[creuser], [m].[logistic], [m].[moddate], [m].[moduser], [m].[name], [m].[pertargetOut], [m].[worker], ROW_NUMBER() OVER(ORDER BY @@RowCount) AS [__RowNumber__]
+    FROM [ManFactory] AS [m]
+) AS [t]
+WHERE ([t].[__RowNumber__] > @__p_0) AND ([t].[__RowNumber__] <= (@__p_0 + @__p_1))
+2020-06-02 17:32:41,342 [23] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (39ms) [Parameters=[@p0='?', @p1='?', @p2='?' (DbType = DateTime2)], CommandType='Text', CommandTimeout='6000000']
+SELECT COUNT(*)
+FROM (
+    select b.Guid,b.factoryGuid,b.countType,b.ordCode,b.itemCode,b.itemName,b.factoryPrice,b.ordQty,b.creuser,b.credate,line.remark,line.workDate,isnull(line.qty,0) as qty,line.Guid as lineGuid,
+                                    (select sum(qty) from ManWorkshopOutLine as l where l.workshopOutGuid=b.Guid ) as sumqty,d.rate
+                                    from ManWorkshopOut as b
+                                    left join (select * from ManWorkshopOutLine where  credate in (select max(credate) from [dbo].[ManWorkshopOutLine] as a where a.workDate=@p2 group by a.workshopOutGuid)) AS line ON (line.workshopOutGuid = b.Guid)
+                                    left join ManOutSplit as c on(c.factoryGuid=b.factoryGuid and c.ordCode=b.ordCode and c.itemCode=b.itemCode)
+    left join ManOutSplitLine as d on(d.workProcessGuid=c.Guid and d.ProcessGuid=@p1)
+    where  b.workProcessGuid=@p1 
+) AS [w]
+2020-06-02 17:32:41,344 [7] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (21ms) [Parameters=[], CommandType='Text', CommandTimeout='6000000']
+SELECT COUNT(*)
+FROM [ManFactory] AS [m]
+2020-06-02 17:32:41,345 [23] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action method DncZeus.Api.Controllers.Api.Weixin.WorkshopController.List (DncZeus.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 92.1248ms.
+2020-06-02 17:32:41,347 [7] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action method DncZeus.Api.Controllers.Api.Weixin.FactoryController.List (DncZeus.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 71.8691ms.
+2020-06-02 17:32:41,349 [23] INFO  Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor [(null)]  - Executing ObjectResult, writing value of type 'DncZeus.Api.Models.Response.ResponseResultModel'.
+2020-06-02 17:32:41,350 [7] INFO  Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor [(null)]  - Executing ObjectResult, writing value of type 'DncZeus.Api.Models.Response.ResponseResultModel'.
+2020-06-02 17:32:41,352 [23] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action DncZeus.Api.Controllers.Api.Weixin.WorkshopController.List (DncZeus.Api) in 143.465ms
+2020-06-02 17:32:41,354 [7] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action DncZeus.Api.Controllers.Api.Weixin.FactoryController.List (DncZeus.Api) in 143.4477ms
+2020-06-02 17:32:41,358 [23] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 164.516ms 200 application/json; charset=utf-8
+2020-06-02 17:32:41,360 [7] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 167.1288ms 200 application/json; charset=utf-8
+2020-06-02 17:32:54,492 [29] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 OPTIONS http://localhost:54321/api/v5/mis/message/GetUnreadCount?api-version=5&userno=admin  
+2020-06-02 17:32:54,495 [29] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-06-02 17:32:54,498 [29] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 4.9522ms 204 
+2020-06-02 17:32:54,503 [21] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 GET http://localhost:54321/api/v5/mis/message/GetUnreadCount?api-version=5&userno=admin  
+2020-06-02 17:32:54,506 [21] INFO  Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler [(null)]  - Successfully validated the token.
+2020-06-02 17:32:54,509 [21] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-06-02 17:32:54,512 [21] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Route matched with {action = "GetUnreadCount", controller = "Message"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetUnreadCount(System.String) on controller DncZeus.Api.Controllers.Api.Mis.MessageController (DncZeus.Api).
+2020-06-02 17:32:54,517 [21] INFO  Microsoft.EntityFrameworkCore.Infrastructure [(null)]  - Entity Framework Core 2.1.14-servicing-32113 initialized 'DncZeusDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: RowNumberPaging 
+2020-06-02 17:32:54,550 [21] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executing action method DncZeus.Api.Controllers.Api.Mis.MessageController.GetUnreadCount (DncZeus.Api) - Validation state: Valid
+2020-06-02 17:32:54,572 [21] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (19ms) [Parameters=[@__userno_0='?' (Size = 20) (DbType = AnsiString)], CommandType='Text', CommandTimeout='6000000']
+SELECT COUNT(*)
+FROM [Mismessage] AS [x]
+WHERE ([x].[receiveUserno] = @__userno_0) AND ([x].[readStatus] = CAST(1 AS tinyint))
+2020-06-02 17:32:54,574 [21] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action method DncZeus.Api.Controllers.Api.Mis.MessageController.GetUnreadCount (DncZeus.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 22.0247ms.
+2020-06-02 17:32:54,577 [21] INFO  Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor [(null)]  - Executing ObjectResult, writing value of type 'DncZeus.Api.Models.Response.ResponseResultModel'.
+2020-06-02 17:32:54,585 [21] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action DncZeus.Api.Controllers.Api.Mis.MessageController.GetUnreadCount (DncZeus.Api) in 62.9773ms
+2020-06-02 17:32:54,588 [21] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 84.8206ms 200 application/json; charset=utf-8
+2020-06-02 17:33:24,491 [30] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 OPTIONS http://localhost:54321/api/v5/mis/message/GetUnreadCount?api-version=5&userno=admin  
+2020-06-02 17:33:24,501 [30] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-06-02 17:33:24,510 [30] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 11.9337ms 204 
+2020-06-02 17:33:24,512 [21] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 GET http://localhost:54321/api/v5/mis/message/GetUnreadCount?api-version=5&userno=admin  
+2020-06-02 17:33:24,514 [21] INFO  Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler [(null)]  - Successfully validated the token.
+2020-06-02 17:33:24,517 [21] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-06-02 17:33:24,519 [21] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Route matched with {action = "GetUnreadCount", controller = "Message"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetUnreadCount(System.String) on controller DncZeus.Api.Controllers.Api.Mis.MessageController (DncZeus.Api).
+2020-06-02 17:33:24,523 [21] INFO  Microsoft.EntityFrameworkCore.Infrastructure [(null)]  - Entity Framework Core 2.1.14-servicing-32113 initialized 'DncZeusDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: RowNumberPaging 
+2020-06-02 17:33:24,541 [21] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executing action method DncZeus.Api.Controllers.Api.Mis.MessageController.GetUnreadCount (DncZeus.Api) - Validation state: Valid
+2020-06-02 17:33:24,565 [21] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (20ms) [Parameters=[@__userno_0='?' (Size = 20) (DbType = AnsiString)], CommandType='Text', CommandTimeout='6000000']
+SELECT COUNT(*)
+FROM [Mismessage] AS [x]
+WHERE ([x].[receiveUserno] = @__userno_0) AND ([x].[readStatus] = CAST(1 AS tinyint))
+2020-06-02 17:33:24,567 [21] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action method DncZeus.Api.Controllers.Api.Mis.MessageController.GetUnreadCount (DncZeus.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 23.7442ms.
+2020-06-02 17:33:24,570 [21] INFO  Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor [(null)]  - Executing ObjectResult, writing value of type 'DncZeus.Api.Models.Response.ResponseResultModel'.
+2020-06-02 17:33:24,573 [21] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action DncZeus.Api.Controllers.Api.Mis.MessageController.GetUnreadCount (DncZeus.Api) in 50.5652ms
+2020-06-02 17:33:24,577 [21] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 65.0067ms 200 application/json; charset=utf-8
+2020-06-02 17:33:54,492 [21] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 OPTIONS http://localhost:54321/api/v5/mis/message/GetUnreadCount?api-version=5&userno=admin  
+2020-06-02 17:33:54,504 [21] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-06-02 17:33:54,507 [21] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 14.9085ms 204 
+2020-06-02 17:33:54,522 [11] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 GET http://localhost:54321/api/v5/mis/message/GetUnreadCount?api-version=5&userno=admin  
+2020-06-02 17:33:54,524 [11] INFO  Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler [(null)]  - Successfully validated the token.
+2020-06-02 17:33:54,527 [11] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-06-02 17:33:54,530 [11] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Route matched with {action = "GetUnreadCount", controller = "Message"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetUnreadCount(System.String) on controller DncZeus.Api.Controllers.Api.Mis.MessageController (DncZeus.Api).
+2020-06-02 17:33:54,532 [11] INFO  Microsoft.EntityFrameworkCore.Infrastructure [(null)]  - Entity Framework Core 2.1.14-servicing-32113 initialized 'DncZeusDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: RowNumberPaging 
+2020-06-02 17:33:54,555 [11] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executing action method DncZeus.Api.Controllers.Api.Mis.MessageController.GetUnreadCount (DncZeus.Api) - Validation state: Valid
+2020-06-02 17:33:54,579 [11] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (22ms) [Parameters=[@__userno_0='?' (Size = 20) (DbType = AnsiString)], CommandType='Text', CommandTimeout='6000000']
+SELECT COUNT(*)
+FROM [Mismessage] AS [x]
+WHERE ([x].[receiveUserno] = @__userno_0) AND ([x].[readStatus] = CAST(1 AS tinyint))
+2020-06-02 17:33:54,582 [11] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action method DncZeus.Api.Controllers.Api.Mis.MessageController.GetUnreadCount (DncZeus.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 24.964ms.
+2020-06-02 17:33:54,584 [11] INFO  Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor [(null)]  - Executing ObjectResult, writing value of type 'DncZeus.Api.Models.Response.ResponseResultModel'.
+2020-06-02 17:33:54,589 [11] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action DncZeus.Api.Controllers.Api.Mis.MessageController.GetUnreadCount (DncZeus.Api) in 54.9439ms
+2020-06-02 17:33:54,592 [11] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 70.2252ms 200 application/json; charset=utf-8
+2020-06-02 17:34:24,491 [21] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 OPTIONS http://localhost:54321/api/v5/mis/message/GetUnreadCount?api-version=5&userno=admin  
+2020-06-02 17:34:24,501 [21] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-06-02 17:34:24,511 [21] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 13.8901ms 204 
+2020-06-02 17:34:24,516 [11] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 GET http://localhost:54321/api/v5/mis/message/GetUnreadCount?api-version=5&userno=admin  
+2020-06-02 17:34:24,519 [11] INFO  Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler [(null)]  - Successfully validated the token.
+2020-06-02 17:34:24,522 [11] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-06-02 17:34:24,524 [11] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Route matched with {action = "GetUnreadCount", controller = "Message"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetUnreadCount(System.String) on controller DncZeus.Api.Controllers.Api.Mis.MessageController (DncZeus.Api).
+2020-06-02 17:34:24,527 [11] INFO  Microsoft.EntityFrameworkCore.Infrastructure [(null)]  - Entity Framework Core 2.1.14-servicing-32113 initialized 'DncZeusDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: RowNumberPaging 
+2020-06-02 17:34:24,544 [11] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executing action method DncZeus.Api.Controllers.Api.Mis.MessageController.GetUnreadCount (DncZeus.Api) - Validation state: Valid
+2020-06-02 17:34:24,566 [11] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (19ms) [Parameters=[@__userno_0='?' (Size = 20) (DbType = AnsiString)], CommandType='Text', CommandTimeout='6000000']
+SELECT COUNT(*)
+FROM [Mismessage] AS [x]
+WHERE ([x].[receiveUserno] = @__userno_0) AND ([x].[readStatus] = CAST(1 AS tinyint))
+2020-06-02 17:34:24,568 [11] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action method DncZeus.Api.Controllers.Api.Mis.MessageController.GetUnreadCount (DncZeus.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 21.393ms.
+2020-06-02 17:34:24,571 [11] INFO  Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor [(null)]  - Executing ObjectResult, writing value of type 'DncZeus.Api.Models.Response.ResponseResultModel'.
+2020-06-02 17:34:24,576 [11] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action DncZeus.Api.Controllers.Api.Mis.MessageController.GetUnreadCount (DncZeus.Api) in 47.8175ms
+2020-06-02 17:34:24,579 [11] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 62.1906ms 200 application/json; charset=utf-8
+2020-06-02 17:34:54,491 [21] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 OPTIONS http://localhost:54321/api/v5/mis/message/GetUnreadCount?api-version=5&userno=admin  
+2020-06-02 17:34:54,502 [21] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-06-02 17:34:54,506 [21] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 13.5295ms 204 
+2020-06-02 17:34:54,517 [11] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 GET http://localhost:54321/api/v5/mis/message/GetUnreadCount?api-version=5&userno=admin  
+2020-06-02 17:34:54,521 [11] INFO  Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler [(null)]  - Successfully validated the token.
+2020-06-02 17:34:54,523 [11] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-06-02 17:34:54,526 [11] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Route matched with {action = "GetUnreadCount", controller = "Message"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetUnreadCount(System.String) on controller DncZeus.Api.Controllers.Api.Mis.MessageController (DncZeus.Api).
+2020-06-02 17:34:54,529 [11] INFO  Microsoft.EntityFrameworkCore.Infrastructure [(null)]  - Entity Framework Core 2.1.14-servicing-32113 initialized 'DncZeusDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: RowNumberPaging 
+2020-06-02 17:34:54,547 [11] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executing action method DncZeus.Api.Controllers.Api.Mis.MessageController.GetUnreadCount (DncZeus.Api) - Validation state: Valid
+2020-06-02 17:34:54,568 [11] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (18ms) [Parameters=[@__userno_0='?' (Size = 20) (DbType = AnsiString)], CommandType='Text', CommandTimeout='6000000']
+SELECT COUNT(*)
+FROM [Mismessage] AS [x]
+WHERE ([x].[receiveUserno] = @__userno_0) AND ([x].[readStatus] = CAST(1 AS tinyint))
+2020-06-02 17:34:54,570 [11] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action method DncZeus.Api.Controllers.Api.Mis.MessageController.GetUnreadCount (DncZeus.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 21.5331ms.
+2020-06-02 17:34:54,573 [11] INFO  Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor [(null)]  - Executing ObjectResult, writing value of type 'DncZeus.Api.Models.Response.ResponseResultModel'.
+2020-06-02 17:34:54,575 [11] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action DncZeus.Api.Controllers.Api.Mis.MessageController.GetUnreadCount (DncZeus.Api) in 46.4914ms
+2020-06-02 17:34:54,577 [11] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 59.7953ms 200 application/json; charset=utf-8
+2020-06-02 17:35:24,490 [21] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 OPTIONS http://localhost:54321/api/v5/mis/message/GetUnreadCount?api-version=5&userno=admin  
+2020-06-02 17:35:24,499 [21] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-06-02 17:35:24,508 [21] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 10.4482ms 204 
+2020-06-02 17:35:24,511 [30] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 GET http://localhost:54321/api/v5/mis/message/GetUnreadCount?api-version=5&userno=admin  
+2020-06-02 17:35:24,513 [30] INFO  Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler [(null)]  - Successfully validated the token.
+2020-06-02 17:35:24,517 [30] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-06-02 17:35:24,519 [30] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Route matched with {action = "GetUnreadCount", controller = "Message"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetUnreadCount(System.String) on controller DncZeus.Api.Controllers.Api.Mis.MessageController (DncZeus.Api).
+2020-06-02 17:35:24,522 [30] INFO  Microsoft.EntityFrameworkCore.Infrastructure [(null)]  - Entity Framework Core 2.1.14-servicing-32113 initialized 'DncZeusDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: RowNumberPaging 
+2020-06-02 17:35:24,543 [30] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executing action method DncZeus.Api.Controllers.Api.Mis.MessageController.GetUnreadCount (DncZeus.Api) - Validation state: Valid
+2020-06-02 17:35:24,570 [30] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (23ms) [Parameters=[@__userno_0='?' (Size = 20) (DbType = AnsiString)], CommandType='Text', CommandTimeout='6000000']
+SELECT COUNT(*)
+FROM [Mismessage] AS [x]
+WHERE ([x].[receiveUserno] = @__userno_0) AND ([x].[readStatus] = CAST(1 AS tinyint))
+2020-06-02 17:35:24,573 [30] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action method DncZeus.Api.Controllers.Api.Mis.MessageController.GetUnreadCount (DncZeus.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 26.6214ms.
+2020-06-02 17:35:24,575 [30] INFO  Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor [(null)]  - Executing ObjectResult, writing value of type 'DncZeus.Api.Models.Response.ResponseResultModel'.
+2020-06-02 17:35:24,579 [30] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action DncZeus.Api.Controllers.Api.Mis.MessageController.GetUnreadCount (DncZeus.Api) in 56.2381ms
+2020-06-02 17:35:24,581 [30] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 70.7289ms 200 application/json; charset=utf-8
+2020-06-02 17:35:54,492 [37] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 OPTIONS http://localhost:54321/api/v5/mis/message/GetUnreadCount?api-version=5&userno=admin  
+2020-06-02 17:35:54,525 [37] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-06-02 17:35:54,535 [37] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 42.4633ms 204 
+2020-06-02 17:35:54,544 [37] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 GET http://localhost:54321/api/v5/mis/message/GetUnreadCount?api-version=5&userno=admin  
+2020-06-02 17:35:54,547 [37] INFO  Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler [(null)]  - Successfully validated the token.
+2020-06-02 17:35:54,550 [37] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-06-02 17:35:54,552 [37] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Route matched with {action = "GetUnreadCount", controller = "Message"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetUnreadCount(System.String) on controller DncZeus.Api.Controllers.Api.Mis.MessageController (DncZeus.Api).
+2020-06-02 17:35:54,554 [37] INFO  Microsoft.EntityFrameworkCore.Infrastructure [(null)]  - Entity Framework Core 2.1.14-servicing-32113 initialized 'DncZeusDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: RowNumberPaging 
+2020-06-02 17:35:54,573 [37] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executing action method DncZeus.Api.Controllers.Api.Mis.MessageController.GetUnreadCount (DncZeus.Api) - Validation state: Valid
+2020-06-02 17:35:54,595 [37] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (20ms) [Parameters=[@__userno_0='?' (Size = 20) (DbType = AnsiString)], CommandType='Text', CommandTimeout='6000000']
+SELECT COUNT(*)
+FROM [Mismessage] AS [x]
+WHERE ([x].[receiveUserno] = @__userno_0) AND ([x].[readStatus] = CAST(1 AS tinyint))
+2020-06-02 17:35:54,597 [37] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action method DncZeus.Api.Controllers.Api.Mis.MessageController.GetUnreadCount (DncZeus.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 21.9955ms.
+2020-06-02 17:35:54,601 [37] INFO  Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor [(null)]  - Executing ObjectResult, writing value of type 'DncZeus.Api.Models.Response.ResponseResultModel'.
+2020-06-02 17:35:54,603 [37] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action DncZeus.Api.Controllers.Api.Mis.MessageController.GetUnreadCount (DncZeus.Api) in 49.007ms
+2020-06-02 17:35:54,605 [37] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 60.7156ms 200 application/json; charset=utf-8
+2020-06-02 17:36:24,491 [30] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 OPTIONS http://localhost:54321/api/v5/mis/message/GetUnreadCount?api-version=5&userno=admin  
+2020-06-02 17:36:24,502 [30] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-06-02 17:36:24,504 [30] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 13.1254ms 204 
+2020-06-02 17:36:24,507 [30] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 GET http://localhost:54321/api/v5/mis/message/GetUnreadCount?api-version=5&userno=admin  
+2020-06-02 17:36:24,510 [30] INFO  Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler [(null)]  - Successfully validated the token.
+2020-06-02 17:36:24,520 [30] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-06-02 17:36:24,522 [30] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Route matched with {action = "GetUnreadCount", controller = "Message"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetUnreadCount(System.String) on controller DncZeus.Api.Controllers.Api.Mis.MessageController (DncZeus.Api).
+2020-06-02 17:36:24,527 [30] INFO  Microsoft.EntityFrameworkCore.Infrastructure [(null)]  - Entity Framework Core 2.1.14-servicing-32113 initialized 'DncZeusDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: RowNumberPaging 
+2020-06-02 17:36:24,551 [30] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executing action method DncZeus.Api.Controllers.Api.Mis.MessageController.GetUnreadCount (DncZeus.Api) - Validation state: Valid
+2020-06-02 17:36:24,576 [30] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (22ms) [Parameters=[@__userno_0='?' (Size = 20) (DbType = AnsiString)], CommandType='Text', CommandTimeout='6000000']
+SELECT COUNT(*)
+FROM [Mismessage] AS [x]
+WHERE ([x].[receiveUserno] = @__userno_0) AND ([x].[readStatus] = CAST(1 AS tinyint))
+2020-06-02 17:36:24,578 [30] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action method DncZeus.Api.Controllers.Api.Mis.MessageController.GetUnreadCount (DncZeus.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 24.2988ms.
+2020-06-02 17:36:24,580 [30] INFO  Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor [(null)]  - Executing ObjectResult, writing value of type 'DncZeus.Api.Models.Response.ResponseResultModel'.
+2020-06-02 17:36:24,584 [30] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action DncZeus.Api.Controllers.Api.Mis.MessageController.GetUnreadCount (DncZeus.Api) in 57.9601ms
+2020-06-02 17:36:24,587 [30] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 79.072ms 200 application/json; charset=utf-8
+2020-06-02 17:36:33,975 [37] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 OPTIONS http://localhost:54321/api/v8/man/factory/list?api-version=8  
+2020-06-02 17:36:33,977 [37] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-06-02 17:36:33,981 [37] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 4.9682ms 204 
+2020-06-02 17:36:34,013 [11] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 OPTIONS http://localhost:54321/api/v8/man/workshop/list?api-version=8  
+2020-06-02 17:36:34,028 [11] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-06-02 17:36:34,029 [41] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 POST http://localhost:54321/api/v8/man/factory/list?api-version=8 application/json;charset=UTF-8 96
+2020-06-02 17:36:34,039 [41] INFO  Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler [(null)]  - Successfully validated the token.
+2020-06-02 17:36:34,066 [11] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 21.4664ms 204 
+2020-06-02 17:36:34,068 [37] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 POST http://localhost:54321/api/v8/man/workshop/list?api-version=8 application/json;charset=UTF-8 139
+2020-06-02 17:36:34,069 [41] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-06-02 17:36:34,073 [37] INFO  Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler [(null)]  - Successfully validated the token.
+2020-06-02 17:36:34,074 [41] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Route matched with {action = "List", controller = "Factory"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult List(DncZeus.Api.RequestPayload.Man.Factory.FactoryRequestPayload) on controller DncZeus.Api.Controllers.Api.Weixin.FactoryController (DncZeus.Api).
+2020-06-02 17:36:34,076 [37] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-06-02 17:36:34,081 [37] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Route matched with {action = "List", controller = "Workshop"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult List(DncZeus.Api.RequestPayload.Man.Workshop.WorkshopRequestPayload) on controller DncZeus.Api.Controllers.Api.Weixin.WorkshopController (DncZeus.Api).
+2020-06-02 17:36:34,083 [41] INFO  Microsoft.EntityFrameworkCore.Infrastructure [(null)]  - Entity Framework Core 2.1.14-servicing-32113 initialized 'DncZeusDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: RowNumberPaging 
+2020-06-02 17:36:34,086 [37] INFO  Microsoft.EntityFrameworkCore.Infrastructure [(null)]  - Entity Framework Core 2.1.14-servicing-32113 initialized 'DncZeusDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: RowNumberPaging 
+2020-06-02 17:36:34,103 [41] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executing action method DncZeus.Api.Controllers.Api.Weixin.FactoryController.List (DncZeus.Api) - Validation state: Valid
+2020-06-02 17:36:34,120 [37] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executing action method DncZeus.Api.Controllers.Api.Weixin.WorkshopController.List (DncZeus.Api) - Validation state: Valid
+2020-06-02 17:36:34,140 [41] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (18ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='6000000']
+SELECT [t].[Guid], [t].[OrgID], [t].[cadre], [t].[code], [t].[countType], [t].[credate], [t].[creuser], [t].[logistic], [t].[moddate], [t].[moduser], [t].[name], [t].[pertargetOut], [t].[worker]
+FROM (
+    SELECT [m].[Guid], [m].[OrgID], [m].[cadre], [m].[code], [m].[countType], [m].[credate], [m].[creuser], [m].[logistic], [m].[moddate], [m].[moduser], [m].[name], [m].[pertargetOut], [m].[worker], ROW_NUMBER() OVER(ORDER BY @@RowCount) AS [__RowNumber__]
+    FROM [ManFactory] AS [m]
+) AS [t]
+WHERE ([t].[__RowNumber__] > @__p_0) AND ([t].[__RowNumber__] <= (@__p_0 + @__p_1))
+2020-06-02 17:36:34,176 [41] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (33ms) [Parameters=[], CommandType='Text', CommandTimeout='6000000']
+SELECT COUNT(*)
+FROM [ManFactory] AS [m]
+2020-06-02 17:36:34,178 [41] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action method DncZeus.Api.Controllers.Api.Weixin.FactoryController.List (DncZeus.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 58.2064ms.
+2020-06-02 17:36:34,180 [41] INFO  Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor [(null)]  - Executing ObjectResult, writing value of type 'DncZeus.Api.Models.Response.ResponseResultModel'.
+2020-06-02 17:36:34,184 [41] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action DncZeus.Api.Controllers.Api.Weixin.FactoryController.List (DncZeus.Api) in 103.7385ms
+2020-06-02 17:36:34,188 [41] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 160.2573ms 200 application/json; charset=utf-8
+2020-06-02 17:36:34,195 [37] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (52ms) [Parameters=[@p0='?', @p1='?', @p2='?' (DbType = DateTime2), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='Text', CommandTimeout='6000000']
+SELECT [t].[Guid], [t].[countType], [t].[credate], [t].[creuser], [t].[factoryGuid], [t].[factoryPrice], [t].[itemCode], [t].[itemName], [t].[lineGuid], [t].[ordCode], [t].[ordQty], [t].[qty], [t].[rate], [t].[remark], [t].[sumQty], [t].[workDate]
+FROM (
+    SELECT [w].[Guid], [w].[countType], [w].[credate], [w].[creuser], [w].[factoryGuid], [w].[factoryPrice], [w].[itemCode], [w].[itemName], [w].[lineGuid], [w].[ordCode], [w].[ordQty], [w].[qty], [w].[rate], [w].[remark], [w].[sumQty], [w].[workDate], ROW_NUMBER() OVER(ORDER BY @@RowCount) AS [__RowNumber__]
+    FROM (
+        select b.Guid,b.factoryGuid,b.countType,b.ordCode,b.itemCode,b.itemName,b.factoryPrice,b.ordQty,b.creuser,b.credate,line.remark,line.workDate,isnull(line.qty,0) as qty,line.Guid as lineGuid,
+                                        (select sum(qty) from ManWorkshopOutLine as l where l.workshopOutGuid=b.Guid ) as sumqty,d.rate
+                                        from ManWorkshopOut as b
+                                        left join (select * from ManWorkshopOutLine where  credate in (select max(credate) from [dbo].[ManWorkshopOutLine] as a where a.workDate=@p2 group by a.workshopOutGuid)) AS line ON (line.workshopOutGuid = b.Guid)
+                                        left join ManOutSplit as c on(c.factoryGuid=b.factoryGuid and c.ordCode=b.ordCode and c.itemCode=b.itemCode)
+        left join ManOutSplitLine as d on(d.workProcessGuid=c.Guid and d.ProcessGuid=@p1)
+        where  b.workProcessGuid=@p1 
+    ) AS [w]
+) AS [t]
+WHERE ([t].[__RowNumber__] > @__p_1) AND ([t].[__RowNumber__] <= (@__p_1 + @__p_2))
+2020-06-02 17:36:34,231 [37] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (32ms) [Parameters=[@p0='?', @p1='?', @p2='?' (DbType = DateTime2)], CommandType='Text', CommandTimeout='6000000']
+SELECT COUNT(*)
+FROM (
+    select b.Guid,b.factoryGuid,b.countType,b.ordCode,b.itemCode,b.itemName,b.factoryPrice,b.ordQty,b.creuser,b.credate,line.remark,line.workDate,isnull(line.qty,0) as qty,line.Guid as lineGuid,
+                                    (select sum(qty) from ManWorkshopOutLine as l where l.workshopOutGuid=b.Guid ) as sumqty,d.rate
+                                    from ManWorkshopOut as b
+                                    left join (select * from ManWorkshopOutLine where  credate in (select max(credate) from [dbo].[ManWorkshopOutLine] as a where a.workDate=@p2 group by a.workshopOutGuid)) AS line ON (line.workshopOutGuid = b.Guid)
+                                    left join ManOutSplit as c on(c.factoryGuid=b.factoryGuid and c.ordCode=b.ordCode and c.itemCode=b.itemCode)
+    left join ManOutSplitLine as d on(d.workProcessGuid=c.Guid and d.ProcessGuid=@p1)
+    where  b.workProcessGuid=@p1 
+) AS [w]
+2020-06-02 17:36:34,236 [37] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action method DncZeus.Api.Controllers.Api.Weixin.WorkshopController.List (DncZeus.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 95.1465ms.
+2020-06-02 17:36:34,238 [37] INFO  Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor [(null)]  - Executing ObjectResult, writing value of type 'DncZeus.Api.Models.Response.ResponseResultModel'.
+2020-06-02 17:36:34,241 [37] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action DncZeus.Api.Controllers.Api.Weixin.WorkshopController.List (DncZeus.Api) in 155.6036ms
+2020-06-02 17:36:34,244 [37] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 175.8767ms 200 application/json; charset=utf-8
+2020-06-02 17:36:53,044 [11] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 OPTIONS http://localhost:54321/api/v8/man/factoryworkshop/getFactoryWorkshopInfo?api-version=8  
+2020-06-02 17:36:53,059 [37] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 OPTIONS http://localhost:54321/api/v8/man/factoryworkshop/getFactoryWorkDate?api-version=8  
+2020-06-02 17:36:53,064 [11] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-06-02 17:36:53,061 [30] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 OPTIONS http://localhost:54321/api/v8/man/workprocess/list?api-version=8  
+2020-06-02 17:36:53,075 [37] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-06-02 17:36:53,086 [11] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 34.0996ms 204 
+2020-06-02 17:36:53,088 [30] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-06-02 17:36:53,090 [37] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 40.9152ms 204 
+2020-06-02 17:36:53,093 [11] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 POST http://localhost:54321/api/v8/man/factoryworkshop/getFactoryWorkshopInfo?api-version=8 application/json;charset=UTF-8 139
+2020-06-02 17:36:53,096 [30] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 36.4778ms 204 
+2020-06-02 17:36:53,098 [37] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 POST http://localhost:54321/api/v8/man/factoryworkshop/getFactoryWorkDate?api-version=8 application/json;charset=UTF-8 131
+2020-06-02 17:36:53,103 [11] INFO  Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler [(null)]  - Successfully validated the token.
+2020-06-02 17:36:53,105 [30] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 POST http://localhost:54321/api/v8/man/workprocess/list?api-version=8 application/json;charset=UTF-8 150
+2020-06-02 17:36:53,106 [37] INFO  Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler [(null)]  - Successfully validated the token.
+2020-06-02 17:36:53,108 [11] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-06-02 17:36:53,110 [30] INFO  Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler [(null)]  - Successfully validated the token.
+2020-06-02 17:36:53,112 [37] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-06-02 17:36:53,114 [11] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Route matched with {action = "GetFactoryWorkshopInfo", controller = "FactoryWorkshop"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetFactoryWorkshopInfo(DncZeus.Api.RequestPayload.Man.FactoryWorkshop.FactoryWorkshopRequestPayload) on controller DncZeus.Api.Controllers.Api.Weixin.FactoryWorkshopController (DncZeus.Api).
+2020-06-02 17:36:53,116 [30] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-06-02 17:36:53,120 [37] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Route matched with {action = "GetFactoryWorkDate", controller = "FactoryWorkshop"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetFactoryWorkDate(DncZeus.Api.RequestPayload.Man.FactoryWorkshop.FactoryWorkshopRequestPayload) on controller DncZeus.Api.Controllers.Api.Weixin.FactoryWorkshopController (DncZeus.Api).
+2020-06-02 17:36:53,122 [11] INFO  Microsoft.EntityFrameworkCore.Infrastructure [(null)]  - Entity Framework Core 2.1.14-servicing-32113 initialized 'DncZeusDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: RowNumberPaging 
+2020-06-02 17:36:53,123 [30] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Route matched with {action = "List", controller = "Workprocess"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult List(DncZeus.Api.RequestPayload.Man.Workprocess.WorkprocessRequestPayload) on controller DncZeus.Api.Controllers.Api.Weixin.WorkprocessController (DncZeus.Api).
+2020-06-02 17:36:53,125 [37] INFO  Microsoft.EntityFrameworkCore.Infrastructure [(null)]  - Entity Framework Core 2.1.14-servicing-32113 initialized 'DncZeusDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: RowNumberPaging 
+2020-06-02 17:36:53,142 [11] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executing action method DncZeus.Api.Controllers.Api.Weixin.FactoryWorkshopController.GetFactoryWorkshopInfo (DncZeus.Api) - Validation state: Valid
+2020-06-02 17:36:53,144 [30] INFO  Microsoft.EntityFrameworkCore.Infrastructure [(null)]  - Entity Framework Core 2.1.14-servicing-32113 initialized 'DncZeusDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: RowNumberPaging 
+2020-06-02 17:36:53,163 [37] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executing action method DncZeus.Api.Controllers.Api.Weixin.FactoryWorkshopController.GetFactoryWorkDate (DncZeus.Api) - Validation state: Valid
+2020-06-02 17:36:53,235 [11] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (42ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (DbType = DateTime2)], CommandType='Text', CommandTimeout='6000000']
+
+select a.factoryGuid,a.yearPlanOutQty,isnull(b.monPlanOutQty,0) as 'monPlanOutQty',isnull(c.monAddDoneOutQty,0) as 'monAddDoneOutQty',isnull(d.sumPeople,0) as 'sumPeople',isnull(e.yearAddPlanOutQty,0) as 'yearAddPlanOutQty',isnull(f.yearAddDoneOutQty,0) as 'yearAddDoneOutQty',isnull(g.todayDoneOutQty,0) as 'todayDoneOutQty'  from(select sum(outqty) as 'yearPlanOutQty',factoryGuid from ManFactoryMonPlan  where factoryGuid in(@p0) and YY=@p1 GROUP BY factoryGuid) as a
+left join (
+	select outqty as 'monPlanOutQty',factoryGuid from ManFactoryMonPlan where factoryGuid in(@p0) and YY=@p1 and MM=@p2
+	) as b on (b.factoryGuid=a.factoryGuid)
+left join (
+	select sum(outline.qty) as 'monAddDoneOutQty',out.factoryGuid from ManWorkshopOut as out 
+	inner join ManWorkshopOutLine as outline on (outline.workshopOutGuid=out.Guid)
+	where out.factoryGuid in(@p0) and outline.workDate BETWEEN (SELECT   DATEADD(mm, DATEDIFF(mm, 0, GETDATE()), 0)) and (SELECT   DATEADD(d, - 1, DATEADD(mm, DATEDIFF(mm, 0, GETDATE())+1, 0)))
+	group by out.factoryGuid
+) as c on (c.factoryGuid=b.factoryGuid)
+left join (
+	select cadre+logistic+worker as 'sumPeople',Guid as 'factoryGuid' from ManFactory where Guid in(@p0)
+) as d on(d.factoryGuid=c.factoryGuid)
+left join (
+	select sum(outqty) as 'yearAddPlanOutQty',factoryGuid from ManFactoryMonPlan where factoryGuid in(@p0) and YY=@p1 and CONVERT(INT,MM)<=CONVERT(INT,@p2) GROUP BY factoryGuid
+) as e on(e.factoryGuid=d.factoryGuid)
+left join (
+	select sum(outline.qty) as 'yearAddDoneOutQty',factoryGuid from ManWorkshopOut as out 
+inner join ManWorkshopOutLine as outline on (outline.workshopOutGuid=out.Guid)
+where out.factoryGuid in(@p0) and outline.workDate <=(SELECT   DATEADD(d, - 1, DATEADD(mm, DATEDIFF(mm, 0, GETDATE())+1, 0))) GROUP BY factoryGuid
+) as f on(f.factoryGuid=e.factoryGuid)
+left join (
+select sum(outline.qty) as 'todayDoneOutQty',out.factoryGuid,out.Guid from ManWorkshopOut as out 
+inner join ManWorkshopOutLine as outline on (outline.workshopOutGuid=out.Guid)
+where out.factoryGuid in(@p0) and  DATEDIFF(day,outline.workDate,@p3)=0 GROUP BY out.Guid,out.factoryGuid
+) as g on(g.factoryGuid=f.factoryGuid)
+2020-06-02 17:36:53,238 [30] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executing action method DncZeus.Api.Controllers.Api.Weixin.WorkprocessController.List (DncZeus.Api) - Validation state: Valid
+2020-06-02 17:36:53,240 [37] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (29ms) [Parameters=[@__payload_factoryGuid_0='?' (DbType = Guid), @__payload_workDate_1='?' (DbType = DateTime2)], CommandType='Text', CommandTimeout='6000000']
+SELECT TOP(1) [x].[Guid], [x].[OrgID], [x].[cadre], [x].[cadreLeave], [x].[cadreRest], [x].[credate], [x].[creuser], [x].[factoryGuid], [x].[logistic], [x].[logisticLeave], [x].[logisticRest], [x].[moddate], [x].[moduser], [x].[workDate], [x].[worker], [x].[workerLeave], [x].[workerReste]
+FROM [ManFactoryWorkdate] AS [x]
+WHERE ([x].[factoryGuid] = @__payload_factoryGuid_0) AND ([x].[workDate] = @__payload_workDate_1)
+2020-06-02 17:36:53,241 [11] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action method DncZeus.Api.Controllers.Api.Weixin.FactoryWorkshopController.GetFactoryWorkshopInfo (DncZeus.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 92.595ms.
+2020-06-02 17:36:53,244 [11] INFO  Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor [(null)]  - Executing ObjectResult, writing value of type 'DncZeus.Api.Models.Response.ResponseResultModel'.
+2020-06-02 17:36:53,246 [37] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action method DncZeus.Api.Controllers.Api.Weixin.FactoryWorkshopController.GetFactoryWorkDate (DncZeus.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 58.5172ms.
+2020-06-02 17:36:53,269 [11] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action DncZeus.Api.Controllers.Api.Weixin.FactoryWorkshopController.GetFactoryWorkshopInfo (DncZeus.Api) in 149.0695ms
+2020-06-02 17:36:53,270 [37] INFO  Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor [(null)]  - Executing ObjectResult, writing value of type 'DncZeus.Api.Models.Response.ResponseModel'.
+2020-06-02 17:36:53,273 [30] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (22ms) [Parameters=[@__payload_factoryGuid_0='?' (DbType = Guid), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='Text', CommandTimeout='6000000']
+SELECT [t].[Guid], [t].[OrgID], [t].[factoryGuid], [t].[workCode], [t].[workName], [t].[rate], [t].[isvalid], [t].[credate], [t].[creuser], [t].[moddate], [t].[moduser], [t].[factoryName]
+FROM (
+    SELECT [a].[Guid], [a].[OrgID], [a].[factoryGuid], [a].[workCode], [a].[workName], [a].[rate], [a].[isvalid], [a].[credate], [a].[creuser], [a].[moddate], [a].[moduser], [b].[name] AS [factoryName], ROW_NUMBER() OVER(ORDER BY [a].[factoryGuid], [a].[workCode]) AS [__RowNumber__]
+    FROM [ManWorkProcess] AS [a]
+    INNER JOIN [ManFactory] AS [b] ON [a].[factoryGuid] = [b].[Guid]
+    WHERE [a].[factoryGuid] = @__payload_factoryGuid_0
+) AS [t]
+WHERE ([t].[__RowNumber__] > @__p_1) AND ([t].[__RowNumber__] <= (@__p_1 + @__p_2))
+2020-06-02 17:36:53,285 [11] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 183.1756ms 200 application/json; charset=utf-8
+2020-06-02 17:36:53,287 [37] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action DncZeus.Api.Controllers.Api.Weixin.FactoryWorkshopController.GetFactoryWorkDate (DncZeus.Api) in 152.6304ms
+2020-06-02 17:36:53,312 [37] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 213.303ms 200 application/json; charset=utf-8
+2020-06-02 17:36:53,315 [30] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (26ms) [Parameters=[@__payload_factoryGuid_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='6000000']
+SELECT COUNT(*)
+FROM [ManWorkProcess] AS [a]
+INNER JOIN [ManFactory] AS [b] ON [a].[factoryGuid] = [b].[Guid]
+WHERE [a].[factoryGuid] = @__payload_factoryGuid_0
+2020-06-02 17:36:53,318 [30] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action method DncZeus.Api.Controllers.Api.Weixin.WorkprocessController.List (DncZeus.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 75.2599ms.
+2020-06-02 17:36:53,320 [30] INFO  Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor [(null)]  - Executing ObjectResult, writing value of type 'DncZeus.Api.Models.Response.ResponseResultModel'.
+2020-06-02 17:36:53,324 [30] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action DncZeus.Api.Controllers.Api.Weixin.WorkprocessController.List (DncZeus.Api) in 195.1074ms
+2020-06-02 17:36:53,327 [30] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 225.2936ms 200 application/json; charset=utf-8
+2020-06-02 17:36:54,491 [11] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 OPTIONS http://localhost:54321/api/v5/mis/message/GetUnreadCount?api-version=5&userno=admin  
+2020-06-02 17:36:54,493 [11] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-06-02 17:36:54,496 [11] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 4.9637ms 204 
+2020-06-02 17:36:54,503 [30] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 GET http://localhost:54321/api/v5/mis/message/GetUnreadCount?api-version=5&userno=admin  
+2020-06-02 17:36:54,505 [30] INFO  Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler [(null)]  - Successfully validated the token.
+2020-06-02 17:36:54,507 [30] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-06-02 17:36:54,509 [30] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Route matched with {action = "GetUnreadCount", controller = "Message"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetUnreadCount(System.String) on controller DncZeus.Api.Controllers.Api.Mis.MessageController (DncZeus.Api).
+2020-06-02 17:36:54,512 [30] INFO  Microsoft.EntityFrameworkCore.Infrastructure [(null)]  - Entity Framework Core 2.1.14-servicing-32113 initialized 'DncZeusDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: RowNumberPaging 
+2020-06-02 17:36:54,533 [30] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executing action method DncZeus.Api.Controllers.Api.Mis.MessageController.GetUnreadCount (DncZeus.Api) - Validation state: Valid
+2020-06-02 17:36:54,555 [30] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (19ms) [Parameters=[@__userno_0='?' (Size = 20) (DbType = AnsiString)], CommandType='Text', CommandTimeout='6000000']
+SELECT COUNT(*)
+FROM [Mismessage] AS [x]
+WHERE ([x].[receiveUserno] = @__userno_0) AND ([x].[readStatus] = CAST(1 AS tinyint))
+2020-06-02 17:36:54,558 [30] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action method DncZeus.Api.Controllers.Api.Mis.MessageController.GetUnreadCount (DncZeus.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 22.6823ms.
+2020-06-02 17:36:54,561 [30] INFO  Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor [(null)]  - Executing ObjectResult, writing value of type 'DncZeus.Api.Models.Response.ResponseResultModel'.
+2020-06-02 17:36:54,565 [30] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action DncZeus.Api.Controllers.Api.Mis.MessageController.GetUnreadCount (DncZeus.Api) in 51.9381ms
+2020-06-02 17:36:54,568 [30] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 64.2133ms 200 application/json; charset=utf-8
+2020-06-02 17:37:24,817 [50] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 OPTIONS http://localhost:54321/api/v5/mis/message/GetUnreadCount?api-version=5&userno=admin  
+2020-06-02 17:37:24,847 [50] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-06-02 17:37:24,849 [50] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 32.0958ms 204 
+2020-06-02 17:37:24,858 [11] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 GET http://localhost:54321/api/v5/mis/message/GetUnreadCount?api-version=5&userno=admin  
+2020-06-02 17:37:24,860 [11] INFO  Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler [(null)]  - Successfully validated the token.
+2020-06-02 17:37:24,864 [11] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-06-02 17:37:24,866 [11] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Route matched with {action = "GetUnreadCount", controller = "Message"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetUnreadCount(System.String) on controller DncZeus.Api.Controllers.Api.Mis.MessageController (DncZeus.Api).
+2020-06-02 17:37:24,869 [11] INFO  Microsoft.EntityFrameworkCore.Infrastructure [(null)]  - Entity Framework Core 2.1.14-servicing-32113 initialized 'DncZeusDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: RowNumberPaging 
+2020-06-02 17:37:24,887 [11] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executing action method DncZeus.Api.Controllers.Api.Mis.MessageController.GetUnreadCount (DncZeus.Api) - Validation state: Valid
+2020-06-02 17:37:24,907 [11] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (18ms) [Parameters=[@__userno_0='?' (Size = 20) (DbType = AnsiString)], CommandType='Text', CommandTimeout='6000000']
+SELECT COUNT(*)
+FROM [Mismessage] AS [x]
+WHERE ([x].[receiveUserno] = @__userno_0) AND ([x].[readStatus] = CAST(1 AS tinyint))
+2020-06-02 17:37:24,909 [11] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action method DncZeus.Api.Controllers.Api.Mis.MessageController.GetUnreadCount (DncZeus.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 20.1885ms.
+2020-06-02 17:37:24,911 [11] INFO  Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor [(null)]  - Executing ObjectResult, writing value of type 'DncZeus.Api.Models.Response.ResponseResultModel'.
+2020-06-02 17:37:24,913 [11] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action DncZeus.Api.Controllers.Api.Mis.MessageController.GetUnreadCount (DncZeus.Api) in 44.4011ms
+2020-06-02 17:37:24,916 [11] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 58.0689ms 200 application/json; charset=utf-8

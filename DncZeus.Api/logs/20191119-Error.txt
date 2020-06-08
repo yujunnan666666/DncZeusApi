@@ -1,0 +1,320 @@
+2019-11-19 09:31:39,721 [10] ERROR Microsoft.EntityFrameworkCore.Query [(null)]  - An exception occurred in the database while iterating the results of a query for context type 'DncZeus.Api.Entities.DncZeusDbContext'.
+System.ArgumentException: Source array was not long enough. Check the source index, length, and the array's lower bounds.
+Parameter name: sourceArray
+   at System.Array.Copy(Array sourceArray, Int32 sourceIndex, Array destinationArray, Int32 destinationIndex, Int32 length, Boolean reliable)
+   at System.Collections.Generic.List`1.CopyTo(T[] array, Int32 arrayIndex)
+   at System.Collections.Generic.List`1.InsertRange(Int32 index, IEnumerable`1 collection)
+   at Microsoft.EntityFrameworkCore.Query.Expressions.SelectExpression.set_IsProjectStar(Boolean value)
+   at Microsoft.EntityFrameworkCore.Query.Expressions.SelectExpression.PushDownSubquery()
+   at Microsoft.EntityFrameworkCore.SqlServer.Query.Sql.Internal.SqlServerQuerySqlGenerator.RowNumberPagingExpressionVisitor.VisitSelectExpression(SelectExpression selectExpression)
+   at Microsoft.EntityFrameworkCore.SqlServer.Query.Sql.Internal.SqlServerQuerySqlGenerator.RowNumberPagingExpressionVisitor.Visit(Expression expression)
+   at Microsoft.EntityFrameworkCore.SqlServer.Query.Sql.Internal.SqlServerQuerySqlGeneratorFactory.CreateDefault(SelectExpression selectExpression)
+   at Microsoft.EntityFrameworkCore.Query.Expressions.SelectExpression.CreateDefaultQuerySqlGenerator()
+   at Microsoft.EntityFrameworkCore.Query.Internal.ShaperCommandContext.GetRelationalCommand(IReadOnlyDictionary`2 parameters)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.BufferlessMoveNext(DbContext _, Boolean buffer)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider._TrackEntities[TOut,TIn](IEnumerable`1 results, QueryContext queryContext, IList`1 entityTrackingInfos, IList`1 entityAccessors)+MoveNext()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext()
+System.ArgumentException: Source array was not long enough. Check the source index, length, and the array's lower bounds.
+Parameter name: sourceArray
+   at System.Array.Copy(Array sourceArray, Int32 sourceIndex, Array destinationArray, Int32 destinationIndex, Int32 length, Boolean reliable)
+   at System.Collections.Generic.List`1.CopyTo(T[] array, Int32 arrayIndex)
+   at System.Collections.Generic.List`1.InsertRange(Int32 index, IEnumerable`1 collection)
+   at Microsoft.EntityFrameworkCore.Query.Expressions.SelectExpression.set_IsProjectStar(Boolean value)
+   at Microsoft.EntityFrameworkCore.Query.Expressions.SelectExpression.PushDownSubquery()
+   at Microsoft.EntityFrameworkCore.SqlServer.Query.Sql.Internal.SqlServerQuerySqlGenerator.RowNumberPagingExpressionVisitor.VisitSelectExpression(SelectExpression selectExpression)
+   at Microsoft.EntityFrameworkCore.SqlServer.Query.Sql.Internal.SqlServerQuerySqlGenerator.RowNumberPagingExpressionVisitor.Visit(Expression expression)
+   at Microsoft.EntityFrameworkCore.SqlServer.Query.Sql.Internal.SqlServerQuerySqlGeneratorFactory.CreateDefault(SelectExpression selectExpression)
+   at Microsoft.EntityFrameworkCore.Query.Expressions.SelectExpression.CreateDefaultQuerySqlGenerator()
+   at Microsoft.EntityFrameworkCore.Query.Internal.ShaperCommandContext.GetRelationalCommand(IReadOnlyDictionary`2 parameters)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.BufferlessMoveNext(DbContext _, Boolean buffer)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider._TrackEntities[TOut,TIn](IEnumerable`1 results, QueryContext queryContext, IList`1 entityTrackingInfos, IList`1 entityAccessors)+MoveNext()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext()
+2019-11-19 09:31:39,721 [7] ERROR Microsoft.EntityFrameworkCore.Query [(null)]  - An exception occurred in the database while iterating the results of a query for context type 'DncZeus.Api.Entities.DncZeusDbContext'.
+System.ArgumentException: Source array was not long enough. Check the source index, length, and the array's lower bounds.
+Parameter name: sourceArray
+   at System.Array.Copy(Array sourceArray, Int32 sourceIndex, Array destinationArray, Int32 destinationIndex, Int32 length, Boolean reliable)
+   at System.Collections.Generic.List`1.CopyTo(T[] array, Int32 arrayIndex)
+   at System.Collections.Generic.List`1.InsertRange(Int32 index, IEnumerable`1 collection)
+   at Microsoft.EntityFrameworkCore.Query.Expressions.SelectExpression.set_IsProjectStar(Boolean value)
+   at Microsoft.EntityFrameworkCore.Query.Expressions.SelectExpression.PushDownSubquery()
+   at Microsoft.EntityFrameworkCore.SqlServer.Query.Sql.Internal.SqlServerQuerySqlGenerator.RowNumberPagingExpressionVisitor.VisitSelectExpression(SelectExpression selectExpression)
+   at Microsoft.EntityFrameworkCore.SqlServer.Query.Sql.Internal.SqlServerQuerySqlGenerator.RowNumberPagingExpressionVisitor.Visit(Expression expression)
+   at Microsoft.EntityFrameworkCore.SqlServer.Query.Sql.Internal.SqlServerQuerySqlGeneratorFactory.CreateDefault(SelectExpression selectExpression)
+   at Microsoft.EntityFrameworkCore.Query.Expressions.SelectExpression.CreateDefaultQuerySqlGenerator()
+   at Microsoft.EntityFrameworkCore.Query.Internal.ShaperCommandContext.GetRelationalCommand(IReadOnlyDictionary`2 parameters)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.BufferlessMoveNext(DbContext _, Boolean buffer)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider._TrackEntities[TOut,TIn](IEnumerable`1 results, QueryContext queryContext, IList`1 entityTrackingInfos, IList`1 entityAccessors)+MoveNext()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext()
+System.ArgumentException: Source array was not long enough. Check the source index, length, and the array's lower bounds.
+Parameter name: sourceArray
+   at System.Array.Copy(Array sourceArray, Int32 sourceIndex, Array destinationArray, Int32 destinationIndex, Int32 length, Boolean reliable)
+   at System.Collections.Generic.List`1.CopyTo(T[] array, Int32 arrayIndex)
+   at System.Collections.Generic.List`1.InsertRange(Int32 index, IEnumerable`1 collection)
+   at Microsoft.EntityFrameworkCore.Query.Expressions.SelectExpression.set_IsProjectStar(Boolean value)
+   at Microsoft.EntityFrameworkCore.Query.Expressions.SelectExpression.PushDownSubquery()
+   at Microsoft.EntityFrameworkCore.SqlServer.Query.Sql.Internal.SqlServerQuerySqlGenerator.RowNumberPagingExpressionVisitor.VisitSelectExpression(SelectExpression selectExpression)
+   at Microsoft.EntityFrameworkCore.SqlServer.Query.Sql.Internal.SqlServerQuerySqlGenerator.RowNumberPagingExpressionVisitor.Visit(Expression expression)
+   at Microsoft.EntityFrameworkCore.SqlServer.Query.Sql.Internal.SqlServerQuerySqlGeneratorFactory.CreateDefault(SelectExpression selectExpression)
+   at Microsoft.EntityFrameworkCore.Query.Expressions.SelectExpression.CreateDefaultQuerySqlGenerator()
+   at Microsoft.EntityFrameworkCore.Query.Internal.ShaperCommandContext.GetRelationalCommand(IReadOnlyDictionary`2 parameters)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.BufferlessMoveNext(DbContext _, Boolean buffer)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider._TrackEntities[TOut,TIn](IEnumerable`1 results, QueryContext queryContext, IList`1 entityTrackingInfos, IList`1 entityAccessors)+MoveNext()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext()
+2019-11-19 11:45:00,077 [7] ERROR Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Failed executing DbCommand (94ms) [Parameters=[@p0='?' (Size = 36), @status='?' (DbType = Int32), @cfmuser='?'], CommandType='Text', CommandTimeout='30']
+UPDATE TmpItemBoards SET status=@status, cfmuser=@cfmuser, cfmdate=getdate() WHERE status = 1 and Guid IN (@p0)
+System.Data.SqlClient.SqlException (0x80131904): 参数化查询 '(@p0 nvarchar(36),@status int,@cfmuser nvarchar(4000))UPDATE Tmp' 需要参数 '@cfmuser'，但未提供该参数。
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.Execute(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues)
+ClientConnectionId:8c3ae374-f976-444c-8f4b-8a0621b27ddd
+Error Number:8178,State:1,Class:16
+2019-11-19 12:19:32,406 [8] ERROR Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Failed executing DbCommand (170ms) [Parameters=[@p0='?' (Size = 36), @status='?' (DbType = Int32), @cfmuser='?'], CommandType='Text', CommandTimeout='30']
+UPDATE TmpItemBoards SET status=@status, cfmuser=@cfmuser, cfmdate=getdate() WHERE status = 1 and Guid IN (@p0)
+System.Data.SqlClient.SqlException (0x80131904): 参数化查询 '(@p0 nvarchar(36),@status int,@cfmuser nvarchar(4000))UPDATE Tmp' 需要参数 '@cfmuser'，但未提供该参数。
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.Execute(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues)
+ClientConnectionId:5239c157-a4bf-4df0-ad10-19e46c85e55a
+Error Number:8178,State:1,Class:16
+2019-11-19 12:21:36,370 [20] ERROR Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Failed executing DbCommand (42ms) [Parameters=[@p0='?' (Size = 36), @cfmuser='?'], CommandType='Text', CommandTimeout='30']
+UPDATE TmpItemBoards SET status=2, cfmuser=@cfmuser, cfmdate=getdate() WHERE status = 1 and Guid IN (@p0)
+System.Data.SqlClient.SqlException (0x80131904): 参数化查询 '(@p0 nvarchar(36),@cfmuser nvarchar(4000))UPDATE TmpItemBoards S' 需要参数 '@cfmuser'，但未提供该参数。
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.Execute(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues)
+ClientConnectionId:5239c157-a4bf-4df0-ad10-19e46c85e55a
+Error Number:8178,State:1,Class:16
+2019-11-19 12:26:49,089 [7] ERROR Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Failed executing DbCommand (115ms) [Parameters=[@p0='?' (Size = 36), @cfmuser='?'], CommandType='Text', CommandTimeout='30']
+UPDATE TmpItemBoards SET status=2, cfmuser=@cfmuser, cfmdate=getdate() WHERE status = 1 and Guid IN (@p0)
+System.Data.SqlClient.SqlException (0x80131904): 参数化查询 '(@p0 nvarchar(36),@cfmuser nvarchar(4000))UPDATE TmpItemBoards S' 需要参数 '@cfmuser'，但未提供该参数。
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.Execute(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues)
+ClientConnectionId:8e2e1b75-2ddf-4418-9492-a7a69143288d
+Error Number:8178,State:1,Class:16
+2019-11-19 13:32:16,462 [7] ERROR Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Failed executing DbCommand (157ms) [Parameters=[@__CurrentUser_OrgID_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [t].[Guid], [t].[Guid], [t].[Org], [t].[boardType], [t].[boardcode], [t].[Org], [t].[boardname], [t].[boardType], [t].[boardnum], [t].[boardcode], [t].[cfmdate], [t].[boardname], [t].[cfmuser], [t].[boardnum], [t].[cfmdate], [t].[credate], [t].[cfmuser], [t].[creuser], [t].[credate], [t].[fBarcode], [t].[fPackNo], [t].[fgoodscode], [t].[fgoodsname], [t].[creuser], [t].[fmono], [t].[fBarcode], [t].[fordno], [t].[fPackNo], [t].[fgoodscode], [t].[fgoodsname], [t].[fmono], [t].[fspname], [t].[isValid], [t].[fordno], [t].[lprintnum], [t].[moddate], [t].[fspname], [t].[isValid], [t].[moduser], [t].[lprintnum], [t].[status], [t].[tmpPackNo], [t].[valmdate], [t].[moddate], [t].[moduser], [t].[valuser], [t].[status], [t].[tmpPackNo], [t].[valmdate], [t].[valuser]
+FROM (
+    SELECT [x].[Guid], [x].[Org], [x].[boardType], [x].[boardcode], [x].[boardname], [x].[boardnum], [x].[cfmdate], [x].[cfmuser], [x].[credate], [x].[creuser], [x].[fBarcode], [x].[fPackNo], [x].[fgoodscode], [x].[fgoodsname], [x].[fmono], [x].[fordno], [x].[fspname], [x].[isValid], [x].[lprintnum], [x].[moddate], [x].[moduser], [x].[status], [x].[tmpPackNo], [x].[valmdate], [x].[valuser], ROW_NUMBER() OVER(ORDER BY [x].[tmpPackNo] DESC) AS [__RowNumber__]
+    FROM [TmpItemBoards] AS [x]
+    WHERE [x].[Org] = @__CurrentUser_OrgID_0
+) AS [t]
+(
+    SELECT [x].[Guid], [x].[Org], [x].[boardType], [x].[boardcode], [x].[boardname], [x].[boardnum], [x].[cfmdate], [x].[cfmuser], [x].[credate], [x].[creuser], [x].[fBarcode], [x].[fPackNo], [x].[fgoodscode], [x].[fgoodsname], [x].[fmono], [x].[fordno], [x].[fspname], [x].[isValid], [x].[lprintnum], [x].[moddate], [x].[moduser], [x].[status], [x].[tmpPackNo], [x].[valmdate], [x].[valuser], ROW_NUMBER() OVER(ORDER BY [x].[tmpPackNo] DESC) AS [__RowNumber__]
+    FROM [TmpItemBoards] AS [x]
+    WHERE [x].[Org] = @__CurrentUser_OrgID_0
+) AS [t]
+WHERE ((([t].[__RowNumber__] > @__p_1) AND ([t].[__RowNumber__] > @__p_1)) AND ([t].[__RowNumber__] <= (@__p_1 + @__p_2))) AND ([t].[__RowNumber__] <= (@__p_1 + @__p_2))
+System.Data.SqlClient.SqlException (0x80131904): 关键字 'SELECT' 附近有语法错误。
+')' 附近有语法错误。
+'t' 附近有语法错误。
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader()
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.Execute(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues)
+ClientConnectionId:7d286deb-7477-482b-b5a8-9a917b86588b
+Error Number:156,State:1,Class:15
+2019-11-19 13:32:16,462 [8] ERROR Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Failed executing DbCommand (157ms) [Parameters=[@__CurrentUser_OrgID_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [t].[Guid], [t].[Guid], [t].[Org], [t].[boardType], [t].[boardcode], [t].[Org], [t].[boardname], [t].[boardType], [t].[boardnum], [t].[boardcode], [t].[cfmdate], [t].[boardname], [t].[cfmuser], [t].[boardnum], [t].[cfmdate], [t].[credate], [t].[cfmuser], [t].[creuser], [t].[credate], [t].[fBarcode], [t].[fPackNo], [t].[fgoodscode], [t].[fgoodsname], [t].[creuser], [t].[fmono], [t].[fBarcode], [t].[fordno], [t].[fPackNo], [t].[fgoodscode], [t].[fgoodsname], [t].[fmono], [t].[fspname], [t].[isValid], [t].[fordno], [t].[lprintnum], [t].[moddate], [t].[fspname], [t].[isValid], [t].[moduser], [t].[lprintnum], [t].[status], [t].[tmpPackNo], [t].[valmdate], [t].[moddate], [t].[moduser], [t].[valuser], [t].[status], [t].[tmpPackNo], [t].[valmdate], [t].[valuser]
+FROM (
+    SELECT [x].[Guid], [x].[Org], [x].[boardType], [x].[boardcode], [x].[boardname], [x].[boardnum], [x].[cfmdate], [x].[cfmuser], [x].[credate], [x].[creuser], [x].[fBarcode], [x].[fPackNo], [x].[fgoodscode], [x].[fgoodsname], [x].[fmono], [x].[fordno], [x].[fspname], [x].[isValid], [x].[lprintnum], [x].[moddate], [x].[moduser], [x].[status], [x].[tmpPackNo], [x].[valmdate], [x].[valuser], ROW_NUMBER() OVER(ORDER BY [x].[tmpPackNo] DESC) AS [__RowNumber__]
+    FROM [TmpItemBoards] AS [x]
+    WHERE [x].[Org] = @__CurrentUser_OrgID_0
+) AS [t]
+(
+    SELECT [x].[Guid], [x].[Org], [x].[boardType], [x].[boardcode], [x].[boardname], [x].[boardnum], [x].[cfmdate], [x].[cfmuser], [x].[credate], [x].[creuser], [x].[fBarcode], [x].[fPackNo], [x].[fgoodscode], [x].[fgoodsname], [x].[fmono], [x].[fordno], [x].[fspname], [x].[isValid], [x].[lprintnum], [x].[moddate], [x].[moduser], [x].[status], [x].[tmpPackNo], [x].[valmdate], [x].[valuser], ROW_NUMBER() OVER(ORDER BY [x].[tmpPackNo] DESC) AS [__RowNumber__]
+    FROM [TmpItemBoards] AS [x]
+    WHERE [x].[Org] = @__CurrentUser_OrgID_0
+) AS [t]
+WHERE ((([t].[__RowNumber__] > @__p_1) AND ([t].[__RowNumber__] > @__p_1)) AND ([t].[__RowNumber__] <= (@__p_1 + @__p_2))) AND ([t].[__RowNumber__] <= (@__p_1 + @__p_2))
+System.Data.SqlClient.SqlException (0x80131904): 关键字 'SELECT' 附近有语法错误。
+')' 附近有语法错误。
+'t' 附近有语法错误。
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader()
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.Execute(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues)
+ClientConnectionId:105ff169-f00e-4076-a84b-d22ad9e837d3
+Error Number:156,State:1,Class:15
+2019-11-19 13:32:16,522 [7] ERROR Microsoft.EntityFrameworkCore.Query [(null)]  - An exception occurred in the database while iterating the results of a query for context type 'DncZeus.Api.Entities.DncZeusDbContext'.
+System.Data.SqlClient.SqlException (0x80131904): 关键字 'SELECT' 附近有语法错误。
+')' 附近有语法错误。
+'t' 附近有语法错误。
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader()
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.Execute(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteReader(IRelationalConnection connection, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.BufferlessMoveNext(DbContext _, Boolean buffer)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider._TrackEntities[TOut,TIn](IEnumerable`1 results, QueryContext queryContext, IList`1 entityTrackingInfos, IList`1 entityAccessors)+MoveNext()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext()
+ClientConnectionId:7d286deb-7477-482b-b5a8-9a917b86588b
+Error Number:156,State:1,Class:15
+System.Data.SqlClient.SqlException (0x80131904): 关键字 'SELECT' 附近有语法错误。
+')' 附近有语法错误。
+'t' 附近有语法错误。
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader()
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.Execute(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteReader(IRelationalConnection connection, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.BufferlessMoveNext(DbContext _, Boolean buffer)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider._TrackEntities[TOut,TIn](IEnumerable`1 results, QueryContext queryContext, IList`1 entityTrackingInfos, IList`1 entityAccessors)+MoveNext()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext()
+ClientConnectionId:7d286deb-7477-482b-b5a8-9a917b86588b
+Error Number:156,State:1,Class:15
+2019-11-19 13:32:16,522 [8] ERROR Microsoft.EntityFrameworkCore.Query [(null)]  - An exception occurred in the database while iterating the results of a query for context type 'DncZeus.Api.Entities.DncZeusDbContext'.
+System.Data.SqlClient.SqlException (0x80131904): 关键字 'SELECT' 附近有语法错误。
+')' 附近有语法错误。
+'t' 附近有语法错误。
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader()
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.Execute(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteReader(IRelationalConnection connection, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.BufferlessMoveNext(DbContext _, Boolean buffer)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider._TrackEntities[TOut,TIn](IEnumerable`1 results, QueryContext queryContext, IList`1 entityTrackingInfos, IList`1 entityAccessors)+MoveNext()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext()
+ClientConnectionId:105ff169-f00e-4076-a84b-d22ad9e837d3
+Error Number:156,State:1,Class:15
+System.Data.SqlClient.SqlException (0x80131904): 关键字 'SELECT' 附近有语法错误。
+')' 附近有语法错误。
+'t' 附近有语法错误。
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader()
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.Execute(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteReader(IRelationalConnection connection, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.BufferlessMoveNext(DbContext _, Boolean buffer)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider._TrackEntities[TOut,TIn](IEnumerable`1 results, QueryContext queryContext, IList`1 entityTrackingInfos, IList`1 entityAccessors)+MoveNext()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext()
+ClientConnectionId:105ff169-f00e-4076-a84b-d22ad9e837d3
+Error Number:156,State:1,Class:15
+2019-11-19 13:37:36,819 [8] ERROR Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Failed executing DbCommand (29ms) [Parameters=[@p0='?' (Size = 36)], CommandType='Text', CommandTimeout='30']
+DELETE FROM TmpItemBoards WHERE status = 1 and and print = 0 and Guid IN (@p0)
+System.Data.SqlClient.SqlException (0x80131904): 关键字 'and' 附近有语法错误。
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.Execute(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues)
+ClientConnectionId:c8de7bd8-f8e1-40c3-b6b9-727f0810d781
+Error Number:156,State:1,Class:15
+2019-11-19 13:43:10,497 [8] ERROR Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Failed executing DbCommand (72ms) [Parameters=[@p0='?' (Size = 36)], CommandType='Text', CommandTimeout='30']
+DELETE FROM TmpItemBoards WHERE status = 1 and print = 0 and Guid IN (@p0)
+System.Data.SqlClient.SqlException (0x80131904): 关键字 'print' 附近有语法错误。
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.Execute(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues)
+ClientConnectionId:543ac7e6-6ca2-4fea-817d-acf159e8f9f5
+Error Number:156,State:1,Class:15

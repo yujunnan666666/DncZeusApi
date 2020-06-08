@@ -1,0 +1,1 @@
+2019-09-23 14:41:06,978 [69] WARN  Microsoft.EntityFrameworkCore.Query [(null)]  - Query: '(from DncMenu x in DbSet<DncMenu> where (int)[x].IsDeleted == (int)__payload_IsDeleted_0 select [x])...' uses a row limiting operation (Skip/Take) without OrderBy which may lead to unpredictable results.

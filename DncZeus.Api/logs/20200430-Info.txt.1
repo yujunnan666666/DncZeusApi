@@ -1,0 +1,69 @@
+2020-04-30 17:29:56,164 [1] INFO  Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager [(null)]  - User profile is available. Using 'C:\Users\June\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-04-30 17:29:56,592 [8] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 OPTIONS http://localhost:54321/api/v5/mis/message/GetUnreadCount?api-version=5&userno=admin  
+2020-04-30 17:29:56,622 [8] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-04-30 17:29:56,629 [8] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 37.3453ms 204 
+2020-04-30 17:29:56,635 [9] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 GET http://localhost:54321/api/v5/mis/message/GetUnreadCount?api-version=5&userno=admin  
+2020-04-30 17:29:56,664 [9] INFO  Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler [(null)]  - Successfully validated the token.
+2020-04-30 17:29:56,665 [9] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-04-30 17:29:56,883 [9] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Route matched with {action = "GetUnreadCount", controller = "Message"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetUnreadCount(System.String) on controller DncZeus.Api.Controllers.Api.Mis.MessageController (DncZeus.Api).
+2020-04-30 17:29:57,370 [9] INFO  Microsoft.EntityFrameworkCore.Infrastructure [(null)]  - Entity Framework Core 2.1.14-servicing-32113 initialized 'DncZeusDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: RowNumberPaging 
+2020-04-30 17:29:57,613 [9] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executing action method DncZeus.Api.Controllers.Api.Mis.MessageController.GetUnreadCount (DncZeus.Api) - Validation state: Valid
+2020-04-30 17:29:57,738 [9] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (2ms) [Parameters=[@__userno_0='?' (Size = 20) (DbType = AnsiString)], CommandType='Text', CommandTimeout='6000000']
+SELECT COUNT(*)
+FROM [Mismessage] AS [x]
+WHERE ([x].[receiveUserno] = @__userno_0) AND ([x].[readStatus] = CAST(1 AS tinyint))
+2020-04-30 17:29:57,747 [9] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action method DncZeus.Api.Controllers.Api.Mis.MessageController.GetUnreadCount (DncZeus.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 130.9807ms.
+2020-04-30 17:29:57,752 [9] INFO  Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor [(null)]  - Executing ObjectResult, writing value of type 'DncZeus.Api.Models.Response.ResponseResultModel'.
+2020-04-30 17:29:57,768 [9] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action DncZeus.Api.Controllers.Api.Mis.MessageController.GetUnreadCount (DncZeus.Api) in 884.2436ms
+2020-04-30 17:29:57,770 [9] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 1134.9683ms 200 application/json; charset=utf-8
+2020-04-30 17:30:25,905 [9] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 OPTIONS http://localhost:54321/api/v5/mis/message/GetUnreadCount?api-version=5&userno=admin  
+2020-04-30 17:30:25,906 [9] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-04-30 17:30:25,907 [9] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 1.3565ms 204 
+2020-04-30 17:30:25,909 [9] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 GET http://localhost:54321/api/v5/mis/message/GetUnreadCount?api-version=5&userno=admin  
+2020-04-30 17:30:25,910 [9] INFO  Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler [(null)]  - Successfully validated the token.
+2020-04-30 17:30:25,911 [9] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-04-30 17:30:25,911 [9] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Route matched with {action = "GetUnreadCount", controller = "Message"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetUnreadCount(System.String) on controller DncZeus.Api.Controllers.Api.Mis.MessageController (DncZeus.Api).
+2020-04-30 17:30:25,913 [9] INFO  Microsoft.EntityFrameworkCore.Infrastructure [(null)]  - Entity Framework Core 2.1.14-servicing-32113 initialized 'DncZeusDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: RowNumberPaging 
+2020-04-30 17:30:25,913 [9] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executing action method DncZeus.Api.Controllers.Api.Mis.MessageController.GetUnreadCount (DncZeus.Api) - Validation state: Valid
+2020-04-30 17:30:25,918 [9] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (2ms) [Parameters=[@__userno_0='?' (Size = 20) (DbType = AnsiString)], CommandType='Text', CommandTimeout='6000000']
+SELECT COUNT(*)
+FROM [Mismessage] AS [x]
+WHERE ([x].[receiveUserno] = @__userno_0) AND ([x].[readStatus] = CAST(1 AS tinyint))
+2020-04-30 17:30:25,918 [9] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action method DncZeus.Api.Controllers.Api.Mis.MessageController.GetUnreadCount (DncZeus.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 4.6773ms.
+2020-04-30 17:30:25,919 [9] INFO  Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor [(null)]  - Executing ObjectResult, writing value of type 'DncZeus.Api.Models.Response.ResponseResultModel'.
+2020-04-30 17:30:25,920 [9] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action DncZeus.Api.Controllers.Api.Mis.MessageController.GetUnreadCount (DncZeus.Api) in 7.7616ms
+2020-04-30 17:30:25,920 [9] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 11.2474ms 200 application/json; charset=utf-8
+2020-04-30 17:30:55,905 [9] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 OPTIONS http://localhost:54321/api/v5/mis/message/GetUnreadCount?api-version=5&userno=admin  
+2020-04-30 17:30:55,905 [9] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-04-30 17:30:55,906 [9] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 1.1494ms 204 
+2020-04-30 17:30:55,908 [19] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 GET http://localhost:54321/api/v5/mis/message/GetUnreadCount?api-version=5&userno=admin  
+2020-04-30 17:30:55,909 [19] INFO  Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler [(null)]  - Successfully validated the token.
+2020-04-30 17:30:55,909 [19] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-04-30 17:30:55,910 [19] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Route matched with {action = "GetUnreadCount", controller = "Message"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetUnreadCount(System.String) on controller DncZeus.Api.Controllers.Api.Mis.MessageController (DncZeus.Api).
+2020-04-30 17:30:55,910 [19] INFO  Microsoft.EntityFrameworkCore.Infrastructure [(null)]  - Entity Framework Core 2.1.14-servicing-32113 initialized 'DncZeusDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: RowNumberPaging 
+2020-04-30 17:30:55,911 [19] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executing action method DncZeus.Api.Controllers.Api.Mis.MessageController.GetUnreadCount (DncZeus.Api) - Validation state: Valid
+2020-04-30 17:30:55,913 [19] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (1ms) [Parameters=[@__userno_0='?' (Size = 20) (DbType = AnsiString)], CommandType='Text', CommandTimeout='6000000']
+SELECT COUNT(*)
+FROM [Mismessage] AS [x]
+WHERE ([x].[receiveUserno] = @__userno_0) AND ([x].[readStatus] = CAST(1 AS tinyint))
+2020-04-30 17:30:55,913 [19] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action method DncZeus.Api.Controllers.Api.Mis.MessageController.GetUnreadCount (DncZeus.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1.89ms.
+2020-04-30 17:30:55,913 [19] INFO  Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor [(null)]  - Executing ObjectResult, writing value of type 'DncZeus.Api.Models.Response.ResponseResultModel'.
+2020-04-30 17:30:55,914 [19] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action DncZeus.Api.Controllers.Api.Mis.MessageController.GetUnreadCount (DncZeus.Api) in 3.6831ms
+2020-04-30 17:30:55,914 [19] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 6.0146ms 200 application/json; charset=utf-8
+2020-04-30 17:31:25,907 [21] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 OPTIONS http://localhost:54321/api/v5/mis/message/GetUnreadCount?api-version=5&userno=admin  
+2020-04-30 17:31:25,907 [21] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-04-30 17:31:25,908 [21] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 1.2439ms 204 
+2020-04-30 17:31:25,923 [27] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 GET http://localhost:54321/api/v5/mis/message/GetUnreadCount?api-version=5&userno=admin  
+2020-04-30 17:31:25,925 [27] INFO  Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler [(null)]  - Successfully validated the token.
+2020-04-30 17:31:25,926 [27] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-04-30 17:31:25,928 [27] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Route matched with {action = "GetUnreadCount", controller = "Message"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetUnreadCount(System.String) on controller DncZeus.Api.Controllers.Api.Mis.MessageController (DncZeus.Api).
+2020-04-30 17:31:25,929 [27] INFO  Microsoft.EntityFrameworkCore.Infrastructure [(null)]  - Entity Framework Core 2.1.14-servicing-32113 initialized 'DncZeusDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: RowNumberPaging 
+2020-04-30 17:31:25,930 [27] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executing action method DncZeus.Api.Controllers.Api.Mis.MessageController.GetUnreadCount (DncZeus.Api) - Validation state: Valid
+2020-04-30 17:31:25,933 [27] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (2ms) [Parameters=[@__userno_0='?' (Size = 20) (DbType = AnsiString)], CommandType='Text', CommandTimeout='6000000']
+SELECT COUNT(*)
+FROM [Mismessage] AS [x]
+WHERE ([x].[receiveUserno] = @__userno_0) AND ([x].[readStatus] = CAST(1 AS tinyint))
+2020-04-30 17:31:25,933 [27] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action method DncZeus.Api.Controllers.Api.Mis.MessageController.GetUnreadCount (DncZeus.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 2.5355ms.
+2020-04-30 17:31:25,933 [27] INFO  Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor [(null)]  - Executing ObjectResult, writing value of type 'DncZeus.Api.Models.Response.ResponseResultModel'.
+2020-04-30 17:31:25,934 [27] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action DncZeus.Api.Controllers.Api.Mis.MessageController.GetUnreadCount (DncZeus.Api) in 5.4465ms
+2020-04-30 17:31:25,935 [27] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 11.2289ms 200 application/json; charset=utf-8

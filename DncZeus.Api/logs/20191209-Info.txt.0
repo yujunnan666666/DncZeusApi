@@ -1,0 +1,3 @@
+2019-12-09 14:30:40,597 [1] INFO  Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager [(null)]  - User profile is available. Using 'C:\Users\June\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-12-09 14:30:42,972 [11] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 GET http://localhost:54321/api/values  
+2019-12-09 14:30:43,186 [11] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 215.105ms 404 

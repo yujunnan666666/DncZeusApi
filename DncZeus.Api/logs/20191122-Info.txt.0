@@ -1,0 +1,335 @@
+2019-11-22 12:36:14,213 [1] INFO  Microsoft.EntityFrameworkCore.Infrastructure [(null)]  - Entity Framework Core 2.1.11-servicing-32099 initialized 'DncZeusDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: RowNumberPaging 
+2019-11-22 12:37:08,040 [1] INFO  Microsoft.EntityFrameworkCore.Infrastructure [(null)]  - Entity Framework Core 2.1.11-servicing-32099 initialized 'DncZeusDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: RowNumberPaging 
+2019-11-22 12:37:08,394 [1] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (70ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2019-11-22 12:37:08,412 [1] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (17ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2019-11-22 12:37:08,477 [1] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (61ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2019-11-22 12:37:08,483 [1] INFO  Microsoft.EntityFrameworkCore.Migrations [(null)]  - Applying migration '20191122043615_MyMigration15'.
+2019-11-22 12:37:08,642 [1] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (128ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+ALTER TABLE [TmpBoardsPrint] ADD [LoginName] nvarchar(50) NULL;
+2019-11-22 12:37:08,649 [1] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (6ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20191122043615_MyMigration15', N'2.1.11-servicing-32099');
+2019-11-22 12:37:47,144 [1] INFO  Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager [(null)]  - User profile is available. Using 'C:\Users\LTB7726286\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-11-22 12:37:49,535 [8] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 DEBUG http://localhost:54321/  0
+2019-11-22 12:37:49,536 [9] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 GET http://localhost:54321/swagger/index.html  
+2019-11-22 12:37:49,574 [8] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 27.5553ms 200 
+2019-11-22 12:37:50,880 [9] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 1345.9415ms 200 text/html
+2019-11-22 12:37:53,817 [8] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 GET http://localhost:54321/swagger/v3/swagger.json  
+2019-11-22 12:37:54,613 [8] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 796.9139ms 200 application/json;charset=utf-8
+2019-11-22 12:58:15,128 [7] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 OPTIONS http://localhost:54321/api/v1/account/profile  
+2019-11-22 12:58:17,029 [7] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2019-11-22 12:58:17,377 [7] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 2305.5817ms 204 
+2019-11-22 12:58:17,492 [7] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 GET http://localhost:54321/api/v1/account/profile  
+2019-11-22 12:58:23,903 [7] INFO  Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler [(null)]  - Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '11/21/2019 07:13:23', Current time: '11/22/2019 04:58:20'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2019-11-22 12:58:24,115 [7] INFO  Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler [(null)]  - Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '11/21/2019 07:13:23', Current time: '11/22/2019 04:58:20'.
+2019-11-22 12:58:24,117 [7] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2019-11-22 12:58:25,688 [7] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Route matched with {action = "Profile", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Profile() on controller DncZeus.Api.Controllers.AccountController (DncZeus.Api).
+2019-11-22 12:58:25,758 [7] INFO  Microsoft.AspNetCore.Authorization.DefaultAuthorizationService [(null)]  - Authorization failed.
+2019-11-22 12:58:25,760 [7] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Authorization failed for the request at filter 'Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter'.
+2019-11-22 12:58:25,774 [7] INFO  Microsoft.AspNetCore.Mvc.ChallengeResult [(null)]  - Executing ChallengeResult with authentication schemes ().
+2019-11-22 12:58:25,801 [7] INFO  Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler [(null)]  - AuthenticationScheme: Bearer was challenged.
+2019-11-22 12:58:25,820 [7] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action DncZeus.Api.Controllers.AccountController.Profile (DncZeus.Api) in 112.9723ms
+2019-11-22 12:58:25,829 [7] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 8354.3632ms 401 
+2019-11-22 12:58:26,152 [7] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 OPTIONS http://localhost:54321/api/v1/save_error_logger  
+2019-11-22 12:58:26,155 [7] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2019-11-22 12:58:26,157 [7] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 5.2787ms 204 
+2019-11-22 12:58:26,559 [7] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 POST http://localhost:54321/api/v1/save_error_logger application/json;charset=UTF-8 101
+2019-11-22 12:58:26,634 [7] INFO  Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler [(null)]  - Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '11/21/2019 07:13:23', Current time: '11/22/2019 04:58:26'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2019-11-22 12:58:26,642 [7] INFO  Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler [(null)]  - Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '11/21/2019 07:13:23', Current time: '11/22/2019 04:58:26'.
+2019-11-22 12:58:26,644 [7] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2019-11-22 12:58:26,727 [7] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 168.8684ms 404 
+2019-11-22 12:58:27,088 [7] INFO  Microsoft.AspNetCore.Server.Kestrel [(null)]  - Connection id "0HLRF0MTB6L4F", Request id "0HLRF0MTB6L4F:00000004": the application completed without reading the entire request body.
+2019-11-22 13:03:50,748 [20] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 GET http://localhost:54321/api/oauth/auth?username=administrator&password=111111&orgid=1  
+2019-11-22 13:03:50,782 [20] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2019-11-22 13:03:51,275 [20] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Route matched with {action = "Auth", controller = "Oauth"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Auth(System.String, System.String, Int32) on controller DncZeus.Api.Controllers.OauthController (DncZeus.Api).
+2019-11-22 13:03:53,325 [20] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executing action method DncZeus.Api.Controllers.OauthController.Auth (DncZeus.Api) - Validation state: Valid
+2019-11-22 13:03:54,715 [20] INFO  Microsoft.EntityFrameworkCore.Infrastructure [(null)]  - Entity Framework Core 2.1.11-servicing-32099 initialized 'DncZeusDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: RowNumberPaging 
+2019-11-22 13:03:56,316 [20] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (776ms) [Parameters=[@__Trim_0='?' (Size = 50)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [x].[Guid], [x].[Avatar], [x].[CreatedByUserGuid], [x].[CreatedByUserName], [x].[CreatedOn], [x].[Description], [x].[DisplayName], [x].[IsDeleted], [x].[IsLocked], [x].[LoginName], [x].[ModifiedByUserGuid], [x].[ModifiedByUserName], [x].[ModifiedOn], [x].[Password], [x].[Status], [x].[UserType]
+FROM [DncUser] AS [x]
+WHERE [x].[LoginName] = @__Trim_0
+2019-11-22 13:03:56,477 [20] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (38ms) [Parameters=[@__orgid_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [x].[ID], [x].[Code], [x].[Name], [x].[credate], [x].[creuser], [x].[moddate], [x].[moduser]
+FROM [MisOrganization] AS [x]
+WHERE [x].[ID] = @__orgid_0
+2019-11-22 13:03:56,517 [20] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action method DncZeus.Api.Controllers.OauthController.Auth (DncZeus.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 3188.0901ms.
+2019-11-22 13:03:56,526 [20] INFO  Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor [(null)]  - Executing ObjectResult, writing value of type 'DncZeus.Api.Models.Response.ResponseModel'.
+2019-11-22 13:03:56,556 [20] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action DncZeus.Api.Controllers.OauthController.Auth (DncZeus.Api) in 5278.5649ms
+2019-11-22 13:03:56,558 [20] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 5810.1658ms 200 application/json; charset=utf-8
+2019-11-22 13:03:56,649 [20] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 OPTIONS http://localhost:54321/api/v1/account/profile  
+2019-11-22 13:03:56,652 [20] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2019-11-22 13:03:56,657 [20] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 4.9609ms 204 
+2019-11-22 13:03:56,721 [24] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 GET http://localhost:54321/api/v1/account/profile  
+2019-11-22 13:03:56,755 [24] INFO  Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler [(null)]  - Successfully validated the token.
+2019-11-22 13:03:56,760 [24] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2019-11-22 13:03:56,764 [24] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Route matched with {action = "Profile", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Profile() on controller DncZeus.Api.Controllers.AccountController (DncZeus.Api).
+2019-11-22 13:03:56,767 [24] INFO  Microsoft.AspNetCore.Authorization.DefaultAuthorizationService [(null)]  - Authorization was successful.
+2019-11-22 13:03:56,917 [24] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executing action method DncZeus.Api.Controllers.AccountController.Profile (DncZeus.Api) - Validation state: Valid
+2019-11-22 13:03:57,093 [24] INFO  Microsoft.EntityFrameworkCore.Infrastructure [(null)]  - Entity Framework Core 2.1.11-servicing-32099 initialized 'DncZeusDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: RowNumberPaging 
+2019-11-22 13:03:57,318 [20] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (145ms) [Parameters=[@__guid_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [x].[Guid], [x].[Avatar], [x].[CreatedByUserGuid], [x].[CreatedByUserName], [x].[CreatedOn], [x].[Description], [x].[DisplayName], [x].[IsDeleted], [x].[IsLocked], [x].[LoginName], [x].[ModifiedByUserGuid], [x].[ModifiedByUserName], [x].[ModifiedOn], [x].[Password], [x].[Status], [x].[UserType]
+FROM [DncUser] AS [x]
+WHERE [x].[Guid] = @__guid_0
+2019-11-22 13:03:57,508 [24] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (148ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [x].[Guid], [x].[Alias], [x].[BeforeCloseFun], [x].[Component], [x].[CreatedByUserGuid], [x].[CreatedByUserName], [x].[CreatedOn], [x].[Description], [x].[HideInMenu], [x].[Icon], [x].[IsDefaultRouter], [x].[IsDeleted], [x].[Level], [x].[ModifiedByUserGuid], [x].[ModifiedByUserName], [x].[ModifiedOn], [x].[Name], [x].[NotCache], [x].[ParentGuid], [x].[ParentName], [x].[Sort], [x].[Status], [x].[Url]
+FROM [DncMenu] AS [x]
+WHERE ([x].[IsDeleted] = 0) AND ([x].[Status] = 1)
+2019-11-22 13:03:57,600 [24] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (58ms) [Parameters=[@p0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT P.Code AS PermissionCode,P.ActionCode AS PermissionActionCode,P.Name AS PermissionName,P.Type AS PermissionType,M.Name AS MenuName,M.Guid AS MenuGuid,M.Alias AS MenuAlias,M.IsDefaultRouter FROM DncPermission AS P 
+INNER JOIN DncMenu AS M ON M.Guid = P.MenuGuid
+WHERE P.IsDeleted=0 AND P.Status=1
+2019-11-22 13:03:57,625 [24] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action method DncZeus.Api.Controllers.AccountController.Profile (DncZeus.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 706.0639ms.
+2019-11-22 13:03:57,627 [24] INFO  Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor [(null)]  - Executing ObjectResult, writing value of type 'DncZeus.Api.Models.Response.ResponseModel'.
+2019-11-22 13:03:57,668 [24] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action DncZeus.Api.Controllers.AccountController.Profile (DncZeus.Api) in 901.2212ms
+2019-11-22 13:03:57,673 [24] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 949.7327ms 200 application/json; charset=utf-8
+2019-11-22 13:03:59,268 [20] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 OPTIONS http://localhost:54321/api/v1/account/menu  
+2019-11-22 13:03:59,272 [20] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2019-11-22 13:03:59,274 [20] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 6.2834ms 204 
+2019-11-22 13:03:59,288 [7] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 GET http://localhost:54321/api/v1/account/menu  
+2019-11-22 13:03:59,291 [7] INFO  Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler [(null)]  - Successfully validated the token.
+2019-11-22 13:03:59,294 [7] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2019-11-22 13:03:59,298 [7] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Route matched with {action = "Menu", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Menu() on controller DncZeus.Api.Controllers.AccountController (DncZeus.Api).
+2019-11-22 13:03:59,300 [7] INFO  Microsoft.AspNetCore.Authorization.DefaultAuthorizationService [(null)]  - Authorization was successful.
+2019-11-22 13:03:59,352 [7] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executing action method DncZeus.Api.Controllers.AccountController.Menu (DncZeus.Api) - Validation state: Valid
+2019-11-22 13:03:59,357 [7] INFO  Microsoft.EntityFrameworkCore.Infrastructure [(null)]  - Entity Framework Core 2.1.11-servicing-32099 initialized 'DncZeusDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: RowNumberPaging 
+2019-11-22 13:03:59,418 [7] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (44ms) [Parameters=[@p0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT * FROM DncMenu WHERE IsDeleted=0 AND Status=1
+2019-11-22 13:03:59,476 [7] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (43ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [x].[Guid], [x].[Alias], [x].[BeforeCloseFun], [x].[Component], [x].[CreatedByUserGuid], [x].[CreatedByUserName], [x].[CreatedOn], [x].[Description], [x].[HideInMenu], [x].[Icon], [x].[IsDefaultRouter], [x].[IsDeleted], [x].[Level], [x].[ModifiedByUserGuid], [x].[ModifiedByUserName], [x].[ModifiedOn], [x].[Name], [x].[NotCache], [x].[ParentGuid], [x].[ParentName], [x].[Sort], [x].[Status], [x].[Url]
+FROM [DncMenu] AS [x]
+WHERE (([x].[IsDeleted] = 0) AND ([x].[Status] = 1)) AND ([x].[ParentGuid] = '00000000-0000-0000-0000-000000000000')
+2019-11-22 13:03:59,486 [7] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action method DncZeus.Api.Controllers.AccountController.Menu (DncZeus.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 131.8156ms.
+2019-11-22 13:03:59,489 [7] INFO  Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor [(null)]  - Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[DncZeus.Api.ViewModels.Rbac.DncMenu.MenuItem, DncZeus.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-11-22 13:03:59,496 [7] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action DncZeus.Api.Controllers.AccountController.Menu (DncZeus.Api) in 196.495ms
+2019-11-22 13:03:59,499 [7] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 210.5813ms 200 application/json; charset=utf-8
+2019-11-22 13:04:00,479 [20] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 OPTIONS http://localhost:54321/api/v1/message/count  
+2019-11-22 13:04:00,484 [20] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2019-11-22 13:04:00,489 [20] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 9.275ms 204 
+2019-11-22 13:04:00,514 [7] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 GET http://localhost:54321/api/v1/message/count  
+2019-11-22 13:04:00,517 [7] INFO  Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler [(null)]  - Successfully validated the token.
+2019-11-22 13:04:00,519 [7] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2019-11-22 13:04:00,559 [7] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Route matched with {action = "Count", controller = "Message"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Count() on controller DncZeus.Api.Controllers.Api.V1.MessageController (DncZeus.Api).
+2019-11-22 13:04:00,561 [7] INFO  Microsoft.AspNetCore.Authorization.DefaultAuthorizationService [(null)]  - Authorization was successful.
+2019-11-22 13:04:00,599 [7] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executing action method DncZeus.Api.Controllers.Api.V1.MessageController.Count (DncZeus.Api) - Validation state: Valid
+2019-11-22 13:04:00,601 [7] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action method DncZeus.Api.Controllers.Api.V1.MessageController.Count (DncZeus.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 0.2265ms.
+2019-11-22 13:04:00,603 [7] INFO  Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor [(null)]  - Executing ObjectResult, writing value of type 'System.Int32'.
+2019-11-22 13:04:00,607 [7] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action DncZeus.Api.Controllers.Api.V1.MessageController.Count (DncZeus.Api) in 44.7305ms
+2019-11-22 13:04:00,610 [7] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 95.7303ms 200 application/json; charset=utf-8
+2019-11-22 13:04:21,196 [17] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 OPTIONS http://localhost:54321/api/v3/tmp/itemboard/list?api-version=3  
+2019-11-22 13:04:21,221 [17] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2019-11-22 13:04:21,224 [17] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 27.5757ms 204 
+2019-11-22 13:04:21,262 [7] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 POST http://localhost:54321/api/v3/tmp/itemboard/list?api-version=3 application/json;charset=UTF-8 362
+2019-11-22 13:04:21,272 [7] INFO  Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler [(null)]  - Successfully validated the token.
+2019-11-22 13:04:21,274 [7] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2019-11-22 13:04:21,356 [7] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Route matched with {action = "List", controller = "ItemBoard"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult List(DncZeus.Api.RequestPayload.Tmp.Barhead.BarhRequestPayload) on controller DncZeus.Api.Controllers.Api.Tmp.ItemBoardController (DncZeus.Api).
+2019-11-22 13:04:21,968 [7] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executing action method DncZeus.Api.Controllers.Api.Tmp.ItemBoardController.List (DncZeus.Api) - Validation state: Valid
+2019-11-22 13:04:21,980 [7] INFO  Microsoft.EntityFrameworkCore.Infrastructure [(null)]  - Entity Framework Core 2.1.11-servicing-32099 initialized 'DncZeusDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: RowNumberPaging 
+2019-11-22 13:04:22,222 [7] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (215ms) [Parameters=[@__payload_orgId_0='?' (DbType = Int32), @__payload_isValid_1='?' (Size = 1) (DbType = Byte), @__payload_orgId_2='?' (DbType = Int32), @__p_3='?' (DbType = Int32), @__p_4='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [t].[Guid], [t].[Org], [t].[boardType], [t].[boardcode], [t].[boardname], [t].[boardnum], [t].[cfmdate], [t].[cfmuser], [t].[credate], [t].[creuser], [t].[fBarcode], [t].[fPackNo], [t].[fgoodscode], [t].[fgoodsname], [t].[fmono], [t].[fordno], [t].[fspname], [t].[isValid], [t].[lprintnum], [t].[moddate], [t].[moduser], [t].[status], [t].[tmpPackNo], [t].[valmdate], [t].[valuser]
+FROM (
+    SELECT [x].[Guid], [x].[Org], [x].[boardType], [x].[boardcode], [x].[boardname], [x].[boardnum], [x].[cfmdate], [x].[cfmuser], [x].[credate], [x].[creuser], [x].[fBarcode], [x].[fPackNo], [x].[fgoodscode], [x].[fgoodsname], [x].[fmono], [x].[fordno], [x].[fspname], [x].[isValid], [x].[lprintnum], [x].[moddate], [x].[moduser], [x].[status], [x].[tmpPackNo], [x].[valmdate], [x].[valuser], ROW_NUMBER() OVER(ORDER BY [x].[tmpPackNo] DESC) AS [__RowNumber__]
+    FROM [TmpItemBoards] AS [x]
+    WHERE ([x].[Org] = @__payload_orgId_0) AND (([x].[isValid] = @__payload_isValid_1) AND ([x].[Org] = @__payload_orgId_2))
+) AS [t]
+WHERE ([t].[__RowNumber__] > @__p_3) AND ([t].[__RowNumber__] <= (@__p_3 + @__p_4))
+2019-11-22 13:04:22,378 [7] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (62ms) [Parameters=[@__payload_orgId_0='?' (DbType = Int32), @__payload_isValid_1='?' (Size = 1) (DbType = Byte), @__payload_orgId_2='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [TmpItemBoards] AS [x]
+WHERE ([x].[Org] = @__payload_orgId_0) AND (([x].[isValid] = @__payload_isValid_1) AND ([x].[Org] = @__payload_orgId_2))
+2019-11-22 13:04:22,440 [7] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action method DncZeus.Api.Controllers.Api.Tmp.ItemBoardController.List (DncZeus.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 468.6159ms.
+2019-11-22 13:04:22,444 [7] INFO  Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor [(null)]  - Executing ObjectResult, writing value of type 'DncZeus.Api.Models.Response.ResponseResultModel'.
+2019-11-22 13:04:22,468 [7] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action DncZeus.Api.Controllers.Api.Tmp.ItemBoardController.List (DncZeus.Api) in 1108.5395ms
+2019-11-22 13:04:22,496 [7] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 1212.0211ms 200 application/json; charset=utf-8
+2019-11-22 13:04:30,326 [17] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 OPTIONS http://localhost:54321/api/v3/tmp/itemboard/batch?api-version=3&command=print&ids=2b1c092b-aaec-4870-aa46-a56d13022735  
+2019-11-22 13:04:30,331 [17] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2019-11-22 13:04:30,349 [17] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 8.3885ms 204 
+2019-11-22 13:04:30,356 [10] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 GET http://localhost:54321/api/v3/tmp/itemboard/batch?api-version=3&command=print&ids=2b1c092b-aaec-4870-aa46-a56d13022735  
+2019-11-22 13:04:30,359 [10] INFO  Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler [(null)]  - Successfully validated the token.
+2019-11-22 13:04:30,361 [10] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2019-11-22 13:04:30,365 [10] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Route matched with {action = "Batch", controller = "ItemBoard"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Batch(System.String, System.String) on controller DncZeus.Api.Controllers.Api.Tmp.ItemBoardController (DncZeus.Api).
+2019-11-22 13:04:30,392 [10] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executing action method DncZeus.Api.Controllers.Api.Tmp.ItemBoardController.Batch (DncZeus.Api) - Validation state: Valid
+2019-11-22 13:04:30,397 [10] INFO  Microsoft.EntityFrameworkCore.Infrastructure [(null)]  - Entity Framework Core 2.1.11-servicing-32099 initialized 'DncZeusDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: RowNumberPaging 
+2019-11-22 13:04:30,611 [10] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (148ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (Size = 50), @p2='?' (DbType = Guid), @p3='?' (Size = 20), @p4='?' (DbType = DateTime2), @p5='?' (DbType = Guid), @p6='?' (DbType = DateTime2), @p7='?' (DbType = Int16)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [TmpBoardsPrint] ([Guid], [LoginName], [creUserGuid], [creUserName], [credate], [itemBoardGuid], [prtdate], [prtnum])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7);
+2019-11-22 13:04:30,642 [10] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action method DncZeus.Api.Controllers.Api.Tmp.ItemBoardController.Batch (DncZeus.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 247.3999ms.
+2019-11-22 13:04:30,644 [10] INFO  Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor [(null)]  - Executing ObjectResult, writing value of type 'DncZeus.Api.Models.Response.ResponseModel'.
+2019-11-22 13:04:30,684 [10] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action DncZeus.Api.Controllers.Api.Tmp.ItemBoardController.Batch (DncZeus.Api) in 316.5634ms
+2019-11-22 13:04:30,687 [10] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 330.3148ms 200 application/json; charset=utf-8
+2019-11-22 13:04:30,698 [7] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 OPTIONS http://localhost:54321/api/v3/tmp/itemboard/list?api-version=3  
+2019-11-22 13:04:30,701 [7] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2019-11-22 13:04:30,705 [7] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 6.0536ms 204 
+2019-11-22 13:04:30,708 [17] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 POST http://localhost:54321/api/v3/tmp/itemboard/list?api-version=3 application/json;charset=UTF-8 362
+2019-11-22 13:04:30,710 [17] INFO  Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler [(null)]  - Successfully validated the token.
+2019-11-22 13:04:30,712 [17] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2019-11-22 13:04:30,714 [17] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Route matched with {action = "List", controller = "ItemBoard"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult List(DncZeus.Api.RequestPayload.Tmp.Barhead.BarhRequestPayload) on controller DncZeus.Api.Controllers.Api.Tmp.ItemBoardController (DncZeus.Api).
+2019-11-22 13:04:30,736 [17] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executing action method DncZeus.Api.Controllers.Api.Tmp.ItemBoardController.List (DncZeus.Api) - Validation state: Valid
+2019-11-22 13:04:30,738 [17] INFO  Microsoft.EntityFrameworkCore.Infrastructure [(null)]  - Entity Framework Core 2.1.11-servicing-32099 initialized 'DncZeusDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: RowNumberPaging 
+2019-11-22 13:04:30,766 [17] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (25ms) [Parameters=[@__payload_orgId_0='?' (DbType = Int32), @__payload_isValid_1='?' (Size = 1) (DbType = Byte), @__payload_orgId_2='?' (DbType = Int32), @__p_3='?' (DbType = Int32), @__p_4='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [t].[Guid], [t].[Org], [t].[boardType], [t].[boardcode], [t].[boardname], [t].[boardnum], [t].[cfmdate], [t].[cfmuser], [t].[credate], [t].[creuser], [t].[fBarcode], [t].[fPackNo], [t].[fgoodscode], [t].[fgoodsname], [t].[fmono], [t].[fordno], [t].[fspname], [t].[isValid], [t].[lprintnum], [t].[moddate], [t].[moduser], [t].[status], [t].[tmpPackNo], [t].[valmdate], [t].[valuser]
+FROM (
+    SELECT [x].[Guid], [x].[Org], [x].[boardType], [x].[boardcode], [x].[boardname], [x].[boardnum], [x].[cfmdate], [x].[cfmuser], [x].[credate], [x].[creuser], [x].[fBarcode], [x].[fPackNo], [x].[fgoodscode], [x].[fgoodsname], [x].[fmono], [x].[fordno], [x].[fspname], [x].[isValid], [x].[lprintnum], [x].[moddate], [x].[moduser], [x].[status], [x].[tmpPackNo], [x].[valmdate], [x].[valuser], ROW_NUMBER() OVER(ORDER BY [x].[tmpPackNo] DESC) AS [__RowNumber__]
+    FROM [TmpItemBoards] AS [x]
+    WHERE ([x].[Org] = @__payload_orgId_0) AND (([x].[isValid] = @__payload_isValid_1) AND ([x].[Org] = @__payload_orgId_2))
+) AS [t]
+WHERE ([t].[__RowNumber__] > @__p_3) AND ([t].[__RowNumber__] <= (@__p_3 + @__p_4))
+2019-11-22 13:04:30,810 [17] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (41ms) [Parameters=[@__payload_orgId_0='?' (DbType = Int32), @__payload_isValid_1='?' (Size = 1) (DbType = Byte), @__payload_orgId_2='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [TmpItemBoards] AS [x]
+WHERE ([x].[Org] = @__payload_orgId_0) AND (([x].[isValid] = @__payload_isValid_1) AND ([x].[Org] = @__payload_orgId_2))
+2019-11-22 13:04:30,813 [17] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action method DncZeus.Api.Controllers.Api.Tmp.ItemBoardController.List (DncZeus.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 74.9916ms.
+2019-11-22 13:04:30,815 [17] INFO  Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor [(null)]  - Executing ObjectResult, writing value of type 'DncZeus.Api.Models.Response.ResponseResultModel'.
+2019-11-22 13:04:30,817 [17] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action DncZeus.Api.Controllers.Api.Tmp.ItemBoardController.List (DncZeus.Api) in 100.624ms
+2019-11-22 13:04:30,820 [17] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 111.1014ms 200 application/json; charset=utf-8
+2019-11-22 13:13:15,288 [25] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 OPTIONS http://localhost:54321/api/v3/tmp/itemboard/batch?api-version=3&command=print&ids=2b1c092b-aaec-4870-aa46-a56d13022735  
+2019-11-22 13:13:15,404 [25] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2019-11-22 13:13:15,407 [25] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 141.4411ms 204 
+2019-11-22 13:13:15,465 [7] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 GET http://localhost:54321/api/v3/tmp/itemboard/batch?api-version=3&command=print&ids=2b1c092b-aaec-4870-aa46-a56d13022735  
+2019-11-22 13:13:15,492 [7] INFO  Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler [(null)]  - Successfully validated the token.
+2019-11-22 13:13:15,513 [7] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2019-11-22 13:13:15,539 [7] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Route matched with {action = "Batch", controller = "ItemBoard"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Batch(System.String, System.String) on controller DncZeus.Api.Controllers.Api.Tmp.ItemBoardController (DncZeus.Api).
+2019-11-22 13:13:15,785 [7] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executing action method DncZeus.Api.Controllers.Api.Tmp.ItemBoardController.Batch (DncZeus.Api) - Validation state: Valid
+2019-11-22 13:13:15,794 [7] INFO  Microsoft.EntityFrameworkCore.Infrastructure [(null)]  - Entity Framework Core 2.1.11-servicing-32099 initialized 'DncZeusDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: RowNumberPaging 
+2019-11-22 13:13:15,957 [7] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (83ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (Size = 50), @p2='?' (DbType = Guid), @p3='?' (Size = 20), @p4='?' (DbType = DateTime2), @p5='?' (DbType = Guid), @p6='?' (DbType = DateTime2), @p7='?' (DbType = Int16)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [TmpBoardsPrint] ([Guid], [LoginName], [creUserGuid], [creUserName], [credate], [itemBoardGuid], [prtdate], [prtnum])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7);
+2019-11-22 13:13:16,000 [7] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action method DncZeus.Api.Controllers.Api.Tmp.ItemBoardController.Batch (DncZeus.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 175.8555ms.
+2019-11-22 13:13:16,003 [7] INFO  Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor [(null)]  - Executing ObjectResult, writing value of type 'DncZeus.Api.Models.Response.ResponseModel'.
+2019-11-22 13:13:16,046 [7] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action DncZeus.Api.Controllers.Api.Tmp.ItemBoardController.Batch (DncZeus.Api) in 499.7604ms
+2019-11-22 13:13:16,051 [7] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 594.3835ms 200 application/json; charset=utf-8
+2019-11-22 13:13:16,243 [29] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 OPTIONS http://localhost:54321/api/v3/tmp/itemboard/list?api-version=3  
+2019-11-22 13:13:16,249 [29] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2019-11-22 13:13:16,252 [29] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 8.6935ms 204 
+2019-11-22 13:13:16,285 [7] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 POST http://localhost:54321/api/v3/tmp/itemboard/list?api-version=3 application/json;charset=UTF-8 362
+2019-11-22 13:13:16,288 [7] INFO  Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler [(null)]  - Successfully validated the token.
+2019-11-22 13:13:16,291 [7] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2019-11-22 13:13:16,309 [7] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Route matched with {action = "List", controller = "ItemBoard"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult List(DncZeus.Api.RequestPayload.Tmp.Barhead.BarhRequestPayload) on controller DncZeus.Api.Controllers.Api.Tmp.ItemBoardController (DncZeus.Api).
+2019-11-22 13:13:16,373 [7] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executing action method DncZeus.Api.Controllers.Api.Tmp.ItemBoardController.List (DncZeus.Api) - Validation state: Valid
+2019-11-22 13:13:16,414 [7] INFO  Microsoft.EntityFrameworkCore.Infrastructure [(null)]  - Entity Framework Core 2.1.11-servicing-32099 initialized 'DncZeusDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: RowNumberPaging 
+2019-11-22 13:13:16,573 [7] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (108ms) [Parameters=[@__payload_orgId_0='?' (DbType = Int32), @__payload_isValid_1='?' (Size = 1) (DbType = Byte), @__payload_orgId_2='?' (DbType = Int32), @__p_3='?' (DbType = Int32), @__p_4='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [t].[Guid], [t].[Org], [t].[boardType], [t].[boardcode], [t].[boardname], [t].[boardnum], [t].[cfmdate], [t].[cfmuser], [t].[credate], [t].[creuser], [t].[fBarcode], [t].[fPackNo], [t].[fgoodscode], [t].[fgoodsname], [t].[fmono], [t].[fordno], [t].[fspname], [t].[isValid], [t].[lprintnum], [t].[moddate], [t].[moduser], [t].[status], [t].[tmpPackNo], [t].[valmdate], [t].[valuser]
+FROM (
+    SELECT [x].[Guid], [x].[Org], [x].[boardType], [x].[boardcode], [x].[boardname], [x].[boardnum], [x].[cfmdate], [x].[cfmuser], [x].[credate], [x].[creuser], [x].[fBarcode], [x].[fPackNo], [x].[fgoodscode], [x].[fgoodsname], [x].[fmono], [x].[fordno], [x].[fspname], [x].[isValid], [x].[lprintnum], [x].[moddate], [x].[moduser], [x].[status], [x].[tmpPackNo], [x].[valmdate], [x].[valuser], ROW_NUMBER() OVER(ORDER BY [x].[tmpPackNo] DESC) AS [__RowNumber__]
+    FROM [TmpItemBoards] AS [x]
+    WHERE ([x].[Org] = @__payload_orgId_0) AND (([x].[isValid] = @__payload_isValid_1) AND ([x].[Org] = @__payload_orgId_2))
+) AS [t]
+WHERE ([t].[__RowNumber__] > @__p_3) AND ([t].[__RowNumber__] <= (@__p_3 + @__p_4))
+2019-11-22 13:13:16,648 [7] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (63ms) [Parameters=[@__payload_orgId_0='?' (DbType = Int32), @__payload_isValid_1='?' (Size = 1) (DbType = Byte), @__payload_orgId_2='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [TmpItemBoards] AS [x]
+WHERE ([x].[Org] = @__payload_orgId_0) AND (([x].[isValid] = @__payload_isValid_1) AND ([x].[Org] = @__payload_orgId_2))
+2019-11-22 13:13:16,651 [7] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action method DncZeus.Api.Controllers.Api.Tmp.ItemBoardController.List (DncZeus.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 274.8148ms.
+2019-11-22 13:13:16,654 [7] INFO  Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor [(null)]  - Executing ObjectResult, writing value of type 'DncZeus.Api.Models.Response.ResponseResultModel'.
+2019-11-22 13:13:16,667 [7] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action DncZeus.Api.Controllers.Api.Tmp.ItemBoardController.List (DncZeus.Api) in 355.7184ms
+2019-11-22 13:13:16,670 [7] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 384.6261ms 200 application/json; charset=utf-8
+2019-11-22 13:14:43,539 [7] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 OPTIONS http://localhost:54321/api/v3/tmp/itemboard/batch?api-version=3&command=print&ids=2b1c092b-aaec-4870-aa46-a56d13022735,7d188073-9c8a-4b84-b233-8e1159228e7e,97ff339f-607a-4d83-b363-21200ffb1b41  
+2019-11-22 13:14:43,567 [7] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2019-11-22 13:14:43,598 [7] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 32.6543ms 204 
+2019-11-22 13:14:43,623 [29] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 GET http://localhost:54321/api/v3/tmp/itemboard/batch?api-version=3&command=print&ids=2b1c092b-aaec-4870-aa46-a56d13022735,7d188073-9c8a-4b84-b233-8e1159228e7e,97ff339f-607a-4d83-b363-21200ffb1b41  
+2019-11-22 13:14:43,645 [29] INFO  Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler [(null)]  - Successfully validated the token.
+2019-11-22 13:14:43,657 [29] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2019-11-22 13:14:43,660 [29] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Route matched with {action = "Batch", controller = "ItemBoard"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Batch(System.String, System.String) on controller DncZeus.Api.Controllers.Api.Tmp.ItemBoardController (DncZeus.Api).
+2019-11-22 13:14:43,703 [29] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executing action method DncZeus.Api.Controllers.Api.Tmp.ItemBoardController.Batch (DncZeus.Api) - Validation state: Valid
+2019-11-22 13:14:43,707 [29] INFO  Microsoft.EntityFrameworkCore.Infrastructure [(null)]  - Entity Framework Core 2.1.11-servicing-32099 initialized 'DncZeusDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: RowNumberPaging 
+2019-11-22 13:14:43,763 [29] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (32ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (Size = 50), @p2='?' (DbType = Guid), @p3='?' (Size = 20), @p4='?' (DbType = DateTime2), @p5='?' (DbType = Guid), @p6='?' (DbType = DateTime2), @p7='?' (DbType = Int16)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [TmpBoardsPrint] ([Guid], [LoginName], [creUserGuid], [creUserName], [credate], [itemBoardGuid], [prtdate], [prtnum])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7);
+2019-11-22 13:14:43,793 [29] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (24ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (Size = 50), @p2='?' (DbType = Guid), @p3='?' (Size = 20), @p4='?' (DbType = DateTime2), @p5='?' (DbType = Guid), @p6='?' (DbType = DateTime2), @p7='?' (DbType = Int16)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [TmpBoardsPrint] ([Guid], [LoginName], [creUserGuid], [creUserName], [credate], [itemBoardGuid], [prtdate], [prtnum])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7);
+2019-11-22 13:14:43,818 [29] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (22ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (Size = 50), @p2='?' (DbType = Guid), @p3='?' (Size = 20), @p4='?' (DbType = DateTime2), @p5='?' (DbType = Guid), @p6='?' (DbType = DateTime2), @p7='?' (DbType = Int16)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [TmpBoardsPrint] ([Guid], [LoginName], [creUserGuid], [creUserName], [credate], [itemBoardGuid], [prtdate], [prtnum])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7);
+2019-11-22 13:14:43,846 [29] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action method DncZeus.Api.Controllers.Api.Tmp.ItemBoardController.Batch (DncZeus.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 137.6332ms.
+2019-11-22 13:14:43,856 [29] INFO  Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor [(null)]  - Executing ObjectResult, writing value of type 'DncZeus.Api.Models.Response.ResponseModel'.
+2019-11-22 13:14:43,863 [29] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action DncZeus.Api.Controllers.Api.Tmp.ItemBoardController.Batch (DncZeus.Api) in 199.2791ms
+2019-11-22 13:14:43,866 [29] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 243.1911ms 200 application/json; charset=utf-8
+2019-11-22 13:14:43,890 [7] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 OPTIONS http://localhost:54321/api/v3/tmp/itemboard/list?api-version=3  
+2019-11-22 13:14:43,892 [7] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2019-11-22 13:14:43,895 [7] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 4.7105ms 204 
+2019-11-22 13:14:43,921 [31] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 POST http://localhost:54321/api/v3/tmp/itemboard/list?api-version=3 application/json;charset=UTF-8 362
+2019-11-22 13:14:43,924 [31] INFO  Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler [(null)]  - Successfully validated the token.
+2019-11-22 13:14:43,936 [31] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2019-11-22 13:14:43,938 [31] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Route matched with {action = "List", controller = "ItemBoard"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult List(DncZeus.Api.RequestPayload.Tmp.Barhead.BarhRequestPayload) on controller DncZeus.Api.Controllers.Api.Tmp.ItemBoardController (DncZeus.Api).
+2019-11-22 13:14:43,991 [31] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executing action method DncZeus.Api.Controllers.Api.Tmp.ItemBoardController.List (DncZeus.Api) - Validation state: Valid
+2019-11-22 13:14:43,995 [31] INFO  Microsoft.EntityFrameworkCore.Infrastructure [(null)]  - Entity Framework Core 2.1.11-servicing-32099 initialized 'DncZeusDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: RowNumberPaging 
+2019-11-22 13:14:44,032 [31] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (34ms) [Parameters=[@__payload_orgId_0='?' (DbType = Int32), @__payload_isValid_1='?' (Size = 1) (DbType = Byte), @__payload_orgId_2='?' (DbType = Int32), @__p_3='?' (DbType = Int32), @__p_4='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [t].[Guid], [t].[Org], [t].[boardType], [t].[boardcode], [t].[boardname], [t].[boardnum], [t].[cfmdate], [t].[cfmuser], [t].[credate], [t].[creuser], [t].[fBarcode], [t].[fPackNo], [t].[fgoodscode], [t].[fgoodsname], [t].[fmono], [t].[fordno], [t].[fspname], [t].[isValid], [t].[lprintnum], [t].[moddate], [t].[moduser], [t].[status], [t].[tmpPackNo], [t].[valmdate], [t].[valuser]
+FROM (
+    SELECT [x].[Guid], [x].[Org], [x].[boardType], [x].[boardcode], [x].[boardname], [x].[boardnum], [x].[cfmdate], [x].[cfmuser], [x].[credate], [x].[creuser], [x].[fBarcode], [x].[fPackNo], [x].[fgoodscode], [x].[fgoodsname], [x].[fmono], [x].[fordno], [x].[fspname], [x].[isValid], [x].[lprintnum], [x].[moddate], [x].[moduser], [x].[status], [x].[tmpPackNo], [x].[valmdate], [x].[valuser], ROW_NUMBER() OVER(ORDER BY [x].[tmpPackNo] DESC) AS [__RowNumber__]
+    FROM [TmpItemBoards] AS [x]
+    WHERE ([x].[Org] = @__payload_orgId_0) AND (([x].[isValid] = @__payload_isValid_1) AND ([x].[Org] = @__payload_orgId_2))
+) AS [t]
+WHERE ([t].[__RowNumber__] > @__p_3) AND ([t].[__RowNumber__] <= (@__p_3 + @__p_4))
+2019-11-22 13:14:44,079 [31] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (24ms) [Parameters=[@__payload_orgId_0='?' (DbType = Int32), @__payload_isValid_1='?' (Size = 1) (DbType = Byte), @__payload_orgId_2='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [TmpItemBoards] AS [x]
+WHERE ([x].[Org] = @__payload_orgId_0) AND (([x].[isValid] = @__payload_isValid_1) AND ([x].[Org] = @__payload_orgId_2))
+2019-11-22 13:14:44,081 [31] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action method DncZeus.Api.Controllers.Api.Tmp.ItemBoardController.List (DncZeus.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 87.6383ms.
+2019-11-22 13:14:44,087 [31] INFO  Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor [(null)]  - Executing ObjectResult, writing value of type 'DncZeus.Api.Models.Response.ResponseResultModel'.
+2019-11-22 13:14:44,105 [31] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action DncZeus.Api.Controllers.Api.Tmp.ItemBoardController.List (DncZeus.Api) in 160.6925ms
+2019-11-22 13:14:44,107 [31] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 186.04ms 200 application/json; charset=utf-8
+2019-11-22 13:35:57,336 [7] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 OPTIONS http://localhost:54321/api/v3/tmp/itemboard/batch?api-version=3&command=print&ids=2b1c092b-aaec-4870-aa46-a56d13022735  
+2019-11-22 13:35:57,669 [7] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2019-11-22 13:35:57,685 [7] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 371.2265ms 204 
+2019-11-22 13:35:57,919 [7] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 GET http://localhost:54321/api/v3/tmp/itemboard/batch?api-version=3&command=print&ids=2b1c092b-aaec-4870-aa46-a56d13022735  
+2019-11-22 13:35:58,258 [7] INFO  Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler [(null)]  - Successfully validated the token.
+2019-11-22 13:35:58,298 [7] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2019-11-22 13:35:58,950 [7] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Route matched with {action = "Batch", controller = "ItemBoard"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Batch(System.String, System.String) on controller DncZeus.Api.Controllers.Api.Tmp.ItemBoardController (DncZeus.Api).
+2019-11-22 13:36:00,487 [7] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executing action method DncZeus.Api.Controllers.Api.Tmp.ItemBoardController.Batch (DncZeus.Api) - Validation state: Valid
+2019-11-22 13:36:00,916 [7] INFO  Microsoft.EntityFrameworkCore.Infrastructure [(null)]  - Entity Framework Core 2.1.11-servicing-32099 initialized 'DncZeusDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: RowNumberPaging 
+2019-11-22 13:36:01,386 [7] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (170ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (Size = 50), @p2='?' (DbType = Guid), @p3='?' (Size = 20), @p4='?' (DbType = DateTime2), @p5='?' (DbType = Guid), @p6='?' (DbType = DateTime2), @p7='?' (DbType = Int16)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [TmpBoardsPrint] ([Guid], [LoginName], [creUserGuid], [creUserName], [credate], [itemBoardGuid], [prtdate], [prtnum])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7);
+2019-11-22 13:36:01,419 [7] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action method DncZeus.Api.Controllers.Api.Tmp.ItemBoardController.Batch (DncZeus.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 928.6644ms.
+2019-11-22 13:36:01,471 [7] INFO  Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor [(null)]  - Executing ObjectResult, writing value of type 'DncZeus.Api.Models.Response.ResponseModel'.
+2019-11-22 13:36:01,524 [7] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action DncZeus.Api.Controllers.Api.Tmp.ItemBoardController.Batch (DncZeus.Api) in 2553.2028ms
+2019-11-22 13:36:01,526 [7] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 3620.0659ms 200 application/json; charset=utf-8
+2019-11-22 13:36:01,897 [33] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 OPTIONS http://localhost:54321/api/v3/tmp/itemboard/list?api-version=3  
+2019-11-22 13:36:01,914 [33] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2019-11-22 13:36:01,921 [33] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 23.7835ms 204 
+2019-11-22 13:36:02,060 [7] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 POST http://localhost:54321/api/v3/tmp/itemboard/list?api-version=3 application/json;charset=UTF-8 362
+2019-11-22 13:36:02,064 [7] INFO  Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler [(null)]  - Successfully validated the token.
+2019-11-22 13:36:02,066 [7] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2019-11-22 13:36:02,116 [7] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Route matched with {action = "List", controller = "ItemBoard"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult List(DncZeus.Api.RequestPayload.Tmp.Barhead.BarhRequestPayload) on controller DncZeus.Api.Controllers.Api.Tmp.ItemBoardController (DncZeus.Api).
+2019-11-22 13:36:02,297 [7] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executing action method DncZeus.Api.Controllers.Api.Tmp.ItemBoardController.List (DncZeus.Api) - Validation state: Valid
+2019-11-22 13:36:02,354 [7] INFO  Microsoft.EntityFrameworkCore.Infrastructure [(null)]  - Entity Framework Core 2.1.11-servicing-32099 initialized 'DncZeusDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: RowNumberPaging 
+2019-11-22 13:36:02,507 [7] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (114ms) [Parameters=[@__payload_orgId_0='?' (DbType = Int32), @__payload_isValid_1='?' (Size = 1) (DbType = Byte), @__payload_orgId_2='?' (DbType = Int32), @__p_3='?' (DbType = Int32), @__p_4='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [t].[Guid], [t].[Org], [t].[boardType], [t].[boardcode], [t].[boardname], [t].[boardnum], [t].[cfmdate], [t].[cfmuser], [t].[credate], [t].[creuser], [t].[fBarcode], [t].[fPackNo], [t].[fgoodscode], [t].[fgoodsname], [t].[fmono], [t].[fordno], [t].[fspname], [t].[isValid], [t].[lprintnum], [t].[moddate], [t].[moduser], [t].[status], [t].[tmpPackNo], [t].[valmdate], [t].[valuser]
+FROM (
+    SELECT [x].[Guid], [x].[Org], [x].[boardType], [x].[boardcode], [x].[boardname], [x].[boardnum], [x].[cfmdate], [x].[cfmuser], [x].[credate], [x].[creuser], [x].[fBarcode], [x].[fPackNo], [x].[fgoodscode], [x].[fgoodsname], [x].[fmono], [x].[fordno], [x].[fspname], [x].[isValid], [x].[lprintnum], [x].[moddate], [x].[moduser], [x].[status], [x].[tmpPackNo], [x].[valmdate], [x].[valuser], ROW_NUMBER() OVER(ORDER BY [x].[tmpPackNo] DESC) AS [__RowNumber__]
+    FROM [TmpItemBoards] AS [x]
+    WHERE ([x].[Org] = @__payload_orgId_0) AND (([x].[isValid] = @__payload_isValid_1) AND ([x].[Org] = @__payload_orgId_2))
+) AS [t]
+WHERE ([t].[__RowNumber__] > @__p_3) AND ([t].[__RowNumber__] <= (@__p_3 + @__p_4))
+2019-11-22 13:36:02,603 [7] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (35ms) [Parameters=[@__payload_orgId_0='?' (DbType = Int32), @__payload_isValid_1='?' (Size = 1) (DbType = Byte), @__payload_orgId_2='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [TmpItemBoards] AS [x]
+WHERE ([x].[Org] = @__payload_orgId_0) AND (([x].[isValid] = @__payload_isValid_1) AND ([x].[Org] = @__payload_orgId_2))
+2019-11-22 13:36:02,619 [7] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action method DncZeus.Api.Controllers.Api.Tmp.ItemBoardController.List (DncZeus.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 311.5528ms.
+2019-11-22 13:36:02,638 [7] INFO  Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor [(null)]  - Executing ObjectResult, writing value of type 'DncZeus.Api.Models.Response.ResponseResultModel'.
+2019-11-22 13:36:02,678 [7] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action DncZeus.Api.Controllers.Api.Tmp.ItemBoardController.List (DncZeus.Api) in 537.8324ms
+2019-11-22 13:36:02,688 [7] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 648.5202ms 200 application/json; charset=utf-8

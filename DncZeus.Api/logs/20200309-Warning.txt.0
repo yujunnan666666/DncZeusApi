@@ -1,0 +1,2 @@
+2020-03-09 17:32:14,019 [7] WARN  Microsoft.EntityFrameworkCore.Query [(null)]  - The LINQ expression 'GroupBy([b].prgno, new <>f__AnonymousType3`2(butno = [b].butno, prgno = [b].prgno))' could not be translated and will be evaluated locally.
+2020-03-09 17:32:14,071 [7] WARN  Microsoft.EntityFrameworkCore.Query [(null)]  - The LINQ expression 'GroupBy([b].prgno, new <>f__AnonymousType3`2(butno = [b].butno, prgno = [b].prgno))' could not be translated and will be evaluated locally.

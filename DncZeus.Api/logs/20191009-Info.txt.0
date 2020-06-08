@@ -1,0 +1,339 @@
+2019-10-09 09:25:28,469 [1] INFO  Microsoft.EntityFrameworkCore.Infrastructure [(null)]  - Entity Framework Core 2.1.11-servicing-32099 initialized 'DncZeusDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: RowNumberPaging 
+2019-10-09 09:25:29,263 [1] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (61ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2019-10-09 09:25:29,266 [1] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2019-10-09 09:25:29,291 [1] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (21ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2019-10-09 09:25:29,296 [1] INFO  Microsoft.EntityFrameworkCore.Migrations [(null)]  - No migrations were applied. The database is already up to date.
+2019-10-09 09:34:36,275 [1] INFO  Microsoft.EntityFrameworkCore.Infrastructure [(null)]  - Entity Framework Core 2.1.11-servicing-32099 initialized 'DncZeusDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: RowNumberPaging 
+2019-10-09 09:34:36,452 [1] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (6ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2019-10-09 09:34:36,454 [1] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2019-10-09 09:34:36,458 [1] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2019-10-09 09:34:36,463 [1] INFO  Microsoft.EntityFrameworkCore.Migrations [(null)]  - No migrations were applied. The database is already up to date.
+2019-10-09 09:52:59,312 [1] INFO  Microsoft.EntityFrameworkCore.Infrastructure [(null)]  - Entity Framework Core 2.1.11-servicing-32099 initialized 'DncZeusDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: RowNumberPaging 
+2019-10-09 09:52:59,463 [1] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (5ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2019-10-09 09:52:59,466 [1] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2019-10-09 09:52:59,470 [1] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2019-10-09 09:52:59,474 [1] INFO  Microsoft.EntityFrameworkCore.Migrations [(null)]  - No migrations were applied. The database is already up to date.
+2019-10-09 10:08:37,805 [1] INFO  Microsoft.EntityFrameworkCore.Infrastructure [(null)]  - Entity Framework Core 2.1.11-servicing-32099 initialized 'DncZeusDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: RowNumberPaging 
+2019-10-09 10:09:11,222 [1] INFO  Microsoft.EntityFrameworkCore.Infrastructure [(null)]  - Entity Framework Core 2.1.11-servicing-32099 initialized 'DncZeusDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: RowNumberPaging 
+2019-10-09 10:11:07,044 [1] INFO  Microsoft.EntityFrameworkCore.Infrastructure [(null)]  - Entity Framework Core 2.1.11-servicing-32099 initialized 'DncZeusDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: RowNumberPaging 
+2019-10-09 10:11:07,167 [1] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (12ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2019-10-09 10:11:07,169 [1] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2019-10-09 10:11:07,173 [1] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2019-10-09 10:11:07,198 [1] INFO  Microsoft.EntityFrameworkCore.Migrations [(null)]  - Applying migration '20191009020837_MyFirstMigration'.
+2019-10-09 10:11:07,280 [1] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (56ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [MisCatalog] (
+    [ID] int NOT NULL IDENTITY,
+    [Code] nvarchar(10) NOT NULL,
+    [Name] nvarchar(30) NULL,
+    [trseq] int NOT NULL,
+    [creuser] uniqueidentifier NULL,
+    [credate] datetime2 NULL,
+    [moduser] uniqueidentifier NULL,
+    [moddate] datetime2 NULL,
+    CONSTRAINT [PK_MisCatalog] PRIMARY KEY ([ID])
+);
+2019-10-09 10:11:07,325 [1] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (44ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20191009020837_MyFirstMigration', N'2.1.11-servicing-32099');
+2019-10-09 10:26:10,612 [1] INFO  Microsoft.EntityFrameworkCore.Infrastructure [(null)]  - Entity Framework Core 2.1.11-servicing-32099 initialized 'DncZeusDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: RowNumberPaging 
+2019-10-09 10:27:21,482 [1] INFO  Microsoft.EntityFrameworkCore.Infrastructure [(null)]  - Entity Framework Core 2.1.11-servicing-32099 initialized 'DncZeusDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: RowNumberPaging 
+2019-10-09 10:27:21,610 [1] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2019-10-09 10:27:21,612 [1] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2019-10-09 10:27:21,616 [1] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2019-10-09 10:27:21,621 [1] INFO  Microsoft.EntityFrameworkCore.Migrations [(null)]  - Applying migration '20191009022610_MisMigration'.
+2019-10-09 10:27:21,639 [1] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20191009022610_MisMigration', N'2.1.11-servicing-32099');
+2019-10-09 10:28:12,525 [1] INFO  Microsoft.EntityFrameworkCore.Infrastructure [(null)]  - Entity Framework Core 2.1.11-servicing-32099 initialized 'DncZeusDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: RowNumberPaging 
+2019-10-09 10:28:12,634 [1] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2019-10-09 10:28:12,636 [1] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2019-10-09 10:28:12,639 [1] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2019-10-09 10:28:12,644 [1] INFO  Microsoft.EntityFrameworkCore.Migrations [(null)]  - No migrations were applied. The database is already up to date.
+2019-10-09 10:29:55,419 [1] INFO  Microsoft.EntityFrameworkCore.Infrastructure [(null)]  - Entity Framework Core 2.1.11-servicing-32099 initialized 'DncZeusDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: RowNumberPaging 
+2019-10-09 10:30:15,789 [1] INFO  Microsoft.EntityFrameworkCore.Infrastructure [(null)]  - Entity Framework Core 2.1.11-servicing-32099 initialized 'DncZeusDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: RowNumberPaging 
+2019-10-09 10:30:15,923 [1] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (6ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2019-10-09 10:30:15,925 [1] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2019-10-09 10:30:15,929 [1] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2019-10-09 10:30:15,933 [1] INFO  Microsoft.EntityFrameworkCore.Migrations [(null)]  - Applying migration '20191009022955_MisMigration'.
+2019-10-09 10:30:15,954 [1] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20191009022955_MisMigration', N'2.1.11-servicing-32099');
+2019-10-09 10:31:38,662 [1] INFO  Microsoft.EntityFrameworkCore.Infrastructure [(null)]  - Entity Framework Core 2.1.11-servicing-32099 initialized 'DncZeusDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: RowNumberPaging 
+2019-10-09 10:32:22,712 [1] INFO  Microsoft.EntityFrameworkCore.Infrastructure [(null)]  - Entity Framework Core 2.1.11-servicing-32099 initialized 'DncZeusDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: RowNumberPaging 
+2019-10-09 10:33:08,756 [1] INFO  Microsoft.EntityFrameworkCore.Infrastructure [(null)]  - Entity Framework Core 2.1.11-servicing-32099 initialized 'DncZeusDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: RowNumberPaging 
+2019-10-09 10:33:08,963 [1] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (6ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2019-10-09 10:33:08,966 [1] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2019-10-09 10:33:08,969 [1] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2019-10-09 10:33:08,973 [1] INFO  Microsoft.EntityFrameworkCore.Migrations [(null)]  - Applying migration '20191009023222_MyMigration'.
+2019-10-09 10:35:05,362 [1] INFO  Microsoft.EntityFrameworkCore.Infrastructure [(null)]  - Entity Framework Core 2.1.11-servicing-32099 initialized 'DncZeusDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: RowNumberPaging 
+2019-10-09 10:35:05,474 [1] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (5ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2019-10-09 10:35:05,476 [1] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2019-10-09 10:35:05,479 [1] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2019-10-09 10:35:05,483 [1] INFO  Microsoft.EntityFrameworkCore.Migrations [(null)]  - Applying migration '20191009023222_MyMigration'.
+2019-10-09 10:49:42,747 [1] INFO  Microsoft.EntityFrameworkCore.Infrastructure [(null)]  - Entity Framework Core 2.1.11-servicing-32099 initialized 'DncZeusDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: RowNumberPaging 
+2019-10-09 10:49:42,819 [1] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2019-10-09 10:49:42,822 [1] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2019-10-09 10:49:42,848 [1] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (21ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2019-10-09 10:49:42,852 [1] INFO  Microsoft.EntityFrameworkCore.Migrations [(null)]  - Applying migration '20191009023222_MyMigration'.
+2019-10-09 10:49:42,895 [1] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (28ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+DECLARE @var0 sysname;
+SELECT @var0 = [d].[name]
+FROM [sys].[default_constraints] [d]
+INNER JOIN [sys].[columns] [c] ON [d].[parent_column_id] = [c].[column_id] AND [d].[parent_object_id] = [c].[object_id]
+WHERE ([d].[parent_object_id] = OBJECT_ID(N'[MisCatalog]') AND [c].[name] = N'Name');
+IF @var0 IS NOT NULL EXEC(N'ALTER TABLE [MisCatalog] DROP CONSTRAINT [' + @var0 + '];');
+ALTER TABLE [MisCatalog] ALTER COLUMN [Name] nvarchar(40) NULL;
+2019-10-09 10:49:42,896 [1] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20191009023222_MyMigration', N'2.1.11-servicing-32099');
+2019-10-09 13:13:43,087 [1] INFO  Microsoft.EntityFrameworkCore.Infrastructure [(null)]  - Entity Framework Core 2.1.11-servicing-32099 initialized 'DncZeusDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: RowNumberPaging 
+2019-10-09 13:15:10,656 [1] INFO  Microsoft.EntityFrameworkCore.Infrastructure [(null)]  - Entity Framework Core 2.1.11-servicing-32099 initialized 'DncZeusDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: RowNumberPaging 
+2019-10-09 13:15:10,848 [1] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (5ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2019-10-09 13:15:10,850 [1] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2019-10-09 13:15:10,854 [1] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2019-10-09 13:15:10,859 [1] INFO  Microsoft.EntityFrameworkCore.Migrations [(null)]  - Applying migration '20191009051343_MyMigration1'.
+2019-10-09 13:15:10,939 [1] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (55ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [MisCkind] (
+    [ID] int NOT NULL IDENTITY,
+    [MisCatalogID] int NOT NULL,
+    [isOrgValid] char(1) NULL,
+    [ckind] nvarchar(2) NOT NULL,
+    [ckdesc] nvarchar(30) NULL,
+    [clen] smallint NOT NULL,
+    [trseq] smallint NOT NULL,
+    [isEnabled] char(1) NULL,
+    [creuser] uniqueidentifier NULL,
+    [credate] datetime2 NULL,
+    [moduser] uniqueidentifier NULL,
+    [moddate] datetime2 NULL,
+    CONSTRAINT [PK_MisCkind] PRIMARY KEY ([ID]),
+    CONSTRAINT [FK_MisCkind_MisCatalog_MisCatalogID] FOREIGN KEY ([MisCatalogID]) REFERENCES [MisCatalog] ([ID]) ON DELETE CASCADE
+);
+2019-10-09 13:15:10,965 [1] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (25ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE INDEX [IX_MisCkind_MisCatalogID] ON [MisCkind] ([MisCatalogID]);
+2019-10-09 13:15:10,967 [1] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20191009051343_MyMigration1', N'2.1.11-servicing-32099');
+2019-10-09 14:14:26,459 [1] INFO  Microsoft.EntityFrameworkCore.Infrastructure [(null)]  - Entity Framework Core 2.1.11-servicing-32099 initialized 'DncZeusDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: RowNumberPaging 
+2019-10-09 14:14:54,775 [1] INFO  Microsoft.EntityFrameworkCore.Infrastructure [(null)]  - Entity Framework Core 2.1.11-servicing-32099 initialized 'DncZeusDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: RowNumberPaging 
+2019-10-09 14:14:55,035 [1] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (23ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2019-10-09 14:14:55,037 [1] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2019-10-09 14:14:55,047 [1] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (6ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2019-10-09 14:14:55,055 [1] INFO  Microsoft.EntityFrameworkCore.Migrations [(null)]  - Applying migration '20191009061426_MyMigration2'.
+2019-10-09 14:14:55,122 [1] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (9ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [MisOrganization] (
+    [ID] int NOT NULL IDENTITY,
+    [Code] nvarchar(10) NOT NULL,
+    [Name] nvarchar(40) NULL,
+    [creuser] uniqueidentifier NULL,
+    [credate] datetime2 NULL,
+    [moduser] uniqueidentifier NULL,
+    [moddate] datetime2 NULL,
+    CONSTRAINT [PK_MisOrganization] PRIMARY KEY ([ID])
+);
+2019-10-09 14:14:55,146 [1] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (24ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [MisCode] (
+    [ID] int NOT NULL IDENTITY,
+    [MisCkindID] int NOT NULL,
+    [OrgID] int NOT NULL,
+    [MisOrganizationID] int NULL,
+    [code] nvarchar(20) NULL,
+    [cdesc] nvarchar(200) NULL,
+    [extendCode1] nvarchar(20) NULL,
+    [extendCode2] nvarchar(20) NULL,
+    [extendCode3] nvarchar(20) NULL,
+    [extendCode4] nvarchar(20) NULL,
+    [extendCode5] nvarchar(20) NULL,
+    [extendCode6] nvarchar(20) NULL,
+    [extendCode7] nvarchar(20) NULL,
+    [extendCode8] nvarchar(20) NULL,
+    [extendCode9] nvarchar(20) NULL,
+    [extendName1] nvarchar(200) NULL,
+    [extendName2] nvarchar(200) NULL,
+    [extendName3] nvarchar(200) NULL,
+    [extendName4] nvarchar(200) NULL,
+    [extendName5] nvarchar(200) NULL,
+    [extendName6] nvarchar(200) NULL,
+    [extendName7] nvarchar(200) NULL,
+    [extendName8] nvarchar(200) NULL,
+    [extendName9] nvarchar(200) NULL,
+    [isEnabled] char(1) NULL,
+    [creuser] uniqueidentifier NULL,
+    [credate] datetime2 NULL,
+    [moduser] uniqueidentifier NULL,
+    [moddate] datetime2 NULL,
+    CONSTRAINT [PK_MisCode] PRIMARY KEY ([ID]),
+    CONSTRAINT [FK_MisCode_MisCkind_MisCkindID] FOREIGN KEY ([MisCkindID]) REFERENCES [MisCkind] ([ID]) ON DELETE CASCADE,
+    CONSTRAINT [FK_MisCode_MisOrganization_MisOrganizationID] FOREIGN KEY ([MisOrganizationID]) REFERENCES [MisOrganization] ([ID]) ON DELETE NO ACTION
+);
+2019-10-09 14:14:55,219 [1] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE INDEX [IX_MisCode_MisCkindID] ON [MisCode] ([MisCkindID]);
+2019-10-09 14:14:55,224 [1] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE INDEX [IX_MisCode_MisOrganizationID] ON [MisCode] ([MisOrganizationID]);
+2019-10-09 14:14:55,226 [1] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20191009061426_MyMigration2', N'2.1.11-servicing-32099');
+2019-10-09 14:22:11,036 [1] INFO  Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager [(null)]  - User profile is available. Using 'C:\Users\LTB7726286\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-10-09 14:22:12,282 [8] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 DEBUG http://localhost:54321/  0
+2019-10-09 14:22:12,283 [9] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 GET http://localhost:54321/swagger/index.html  
+2019-10-09 14:22:12,316 [8] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 31.3205ms 200 
+2019-10-09 14:22:12,791 [9] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 508.4616ms 200 text/html
+2019-10-09 14:22:13,092 [7] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 GET http://localhost:54321/swagger/v1/swagger.json  
+2019-10-09 14:22:13,398 [7] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 308.3667ms 200 application/json;charset=utf-8
+2019-10-09 14:22:22,456 [8] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 GET http://localhost:54321/swagger/v3/swagger.json  
+2019-10-09 14:22:22,598 [8] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 142.1674ms 500 application/json
+2019-10-09 14:22:29,265 [8] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 GET http://localhost:54321/swagger/v1/swagger.json  
+2019-10-09 14:22:29,334 [8] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 72.146ms 200 application/json;charset=utf-8
+2019-10-09 14:22:31,652 [7] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 GET http://localhost:54321/swagger/v3/swagger.json  
+2019-10-09 14:22:31,692 [7] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 40.8853ms 500 application/json
+2019-10-09 14:23:40,021 [1] INFO  Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager [(null)]  - User profile is available. Using 'C:\Users\LTB7726286\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-10-09 14:23:40,524 [8] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 GET http://localhost:54321/swagger/index.html  
+2019-10-09 14:23:40,526 [7] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 DEBUG http://localhost:54321/  0
+2019-10-09 14:23:40,582 [7] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 38.8232ms 200 
+2019-10-09 14:23:40,906 [8] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 382.6212ms 200 text/html
+2019-10-09 14:23:41,057 [8] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 GET http://localhost:54321/swagger/v1/swagger.json  
+2019-10-09 14:23:41,432 [8] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 361.7015ms 200 application/json;charset=utf-8
+2019-10-09 14:23:45,356 [10] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 GET http://localhost:54321/swagger/v3/swagger.json  
+2019-10-09 14:23:45,373 [10] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 10.645ms 200 application/json;charset=utf-8
+2019-10-09 14:24:05,472 [10] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 GET http://localhost:54321/api/v3/org/list?api-version=3  
+2019-10-09 14:24:05,535 [10] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Route matched with {action = "List", controller = "Org"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult List() on controller DncZeus.Api.Controllers.Mis.OrgController (DncZeus.Api).
+2019-10-09 14:24:05,803 [10] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executing action method DncZeus.Api.Controllers.Mis.OrgController.List (DncZeus.Api) - Validation state: Valid
+2019-10-09 14:24:06,110 [10] INFO  Microsoft.EntityFrameworkCore.Infrastructure [(null)]  - Entity Framework Core 2.1.11-servicing-32099 initialized 'DncZeusDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: RowNumberPaging 
+2019-10-09 14:24:06,518 [10] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (118ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [d].[Guid], [d].[Avatar], [d].[CreatedByUserGuid], [d].[CreatedByUserName], [d].[CreatedOn], [d].[Description], [d].[DisplayName], [d].[IsDeleted], [d].[IsLocked], [d].[LoginName], [d].[ModifiedByUserGuid], [d].[ModifiedByUserName], [d].[ModifiedOn], [d].[Password], [d].[Status], [d].[UserType]
+FROM [DncUser] AS [d]
+2019-10-09 14:24:06,600 [10] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action method DncZeus.Api.Controllers.Mis.OrgController.List (DncZeus.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 792.9971ms.
+2019-10-09 14:24:06,610 [10] INFO  Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor [(null)]  - Executing ObjectResult, writing value of type 'DncZeus.Api.Models.Response.ResponseModel'.
+2019-10-09 14:24:06,629 [10] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action DncZeus.Api.Controllers.Mis.OrgController.List (DncZeus.Api) in 1086.6534ms
+2019-10-09 14:24:06,644 [10] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 1159.7847ms 200 application/json; charset=utf-8
+2019-10-09 14:25:41,937 [1] INFO  Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager [(null)]  - User profile is available. Using 'C:\Users\LTB7726286\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-10-09 14:25:42,425 [9] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 GET http://localhost:54321/swagger/index.html  
+2019-10-09 14:25:42,426 [8] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 DEBUG http://localhost:54321/  0
+2019-10-09 14:25:42,455 [8] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 27.6631ms 200 
+2019-10-09 14:25:42,784 [9] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 359.8082ms 200 text/html
+2019-10-09 14:25:42,925 [8] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 GET http://localhost:54321/swagger/v1/swagger.json  
+2019-10-09 14:25:43,245 [8] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 319.6631ms 200 application/json;charset=utf-8
+2019-10-09 14:26:01,747 [7] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 GET http://localhost:54321/swagger/v3/swagger.json  
+2019-10-09 14:26:01,762 [7] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 17.8627ms 200 application/json;charset=utf-8
+2019-10-09 14:26:15,944 [14] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 GET http://localhost:54321/api/v3/org/list?api-version=3  
+2019-10-09 14:26:15,998 [14] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Route matched with {action = "List", controller = "Org"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult List() on controller DncZeus.Api.Controllers.Mis.OrgController (DncZeus.Api).
+2019-10-09 14:26:16,152 [14] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executing action method DncZeus.Api.Controllers.Mis.OrgController.List (DncZeus.Api) - Validation state: Valid
+2019-10-09 14:26:16,398 [14] INFO  Microsoft.EntityFrameworkCore.Infrastructure [(null)]  - Entity Framework Core 2.1.11-servicing-32099 initialized 'DncZeusDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: RowNumberPaging 
+2019-10-09 14:26:16,629 [14] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (47ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [m].[ID], [m].[Code], [m].[Name], [m].[credate], [m].[creuser], [m].[moddate], [m].[moduser]
+FROM [MisOrganization] AS [m]
+2019-10-09 14:26:16,650 [14] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action method DncZeus.Api.Controllers.Mis.OrgController.List (DncZeus.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 493.136ms.
+2019-10-09 14:26:16,660 [14] INFO  Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor [(null)]  - Executing ObjectResult, writing value of type 'DncZeus.Api.Models.Response.ResponseModel'.
+2019-10-09 14:26:16,671 [14] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action DncZeus.Api.Controllers.Mis.OrgController.List (DncZeus.Api) in 669.222ms
+2019-10-09 14:26:16,674 [14] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 730.857ms 200 application/json; charset=utf-8
+2019-10-09 14:27:08,625 [16] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 GET http://localhost:54321/api/v3/org/list?api-version=3  
+2019-10-09 14:27:08,637 [16] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Route matched with {action = "List", controller = "Org"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult List() on controller DncZeus.Api.Controllers.Mis.OrgController (DncZeus.Api).
+2019-10-09 14:27:08,666 [16] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executing action method DncZeus.Api.Controllers.Mis.OrgController.List (DncZeus.Api) - Validation state: Valid
+2019-10-09 14:27:08,671 [16] INFO  Microsoft.EntityFrameworkCore.Infrastructure [(null)]  - Entity Framework Core 2.1.11-servicing-32099 initialized 'DncZeusDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: RowNumberPaging 
+2019-10-09 14:27:08,698 [16] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (21ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [m].[ID], [m].[Code], [m].[Name], [m].[credate], [m].[creuser], [m].[moddate], [m].[moduser]
+FROM [MisOrganization] AS [m]
+2019-10-09 14:27:08,748 [16] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action method DncZeus.Api.Controllers.Mis.OrgController.List (DncZeus.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 77.2494ms.
+2019-10-09 14:27:08,752 [16] INFO  Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor [(null)]  - Executing ObjectResult, writing value of type 'DncZeus.Api.Models.Response.ResponseModel'.
+2019-10-09 14:27:08,756 [16] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action DncZeus.Api.Controllers.Mis.OrgController.List (DncZeus.Api) in 114.8803ms
+2019-10-09 14:27:08,759 [16] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 140.7886ms 200 application/json; charset=utf-8
+2019-10-09 14:27:13,965 [17] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 GET http://localhost:54321/api/v3/org/list?api-version=3  
+2019-10-09 14:27:13,970 [17] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Route matched with {action = "List", controller = "Org"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult List() on controller DncZeus.Api.Controllers.Mis.OrgController (DncZeus.Api).
+2019-10-09 14:27:13,996 [17] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executing action method DncZeus.Api.Controllers.Mis.OrgController.List (DncZeus.Api) - Validation state: Valid
+2019-10-09 14:27:13,999 [17] INFO  Microsoft.EntityFrameworkCore.Infrastructure [(null)]  - Entity Framework Core 2.1.11-servicing-32099 initialized 'DncZeusDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: RowNumberPaging 
+2019-10-09 14:27:14,022 [17] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (20ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [m].[ID], [m].[Code], [m].[Name], [m].[credate], [m].[creuser], [m].[moddate], [m].[moduser]
+FROM [MisOrganization] AS [m]
+2019-10-09 14:27:14,024 [17] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action method DncZeus.Api.Controllers.Mis.OrgController.List (DncZeus.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 26.1655ms.
+2019-10-09 14:27:14,026 [17] INFO  Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor [(null)]  - Executing ObjectResult, writing value of type 'DncZeus.Api.Models.Response.ResponseModel'.
+2019-10-09 14:27:14,031 [17] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action DncZeus.Api.Controllers.Mis.OrgController.List (DncZeus.Api) in 55.6137ms
+2019-10-09 14:27:14,035 [17] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 71.5442ms 200 application/json; charset=utf-8
+2019-10-09 17:33:18,886 [1] INFO  Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager [(null)]  - User profile is available. Using 'C:\Users\LTB7726286\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-10-09 17:33:20,104 [9] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 GET http://localhost:54321/swagger/index.html  
+2019-10-09 17:33:20,105 [8] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 DEBUG http://localhost:54321/  0
+2019-10-09 17:33:20,134 [8] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 26.4005ms 200 
+2019-10-09 17:33:20,694 [9] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 588.8116ms 200 text/html
+2019-10-09 17:33:21,139 [9] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 GET http://localhost:54321/swagger/v1/swagger.json  
+2019-10-09 17:33:21,504 [9] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 360.7205ms 200 application/json;charset=utf-8
+2019-10-09 17:34:53,545 [16] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 GET http://localhost:54321/swagger/v3/swagger.json  
+2019-10-09 17:34:53,586 [16] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 40.7778ms 200 application/json;charset=utf-8
+2019-10-09 17:34:55,374 [16] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 GET http://localhost:54321/swagger/v1/swagger.json  
+2019-10-09 17:34:55,434 [16] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 62.9788ms 200 application/json;charset=utf-8
+2019-10-09 17:35:40,671 [16] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 GET http://localhost:54321/api/oauth/auth  
+2019-10-09 17:35:40,769 [16] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Route matched with {action = "Auth", controller = "Oauth"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Auth(System.String, System.String, Int32) on controller DncZeus.Api.Controllers.OauthController (DncZeus.Api).
+2019-10-09 17:35:41,303 [16] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executing action method DncZeus.Api.Controllers.OauthController.Auth (DncZeus.Api) - Validation state: Valid
+2019-10-09 17:35:41,655 [16] INFO  Microsoft.EntityFrameworkCore.Infrastructure [(null)]  - Entity Framework Core 2.1.11-servicing-32099 initialized 'DncZeusDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: RowNumberPaging 
+2019-10-09 17:36:17,219 [16] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action DncZeus.Api.Controllers.OauthController.Auth (DncZeus.Api) in 36445.3965ms
+2019-10-09 17:36:17,260 [16] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 36588.599ms 500 application/json
+2019-10-09 17:36:31,455 [16] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 GET http://localhost:54321/api/oauth/auth?username=1&password=1&orgid=1  
+2019-10-09 17:36:31,462 [16] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Route matched with {action = "Auth", controller = "Oauth"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Auth(System.String, System.String, Int32) on controller DncZeus.Api.Controllers.OauthController (DncZeus.Api).
+2019-10-09 17:36:31,496 [16] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executing action method DncZeus.Api.Controllers.OauthController.Auth (DncZeus.Api) - Validation state: Valid
+2019-10-09 17:36:31,519 [16] INFO  Microsoft.EntityFrameworkCore.Infrastructure [(null)]  - Entity Framework Core 2.1.11-servicing-32099 initialized 'DncZeusDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: RowNumberPaging 
+2019-10-09 17:36:32,091 [16] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (133ms) [Parameters=[@__Trim_0='?' (Size = 50)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [x].[Guid], [x].[Avatar], [x].[CreatedByUserGuid], [x].[CreatedByUserName], [x].[CreatedOn], [x].[Description], [x].[DisplayName], [x].[IsDeleted], [x].[IsLocked], [x].[LoginName], [x].[ModifiedByUserGuid], [x].[ModifiedByUserName], [x].[ModifiedOn], [x].[Password], [x].[Status], [x].[UserType]
+FROM [DncUser] AS [x]
+WHERE [x].[LoginName] = @__Trim_0
+2019-10-09 17:36:32,114 [16] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action method DncZeus.Api.Controllers.OauthController.Auth (DncZeus.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 612.8778ms.
+2019-10-09 17:36:32,125 [16] INFO  Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor [(null)]  - Executing ObjectResult, writing value of type 'DncZeus.Api.Models.Response.ResponseModel'.
+2019-10-09 17:36:32,133 [16] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action DncZeus.Api.Controllers.OauthController.Auth (DncZeus.Api) in 667.5804ms
+2019-10-09 17:36:32,136 [16] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 681.0925ms 200 application/json; charset=utf-8

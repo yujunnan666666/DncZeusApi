@@ -1,0 +1,429 @@
+2020-02-18 18:14:56,175 [1] INFO  Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager [(null)]  - User profile is available. Using 'C:\Users\June\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-02-18 18:14:57,025 [12] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 GET http://localhost:54321/swagger/index.html  
+2020-02-18 18:14:57,027 [9] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 DEBUG http://localhost:54321/  0
+2020-02-18 18:14:57,059 [9] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 32.3693ms 200 
+2020-02-18 18:14:57,422 [12] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 396.3735ms 200 text/html
+2020-02-18 18:14:57,847 [9] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 GET http://localhost:54321/swagger/v3/swagger.json  
+2020-02-18 18:14:58,048 [9] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 198.8704ms 200 application/json;charset=utf-8
+2020-02-18 18:15:10,592 [10] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 GET http://localhost:54321/api/oauth/auth?username=administrator&password=111111&orgid=1  
+2020-02-18 18:15:10,596 [10] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-02-18 18:15:10,662 [10] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Route matched with {action = "Auth", controller = "Oauth"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Auth(System.String, System.String, Int32) on controller DncZeus.Api.Controllers.OauthController (DncZeus.Api).
+2020-02-18 18:15:11,274 [10] INFO  Microsoft.EntityFrameworkCore.Infrastructure [(null)]  - Entity Framework Core 2.1.14-servicing-32113 initialized 'DncZeusDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: RowNumberPaging 
+2020-02-18 18:15:11,427 [10] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executing action method DncZeus.Api.Controllers.OauthController.Auth (DncZeus.Api) - Validation state: Valid
+2020-02-18 18:15:11,921 [10] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (80ms) [Parameters=[@__Trim_0='?' (Size = 50)], CommandType='Text', CommandTimeout='6000000']
+SELECT TOP(1) [x].[Guid], [x].[Avatar], [x].[CreatedByUserGuid], [x].[CreatedByUserName], [x].[CreatedOn], [x].[Description], [x].[DisplayName], [x].[IsDeleted], [x].[IsLocked], [x].[LoginName], [x].[ModifiedByUserGuid], [x].[ModifiedByUserName], [x].[ModifiedOn], [x].[Password], [x].[Status], [x].[UserType]
+FROM [DncUser] AS [x]
+WHERE [x].[LoginName] = @__Trim_0
+2020-02-18 18:15:12,035 [10] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (27ms) [Parameters=[@__orgid_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='6000000']
+SELECT TOP(1) [x].[ID], [x].[Code], [x].[Name], [x].[credate], [x].[creuser], [x].[moddate], [x].[moduser]
+FROM [MisOrganization] AS [x]
+WHERE [x].[ID] = @__orgid_0
+2020-02-18 18:15:12,076 [10] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action method DncZeus.Api.Controllers.OauthController.Auth (DncZeus.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 644.5201ms.
+2020-02-18 18:15:12,089 [10] INFO  Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor [(null)]  - Executing ObjectResult, writing value of type 'DncZeus.Api.Models.Response.ResponseModel'.
+2020-02-18 18:15:12,104 [10] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action DncZeus.Api.Controllers.OauthController.Auth (DncZeus.Api) in 1435.4298ms
+2020-02-18 18:15:12,109 [10] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 1516.9818ms 200 application/json; charset=utf-8
+2020-02-18 18:15:12,134 [7] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 OPTIONS http://localhost:54321/api/v1/account/profile  
+2020-02-18 18:15:12,138 [7] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-02-18 18:15:12,143 [7] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 10.7388ms 204 
+2020-02-18 18:15:12,158 [8] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 GET http://localhost:54321/api/v1/account/profile  
+2020-02-18 18:15:12,172 [8] INFO  Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler [(null)]  - Successfully validated the token.
+2020-02-18 18:15:12,177 [8] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-02-18 18:15:12,183 [8] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Route matched with {action = "Profile", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Profile() on controller DncZeus.Api.Controllers.AccountController (DncZeus.Api).
+2020-02-18 18:15:12,198 [8] INFO  Microsoft.AspNetCore.Authorization.DefaultAuthorizationService [(null)]  - Authorization was successful.
+2020-02-18 18:15:12,209 [8] INFO  Microsoft.EntityFrameworkCore.Infrastructure [(null)]  - Entity Framework Core 2.1.14-servicing-32113 initialized 'DncZeusDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: RowNumberPaging 
+2020-02-18 18:15:12,302 [8] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executing action method DncZeus.Api.Controllers.AccountController.Profile (DncZeus.Api) - Validation state: Valid
+2020-02-18 18:15:12,576 [7] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (127ms) [Parameters=[@__guid_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='6000000']
+SELECT TOP(1) [x].[Guid], [x].[Avatar], [x].[CreatedByUserGuid], [x].[CreatedByUserName], [x].[CreatedOn], [x].[Description], [x].[DisplayName], [x].[IsDeleted], [x].[IsLocked], [x].[LoginName], [x].[ModifiedByUserGuid], [x].[ModifiedByUserName], [x].[ModifiedOn], [x].[Password], [x].[Status], [x].[UserType]
+FROM [DncUser] AS [x]
+WHERE [x].[Guid] = @__guid_0
+2020-02-18 18:15:12,638 [8] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (33ms) [Parameters=[], CommandType='Text', CommandTimeout='6000000']
+SELECT [x].[Guid], [x].[Alias], [x].[BeforeCloseFun], [x].[Component], [x].[CreatedByUserGuid], [x].[CreatedByUserName], [x].[CreatedOn], [x].[Description], [x].[HideInMenu], [x].[Icon], [x].[IsDefaultRouter], [x].[IsDeleted], [x].[Level], [x].[ModifiedByUserGuid], [x].[ModifiedByUserName], [x].[ModifiedOn], [x].[Name], [x].[NotCache], [x].[ParentGuid], [x].[ParentName], [x].[Sort], [x].[Status], [x].[Url]
+FROM [DncMenu] AS [x]
+WHERE ([x].[IsDeleted] = 0) AND ([x].[Status] = 1)
+2020-02-18 18:15:12,731 [8] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (38ms) [Parameters=[@p0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='6000000']
+SELECT P.Code AS PermissionCode,P.ActionCode AS PermissionActionCode,P.Name AS PermissionName,P.Type AS PermissionType,M.Name AS MenuName,M.Guid AS MenuGuid,M.Alias AS MenuAlias,M.IsDefaultRouter FROM DncPermission AS P 
+INNER JOIN DncMenu AS M ON M.Guid = P.MenuGuid
+WHERE P.IsDeleted=0 AND P.Status=1
+2020-02-18 18:15:12,877 [8] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action method DncZeus.Api.Controllers.AccountController.Profile (DncZeus.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 424.4522ms.
+2020-02-18 18:15:12,893 [8] INFO  Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor [(null)]  - Executing ObjectResult, writing value of type 'DncZeus.Api.Models.Response.ResponseModel'.
+2020-02-18 18:15:12,929 [8] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action DncZeus.Api.Controllers.AccountController.Profile (DncZeus.Api) in 736.9165ms
+2020-02-18 18:15:12,935 [8] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 783.4307ms 200 application/json; charset=utf-8
+2020-02-18 18:15:14,485 [7] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 OPTIONS http://localhost:54321/api/v1/account/menu  
+2020-02-18 18:15:14,489 [7] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-02-18 18:15:14,495 [7] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 12.4661ms 204 
+2020-02-18 18:15:14,503 [7] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 GET http://localhost:54321/api/v1/account/menu  
+2020-02-18 18:15:14,507 [7] INFO  Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler [(null)]  - Successfully validated the token.
+2020-02-18 18:15:14,513 [7] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-02-18 18:15:14,521 [7] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Route matched with {action = "Menu", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Menu() on controller DncZeus.Api.Controllers.AccountController (DncZeus.Api).
+2020-02-18 18:15:14,525 [7] INFO  Microsoft.AspNetCore.Authorization.DefaultAuthorizationService [(null)]  - Authorization was successful.
+2020-02-18 18:15:14,531 [7] INFO  Microsoft.EntityFrameworkCore.Infrastructure [(null)]  - Entity Framework Core 2.1.14-servicing-32113 initialized 'DncZeusDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: RowNumberPaging 
+2020-02-18 18:15:14,581 [7] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executing action method DncZeus.Api.Controllers.AccountController.Menu (DncZeus.Api) - Validation state: Valid
+2020-02-18 18:15:14,629 [7] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (35ms) [Parameters=[@p0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='6000000']
+SELECT * FROM DncMenu WHERE IsDeleted=0 AND Status=1
+2020-02-18 18:15:14,681 [7] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (31ms) [Parameters=[], CommandType='Text', CommandTimeout='6000000']
+SELECT [x].[Guid], [x].[Alias], [x].[BeforeCloseFun], [x].[Component], [x].[CreatedByUserGuid], [x].[CreatedByUserName], [x].[CreatedOn], [x].[Description], [x].[HideInMenu], [x].[Icon], [x].[IsDefaultRouter], [x].[IsDeleted], [x].[Level], [x].[ModifiedByUserGuid], [x].[ModifiedByUserName], [x].[ModifiedOn], [x].[Name], [x].[NotCache], [x].[ParentGuid], [x].[ParentName], [x].[Sort], [x].[Status], [x].[Url]
+FROM [DncMenu] AS [x]
+WHERE (([x].[IsDeleted] = 0) AND ([x].[Status] = 1)) AND ([x].[ParentGuid] = '00000000-0000-0000-0000-000000000000')
+2020-02-18 18:15:14,694 [7] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action method DncZeus.Api.Controllers.AccountController.Menu (DncZeus.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 108.8158ms.
+2020-02-18 18:15:14,697 [7] INFO  Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor [(null)]  - Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[DncZeus.Api.ViewModels.Rbac.DncMenu.MenuItem, DncZeus.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2020-02-18 18:15:14,709 [7] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action DncZeus.Api.Controllers.AccountController.Menu (DncZeus.Api) in 182.2945ms
+2020-02-18 18:15:14,714 [7] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 212.8298ms 200 application/json; charset=utf-8
+2020-02-18 18:15:15,000 [7] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 OPTIONS http://localhost:54321/api/v1/message/count  
+2020-02-18 18:15:15,004 [7] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-02-18 18:15:15,007 [7] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 10.5993ms 204 
+2020-02-18 18:15:15,151 [8] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 GET http://localhost:54321/api/v1/message/count  
+2020-02-18 18:15:15,164 [8] INFO  Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler [(null)]  - Successfully validated the token.
+2020-02-18 18:15:15,209 [8] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-02-18 18:15:15,261 [8] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Route matched with {action = "Count", controller = "Message"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Count() on controller DncZeus.Api.Controllers.Api.V1.MessageController (DncZeus.Api).
+2020-02-18 18:15:15,265 [8] INFO  Microsoft.AspNetCore.Authorization.DefaultAuthorizationService [(null)]  - Authorization was successful.
+2020-02-18 18:15:15,301 [8] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executing action method DncZeus.Api.Controllers.Api.V1.MessageController.Count (DncZeus.Api) - Validation state: Valid
+2020-02-18 18:15:15,307 [8] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action method DncZeus.Api.Controllers.Api.V1.MessageController.Count (DncZeus.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 0.2427ms.
+2020-02-18 18:15:15,320 [8] INFO  Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor [(null)]  - Executing ObjectResult, writing value of type 'System.Int32'.
+2020-02-18 18:15:15,325 [8] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action DncZeus.Api.Controllers.Api.V1.MessageController.Count (DncZeus.Api) in 57.8212ms
+2020-02-18 18:15:15,337 [8] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 187.9863ms 200 application/json; charset=utf-8
+2020-02-18 18:15:18,814 [11] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 OPTIONS http://localhost:54321/api/v5/manage/approvalstaffback/list?api-version=5  
+2020-02-18 18:15:18,817 [11] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-02-18 18:15:18,820 [11] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 9.2188ms 204 
+2020-02-18 18:15:18,832 [8] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 POST http://localhost:54321/api/v5/manage/approvalstaffback/list?api-version=5 application/json;charset=UTF-8 2
+2020-02-18 18:15:18,837 [8] INFO  Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler [(null)]  - Successfully validated the token.
+2020-02-18 18:15:18,840 [8] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-02-18 18:15:18,851 [8] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Route matched with {action = "List", controller = "ApprovalStaffBack"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult List() on controller DncZeus.Api.Controllers.Api.Sec.ApprovalStaffBackController (DncZeus.Api).
+2020-02-18 18:15:18,854 [8] INFO  Microsoft.EntityFrameworkCore.Infrastructure [(null)]  - Entity Framework Core 2.1.14-servicing-32113 initialized 'DncZeusDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: RowNumberPaging 
+2020-02-18 18:15:19,115 [8] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executing action method DncZeus.Api.Controllers.Api.Sec.ApprovalStaffBackController.List (DncZeus.Api) - Validation state: Valid
+2020-02-18 18:15:35,691 [8] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action method DncZeus.Api.Controllers.Api.Sec.ApprovalStaffBackController.List (DncZeus.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 16573.0695ms.
+2020-02-18 18:15:35,693 [8] INFO  Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor [(null)]  - Executing ObjectResult, writing value of type 'Newtonsoft.Json.Linq.JObject'.
+2020-02-18 18:15:35,699 [8] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action DncZeus.Api.Controllers.Api.Sec.ApprovalStaffBackController.List (DncZeus.Api) in 16845.1559ms
+2020-02-18 18:15:35,704 [8] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 16871.3008ms 200 application/json; charset=utf-8
+2020-02-18 18:15:35,715 [8] INFO  Microsoft.AspNetCore.Server.Kestrel [(null)]  - Connection id "0HLTKBDJPDR1B", Request id "0HLTKBDJPDR1B:00000006": the application completed without reading the entire request body.
+2020-02-18 18:15:44,996 [16] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 OPTIONS http://localhost:54321/api/v5/manage/approvalstaffback/list2?api-version=5  
+2020-02-18 18:15:45,001 [16] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-02-18 18:15:45,004 [16] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 7.9284ms 204 
+2020-02-18 18:15:45,009 [7] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 POST http://localhost:54321/api/v5/manage/approvalstaffback/list2?api-version=5 application/json;charset=UTF-8 42
+2020-02-18 18:15:45,012 [7] INFO  Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler [(null)]  - Successfully validated the token.
+2020-02-18 18:15:45,015 [7] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-02-18 18:15:45,020 [7] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Route matched with {action = "List2", controller = "ApprovalStaffBack"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult List2(DncZeus.Api.RequestPayload.Manage.ApprovalStaffBack.ApprovalStaffBackRequestPayload) on controller DncZeus.Api.Controllers.Api.Sec.ApprovalStaffBackController (DncZeus.Api).
+2020-02-18 18:15:45,023 [7] INFO  Microsoft.EntityFrameworkCore.Infrastructure [(null)]  - Entity Framework Core 2.1.14-servicing-32113 initialized 'DncZeusDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: RowNumberPaging 
+2020-02-18 18:15:51,951 [7] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action DncZeus.Api.Controllers.Api.Sec.ApprovalStaffBackController.List2 (DncZeus.Api) in 6928.0571ms
+2020-02-18 18:15:51,983 [7] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 6973.9393ms 500 application/json
+2020-02-18 18:15:51,995 [11] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 OPTIONS http://localhost:54321/api/v1/save_error_logger  
+2020-02-18 18:15:51,997 [11] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-02-18 18:15:52,001 [11] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 4.645ms 204 
+2020-02-18 18:15:52,005 [7] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 POST http://localhost:54321/api/v1/save_error_logger application/json;charset=UTF-8 139
+2020-02-18 18:15:52,009 [7] INFO  Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler [(null)]  - Successfully validated the token.
+2020-02-18 18:15:52,012 [7] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-02-18 18:15:52,024 [7] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 17.1369ms 404 
+2020-02-18 18:15:52,027 [7] INFO  Microsoft.AspNetCore.Server.Kestrel [(null)]  - Connection id "0HLTKBDJPDR1B", Request id "0HLTKBDJPDR1B:00000008": the application completed without reading the entire request body.
+2020-02-18 18:15:58,967 [8] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 OPTIONS http://localhost:54321/api/v5/manage/approvalstaffback/list2?api-version=5  
+2020-02-18 18:15:58,972 [8] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-02-18 18:15:58,975 [8] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 9.3174ms 204 
+2020-02-18 18:15:58,979 [8] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 POST http://localhost:54321/api/v5/manage/approvalstaffback/list2?api-version=5 application/json;charset=UTF-8 42
+2020-02-18 18:15:58,982 [8] INFO  Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler [(null)]  - Successfully validated the token.
+2020-02-18 18:15:58,985 [8] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-02-18 18:15:58,989 [8] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Route matched with {action = "List2", controller = "ApprovalStaffBack"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult List2(DncZeus.Api.RequestPayload.Manage.ApprovalStaffBack.ApprovalStaffBackRequestPayload) on controller DncZeus.Api.Controllers.Api.Sec.ApprovalStaffBackController (DncZeus.Api).
+2020-02-18 18:15:58,995 [8] INFO  Microsoft.EntityFrameworkCore.Infrastructure [(null)]  - Entity Framework Core 2.1.14-servicing-32113 initialized 'DncZeusDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: RowNumberPaging 
+2020-02-18 18:16:01,923 [8] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action DncZeus.Api.Controllers.Api.Sec.ApprovalStaffBackController.List2 (DncZeus.Api) in 2930.0995ms
+2020-02-18 18:16:01,957 [8] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 2976.627ms 500 application/json
+2020-02-18 18:16:01,972 [8] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 OPTIONS http://localhost:54321/api/v1/save_error_logger  
+2020-02-18 18:16:01,977 [8] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-02-18 18:16:01,983 [8] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 11.7225ms 204 
+2020-02-18 18:16:01,985 [15] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 POST http://localhost:54321/api/v1/save_error_logger application/json;charset=UTF-8 139
+2020-02-18 18:16:01,987 [15] INFO  Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler [(null)]  - Successfully validated the token.
+2020-02-18 18:16:01,990 [15] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-02-18 18:16:01,994 [15] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 8.5971ms 404 
+2020-02-18 18:16:02,004 [15] INFO  Microsoft.AspNetCore.Server.Kestrel [(null)]  - Connection id "0HLTKBDJPDR1B", Request id "0HLTKBDJPDR1B:0000000A": the application completed without reading the entire request body.
+2020-02-18 18:16:30,380 [8] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 OPTIONS http://localhost:54321/api/v5/manage/approvalstaffback/list2?api-version=5  
+2020-02-18 18:16:30,395 [8] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-02-18 18:16:30,409 [8] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 16.8465ms 204 
+2020-02-18 18:16:30,418 [7] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 POST http://localhost:54321/api/v5/manage/approvalstaffback/list2?api-version=5 application/json;charset=UTF-8 42
+2020-02-18 18:16:30,422 [7] INFO  Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler [(null)]  - Successfully validated the token.
+2020-02-18 18:16:30,425 [7] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-02-18 18:16:30,428 [7] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Route matched with {action = "List2", controller = "ApprovalStaffBack"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult List2(DncZeus.Api.RequestPayload.Manage.ApprovalStaffBack.ApprovalStaffBackRequestPayload) on controller DncZeus.Api.Controllers.Api.Sec.ApprovalStaffBackController (DncZeus.Api).
+2020-02-18 18:16:30,432 [7] INFO  Microsoft.EntityFrameworkCore.Infrastructure [(null)]  - Entity Framework Core 2.1.14-servicing-32113 initialized 'DncZeusDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: RowNumberPaging 
+2020-02-18 18:16:33,689 [7] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action DncZeus.Api.Controllers.Api.Sec.ApprovalStaffBackController.List2 (DncZeus.Api) in 3247.7353ms
+2020-02-18 18:16:33,740 [7] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 3308.7411ms 500 application/json
+2020-02-18 18:16:33,743 [8] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 OPTIONS http://localhost:54321/api/v1/save_error_logger  
+2020-02-18 18:16:33,746 [8] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-02-18 18:16:33,756 [8] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 8.2083ms 204 
+2020-02-18 18:16:33,761 [10] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 POST http://localhost:54321/api/v1/save_error_logger application/json;charset=UTF-8 139
+2020-02-18 18:16:33,764 [10] INFO  Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler [(null)]  - Successfully validated the token.
+2020-02-18 18:16:33,766 [10] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-02-18 18:16:33,769 [10] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 8.505ms 404 
+2020-02-18 18:16:33,773 [10] INFO  Microsoft.AspNetCore.Server.Kestrel [(null)]  - Connection id "0HLTKBDJPDR1B", Request id "0HLTKBDJPDR1B:0000000C": the application completed without reading the entire request body.
+2020-02-18 18:17:00,324 [29] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 OPTIONS http://localhost:54321/api/v5/manage/approvalstaffback/list2?api-version=5  
+2020-02-18 18:17:00,339 [29] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-02-18 18:17:00,346 [29] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 18.0813ms 204 
+2020-02-18 18:17:00,358 [8] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 POST http://localhost:54321/api/v5/manage/approvalstaffback/list2?api-version=5 application/json;charset=UTF-8 42
+2020-02-18 18:17:00,361 [8] INFO  Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler [(null)]  - Successfully validated the token.
+2020-02-18 18:17:00,366 [8] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-02-18 18:17:00,370 [8] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Route matched with {action = "List2", controller = "ApprovalStaffBack"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult List2(DncZeus.Api.RequestPayload.Manage.ApprovalStaffBack.ApprovalStaffBackRequestPayload) on controller DncZeus.Api.Controllers.Api.Sec.ApprovalStaffBackController (DncZeus.Api).
+2020-02-18 18:17:00,375 [8] INFO  Microsoft.EntityFrameworkCore.Infrastructure [(null)]  - Entity Framework Core 2.1.14-servicing-32113 initialized 'DncZeusDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: RowNumberPaging 
+2020-02-18 18:17:03,407 [8] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action DncZeus.Api.Controllers.Api.Sec.ApprovalStaffBackController.List2 (DncZeus.Api) in 3031.5341ms
+2020-02-18 18:17:03,443 [8] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 3083.4759ms 500 application/json
+2020-02-18 18:17:03,453 [31] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 OPTIONS http://localhost:54321/api/v1/save_error_logger  
+2020-02-18 18:17:03,457 [31] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-02-18 18:17:03,464 [31] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 6.688ms 204 
+2020-02-18 18:17:03,470 [31] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 POST http://localhost:54321/api/v1/save_error_logger application/json;charset=UTF-8 139
+2020-02-18 18:17:03,496 [31] INFO  Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler [(null)]  - Successfully validated the token.
+2020-02-18 18:17:03,498 [31] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-02-18 18:17:03,504 [31] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 34.3127ms 404 
+2020-02-18 18:17:03,510 [31] INFO  Microsoft.AspNetCore.Server.Kestrel [(null)]  - Connection id "0HLTKBDJPDR1B", Request id "0HLTKBDJPDR1B:0000000E": the application completed without reading the entire request body.
+2020-02-18 18:18:06,909 [7] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 OPTIONS http://localhost:54321/api/v1/account/profile  
+2020-02-18 18:18:06,934 [7] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-02-18 18:18:06,974 [7] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 61.7796ms 204 
+2020-02-18 18:18:07,069 [41] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 GET http://localhost:54321/api/v1/account/profile  
+2020-02-18 18:18:07,072 [41] INFO  Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler [(null)]  - Successfully validated the token.
+2020-02-18 18:18:07,074 [41] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-02-18 18:18:07,077 [41] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Route matched with {action = "Profile", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Profile() on controller DncZeus.Api.Controllers.AccountController (DncZeus.Api).
+2020-02-18 18:18:07,079 [41] INFO  Microsoft.AspNetCore.Authorization.DefaultAuthorizationService [(null)]  - Authorization was successful.
+2020-02-18 18:18:07,083 [41] INFO  Microsoft.EntityFrameworkCore.Infrastructure [(null)]  - Entity Framework Core 2.1.14-servicing-32113 initialized 'DncZeusDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: RowNumberPaging 
+2020-02-18 18:18:07,102 [41] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executing action method DncZeus.Api.Controllers.AccountController.Profile (DncZeus.Api) - Validation state: Valid
+2020-02-18 18:18:07,146 [7] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (32ms) [Parameters=[@__guid_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='6000000']
+SELECT TOP(1) [x].[Guid], [x].[Avatar], [x].[CreatedByUserGuid], [x].[CreatedByUserName], [x].[CreatedOn], [x].[Description], [x].[DisplayName], [x].[IsDeleted], [x].[IsLocked], [x].[LoginName], [x].[ModifiedByUserGuid], [x].[ModifiedByUserName], [x].[ModifiedOn], [x].[Password], [x].[Status], [x].[UserType]
+FROM [DncUser] AS [x]
+WHERE [x].[Guid] = @__guid_0
+2020-02-18 18:18:07,178 [41] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (28ms) [Parameters=[], CommandType='Text', CommandTimeout='6000000']
+SELECT [x].[Guid], [x].[Alias], [x].[BeforeCloseFun], [x].[Component], [x].[CreatedByUserGuid], [x].[CreatedByUserName], [x].[CreatedOn], [x].[Description], [x].[HideInMenu], [x].[Icon], [x].[IsDefaultRouter], [x].[IsDeleted], [x].[Level], [x].[ModifiedByUserGuid], [x].[ModifiedByUserName], [x].[ModifiedOn], [x].[Name], [x].[NotCache], [x].[ParentGuid], [x].[ParentName], [x].[Sort], [x].[Status], [x].[Url]
+FROM [DncMenu] AS [x]
+WHERE ([x].[IsDeleted] = 0) AND ([x].[Status] = 1)
+2020-02-18 18:18:07,205 [41] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (23ms) [Parameters=[@p0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='6000000']
+SELECT P.Code AS PermissionCode,P.ActionCode AS PermissionActionCode,P.Name AS PermissionName,P.Type AS PermissionType,M.Name AS MenuName,M.Guid AS MenuGuid,M.Alias AS MenuAlias,M.IsDefaultRouter FROM DncPermission AS P 
+INNER JOIN DncMenu AS M ON M.Guid = P.MenuGuid
+WHERE P.IsDeleted=0 AND P.Status=1
+2020-02-18 18:18:07,208 [41] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action method DncZeus.Api.Controllers.AccountController.Profile (DncZeus.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 103.3309ms.
+2020-02-18 18:18:07,211 [41] INFO  Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor [(null)]  - Executing ObjectResult, writing value of type 'DncZeus.Api.Models.Response.ResponseModel'.
+2020-02-18 18:18:07,214 [41] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action DncZeus.Api.Controllers.AccountController.Profile (DncZeus.Api) in 134.048ms
+2020-02-18 18:18:07,221 [41] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 150.2717ms 200 application/json; charset=utf-8
+2020-02-18 18:18:07,229 [7] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 OPTIONS http://localhost:54321/api/v1/account/menu  
+2020-02-18 18:18:07,232 [7] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-02-18 18:18:07,236 [7] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 6.3599ms 204 
+2020-02-18 18:18:07,239 [8] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 GET http://localhost:54321/api/v1/account/menu  
+2020-02-18 18:18:07,242 [8] INFO  Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler [(null)]  - Successfully validated the token.
+2020-02-18 18:18:07,245 [8] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-02-18 18:18:07,252 [8] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Route matched with {action = "Menu", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Menu() on controller DncZeus.Api.Controllers.AccountController (DncZeus.Api).
+2020-02-18 18:18:07,254 [8] INFO  Microsoft.AspNetCore.Authorization.DefaultAuthorizationService [(null)]  - Authorization was successful.
+2020-02-18 18:18:07,257 [8] INFO  Microsoft.EntityFrameworkCore.Infrastructure [(null)]  - Entity Framework Core 2.1.14-servicing-32113 initialized 'DncZeusDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: RowNumberPaging 
+2020-02-18 18:18:07,276 [8] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executing action method DncZeus.Api.Controllers.AccountController.Menu (DncZeus.Api) - Validation state: Valid
+2020-02-18 18:18:07,302 [8] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (23ms) [Parameters=[@p0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='6000000']
+SELECT * FROM DncMenu WHERE IsDeleted=0 AND Status=1
+2020-02-18 18:18:07,328 [8] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (23ms) [Parameters=[], CommandType='Text', CommandTimeout='6000000']
+SELECT [x].[Guid], [x].[Alias], [x].[BeforeCloseFun], [x].[Component], [x].[CreatedByUserGuid], [x].[CreatedByUserName], [x].[CreatedOn], [x].[Description], [x].[HideInMenu], [x].[Icon], [x].[IsDefaultRouter], [x].[IsDeleted], [x].[Level], [x].[ModifiedByUserGuid], [x].[ModifiedByUserName], [x].[ModifiedOn], [x].[Name], [x].[NotCache], [x].[ParentGuid], [x].[ParentName], [x].[Sort], [x].[Status], [x].[Url]
+FROM [DncMenu] AS [x]
+WHERE (([x].[IsDeleted] = 0) AND ([x].[Status] = 1)) AND ([x].[ParentGuid] = '00000000-0000-0000-0000-000000000000')
+2020-02-18 18:18:07,331 [8] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action method DncZeus.Api.Controllers.AccountController.Menu (DncZeus.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 52.5119ms.
+2020-02-18 18:18:07,334 [8] INFO  Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor [(null)]  - Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[DncZeus.Api.ViewModels.Rbac.DncMenu.MenuItem, DncZeus.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2020-02-18 18:18:07,337 [8] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action DncZeus.Api.Controllers.AccountController.Menu (DncZeus.Api) in 82.4426ms
+2020-02-18 18:18:07,341 [8] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 100.8389ms 200 application/json; charset=utf-8
+2020-02-18 18:18:07,614 [7] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 OPTIONS http://localhost:54321/api/v5/manage/approvalstaffback/list?api-version=5  
+2020-02-18 18:18:07,618 [7] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-02-18 18:18:07,623 [31] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 OPTIONS http://localhost:54321/api/v1/message/count  
+2020-02-18 18:18:07,629 [7] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 10.1651ms 204 
+2020-02-18 18:18:07,643 [31] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-02-18 18:18:07,648 [7] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 POST http://localhost:54321/api/v5/manage/approvalstaffback/list?api-version=5 application/json;charset=UTF-8 2
+2020-02-18 18:18:07,652 [31] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 27.5682ms 204 
+2020-02-18 18:18:07,661 [7] INFO  Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler [(null)]  - Successfully validated the token.
+2020-02-18 18:18:07,694 [31] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 GET http://localhost:54321/api/v1/message/count  
+2020-02-18 18:18:07,698 [7] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-02-18 18:18:07,711 [31] INFO  Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler [(null)]  - Successfully validated the token.
+2020-02-18 18:18:07,716 [7] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Route matched with {action = "List", controller = "ApprovalStaffBack"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult List() on controller DncZeus.Api.Controllers.Api.Sec.ApprovalStaffBackController (DncZeus.Api).
+2020-02-18 18:18:07,718 [31] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-02-18 18:18:07,722 [7] INFO  Microsoft.EntityFrameworkCore.Infrastructure [(null)]  - Entity Framework Core 2.1.14-servicing-32113 initialized 'DncZeusDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: RowNumberPaging 
+2020-02-18 18:18:07,726 [31] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Route matched with {action = "Count", controller = "Message"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Count() on controller DncZeus.Api.Controllers.Api.V1.MessageController (DncZeus.Api).
+2020-02-18 18:18:07,750 [7] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executing action method DncZeus.Api.Controllers.Api.Sec.ApprovalStaffBackController.List (DncZeus.Api) - Validation state: Valid
+2020-02-18 18:18:07,750 [31] INFO  Microsoft.AspNetCore.Authorization.DefaultAuthorizationService [(null)]  - Authorization was successful.
+2020-02-18 18:18:07,795 [31] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executing action method DncZeus.Api.Controllers.Api.V1.MessageController.Count (DncZeus.Api) - Validation state: Valid
+2020-02-18 18:18:07,802 [31] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action method DncZeus.Api.Controllers.Api.V1.MessageController.Count (DncZeus.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 0.0093ms.
+2020-02-18 18:18:07,805 [31] INFO  Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor [(null)]  - Executing ObjectResult, writing value of type 'System.Int32'.
+2020-02-18 18:18:07,810 [31] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action DncZeus.Api.Controllers.Api.V1.MessageController.Count (DncZeus.Api) in 61.1661ms
+2020-02-18 18:18:07,814 [31] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 149.5107ms 200 application/json; charset=utf-8
+2020-02-18 18:18:12,150 [8] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 OPTIONS http://localhost:54321/api/v5/manage/approvalstaffback/list2?api-version=5  
+2020-02-18 18:18:12,153 [8] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-02-18 18:18:12,159 [8] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 6.3637ms 204 
+2020-02-18 18:18:12,171 [8] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 POST http://localhost:54321/api/v5/manage/approvalstaffback/list2?api-version=5 application/json;charset=UTF-8 57
+2020-02-18 18:18:12,175 [8] INFO  Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler [(null)]  - Successfully validated the token.
+2020-02-18 18:18:12,177 [8] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-02-18 18:18:12,231 [8] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Route matched with {action = "List2", controller = "ApprovalStaffBack"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult List2(DncZeus.Api.RequestPayload.Manage.ApprovalStaffBack.ApprovalStaffBackRequestPayload) on controller DncZeus.Api.Controllers.Api.Sec.ApprovalStaffBackController (DncZeus.Api).
+2020-02-18 18:18:12,234 [8] INFO  Microsoft.EntityFrameworkCore.Infrastructure [(null)]  - Entity Framework Core 2.1.14-servicing-32113 initialized 'DncZeusDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: RowNumberPaging 
+2020-02-18 18:18:14,689 [8] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action DncZeus.Api.Controllers.Api.Sec.ApprovalStaffBackController.List2 (DncZeus.Api) in 2452.9804ms
+2020-02-18 18:18:14,730 [8] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 2560.0823ms 500 application/json
+2020-02-18 18:18:14,753 [8] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 OPTIONS http://localhost:54321/api/v1/save_error_logger  
+2020-02-18 18:18:14,757 [8] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-02-18 18:18:14,762 [8] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 15.9529ms 204 
+2020-02-18 18:18:14,768 [41] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 POST http://localhost:54321/api/v1/save_error_logger application/json;charset=UTF-8 139
+2020-02-18 18:18:14,792 [41] INFO  Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler [(null)]  - Successfully validated the token.
+2020-02-18 18:18:14,816 [41] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-02-18 18:18:14,819 [41] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 51.3053ms 404 
+2020-02-18 18:18:14,824 [41] INFO  Microsoft.AspNetCore.Server.Kestrel [(null)]  - Connection id "0HLTKBDJPDR1D", Request id "0HLTKBDJPDR1D:00000006": the application completed without reading the entire request body.
+2020-02-18 18:18:27,065 [7] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action method DncZeus.Api.Controllers.Api.Sec.ApprovalStaffBackController.List (DncZeus.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 19311.9599ms.
+2020-02-18 18:18:27,068 [7] INFO  Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor [(null)]  - Executing ObjectResult, writing value of type 'Newtonsoft.Json.Linq.JObject'.
+2020-02-18 18:18:27,071 [7] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action DncZeus.Api.Controllers.Api.Sec.ApprovalStaffBackController.List (DncZeus.Api) in 19349.622ms
+2020-02-18 18:18:27,075 [7] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 19429.3411ms 200 application/json; charset=utf-8
+2020-02-18 18:18:27,078 [7] INFO  Microsoft.AspNetCore.Server.Kestrel [(null)]  - Connection id "0HLTKBDJPDR1C", Request id "0HLTKBDJPDR1C:00000006": the application completed without reading the entire request body.
+2020-02-18 18:18:38,285 [8] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 OPTIONS http://localhost:54321/api/v5/manage/approvalstaffback/list?api-version=5  
+2020-02-18 18:18:38,290 [8] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-02-18 18:18:38,295 [8] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 20.2106ms 204 
+2020-02-18 18:18:38,309 [8] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 POST http://localhost:54321/api/v5/manage/approvalstaffback/list?api-version=5 application/json;charset=UTF-8 2
+2020-02-18 18:18:38,317 [8] INFO  Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler [(null)]  - Successfully validated the token.
+2020-02-18 18:18:38,319 [8] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-02-18 18:18:38,321 [8] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Route matched with {action = "List", controller = "ApprovalStaffBack"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult List() on controller DncZeus.Api.Controllers.Api.Sec.ApprovalStaffBackController (DncZeus.Api).
+2020-02-18 18:18:38,323 [8] INFO  Microsoft.EntityFrameworkCore.Infrastructure [(null)]  - Entity Framework Core 2.1.14-servicing-32113 initialized 'DncZeusDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: RowNumberPaging 
+2020-02-18 18:18:38,370 [8] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executing action method DncZeus.Api.Controllers.Api.Sec.ApprovalStaffBackController.List (DncZeus.Api) - Validation state: Valid
+2020-02-18 18:18:53,798 [8] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action method DncZeus.Api.Controllers.Api.Sec.ApprovalStaffBackController.List (DncZeus.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 15424.8715ms.
+2020-02-18 18:18:53,810 [8] INFO  Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor [(null)]  - Executing ObjectResult, writing value of type 'Newtonsoft.Json.Linq.JObject'.
+2020-02-18 18:18:53,813 [8] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action DncZeus.Api.Controllers.Api.Sec.ApprovalStaffBackController.List (DncZeus.Api) in 15489.267ms
+2020-02-18 18:18:53,815 [8] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 15512.8911ms 200 application/json; charset=utf-8
+2020-02-18 18:18:53,817 [8] INFO  Microsoft.AspNetCore.Server.Kestrel [(null)]  - Connection id "0HLTKBDJPDR1C", Request id "0HLTKBDJPDR1C:00000007": the application completed without reading the entire request body.
+2020-02-18 19:40:31,757 [25] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 OPTIONS http://localhost:54321/api/v1/account/profile  
+2020-02-18 19:40:31,772 [25] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-02-18 19:40:31,776 [25] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 17.6814ms 204 
+2020-02-18 19:40:31,931 [100] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 GET http://localhost:54321/api/v1/account/profile  
+2020-02-18 19:40:31,937 [100] INFO  Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler [(null)]  - Successfully validated the token.
+2020-02-18 19:40:31,941 [100] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-02-18 19:40:31,946 [100] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Route matched with {action = "Profile", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Profile() on controller DncZeus.Api.Controllers.AccountController (DncZeus.Api).
+2020-02-18 19:40:31,949 [100] INFO  Microsoft.AspNetCore.Authorization.DefaultAuthorizationService [(null)]  - Authorization was successful.
+2020-02-18 19:40:31,955 [100] INFO  Microsoft.EntityFrameworkCore.Infrastructure [(null)]  - Entity Framework Core 2.1.14-servicing-32113 initialized 'DncZeusDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: RowNumberPaging 
+2020-02-18 19:40:31,979 [100] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executing action method DncZeus.Api.Controllers.AccountController.Profile (DncZeus.Api) - Validation state: Valid
+2020-02-18 19:40:32,018 [25] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (34ms) [Parameters=[@__guid_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='6000000']
+SELECT TOP(1) [x].[Guid], [x].[Avatar], [x].[CreatedByUserGuid], [x].[CreatedByUserName], [x].[CreatedOn], [x].[Description], [x].[DisplayName], [x].[IsDeleted], [x].[IsLocked], [x].[LoginName], [x].[ModifiedByUserGuid], [x].[ModifiedByUserName], [x].[ModifiedOn], [x].[Password], [x].[Status], [x].[UserType]
+FROM [DncUser] AS [x]
+WHERE [x].[Guid] = @__guid_0
+2020-02-18 19:40:32,054 [100] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (27ms) [Parameters=[], CommandType='Text', CommandTimeout='6000000']
+SELECT [x].[Guid], [x].[Alias], [x].[BeforeCloseFun], [x].[Component], [x].[CreatedByUserGuid], [x].[CreatedByUserName], [x].[CreatedOn], [x].[Description], [x].[HideInMenu], [x].[Icon], [x].[IsDefaultRouter], [x].[IsDeleted], [x].[Level], [x].[ModifiedByUserGuid], [x].[ModifiedByUserName], [x].[ModifiedOn], [x].[Name], [x].[NotCache], [x].[ParentGuid], [x].[ParentName], [x].[Sort], [x].[Status], [x].[Url]
+FROM [DncMenu] AS [x]
+WHERE ([x].[IsDeleted] = 0) AND ([x].[Status] = 1)
+2020-02-18 19:40:32,096 [100] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (34ms) [Parameters=[@p0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='6000000']
+SELECT P.Code AS PermissionCode,P.ActionCode AS PermissionActionCode,P.Name AS PermissionName,P.Type AS PermissionType,M.Name AS MenuName,M.Guid AS MenuGuid,M.Alias AS MenuAlias,M.IsDefaultRouter FROM DncPermission AS P 
+INNER JOIN DncMenu AS M ON M.Guid = P.MenuGuid
+WHERE P.IsDeleted=0 AND P.Status=1
+2020-02-18 19:40:32,114 [100] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action method DncZeus.Api.Controllers.AccountController.Profile (DncZeus.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 116.9069ms.
+2020-02-18 19:40:32,120 [100] INFO  Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor [(null)]  - Executing ObjectResult, writing value of type 'DncZeus.Api.Models.Response.ResponseModel'.
+2020-02-18 19:40:32,154 [100] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action DncZeus.Api.Controllers.AccountController.Profile (DncZeus.Api) in 173.4555ms
+2020-02-18 19:40:32,165 [100] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 249.1669ms 200 application/json; charset=utf-8
+2020-02-18 19:40:32,178 [100] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 OPTIONS http://localhost:54321/api/v1/account/menu  
+2020-02-18 19:40:32,185 [100] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-02-18 19:40:32,193 [100] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 12.9908ms 204 
+2020-02-18 19:40:32,202 [100] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 GET http://localhost:54321/api/v1/account/menu  
+2020-02-18 19:40:32,210 [100] INFO  Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler [(null)]  - Successfully validated the token.
+2020-02-18 19:40:32,213 [100] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-02-18 19:40:32,218 [100] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Route matched with {action = "Menu", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Menu() on controller DncZeus.Api.Controllers.AccountController (DncZeus.Api).
+2020-02-18 19:40:32,225 [100] INFO  Microsoft.AspNetCore.Authorization.DefaultAuthorizationService [(null)]  - Authorization was successful.
+2020-02-18 19:40:32,231 [100] INFO  Microsoft.EntityFrameworkCore.Infrastructure [(null)]  - Entity Framework Core 2.1.14-servicing-32113 initialized 'DncZeusDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: RowNumberPaging 
+2020-02-18 19:40:32,253 [100] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executing action method DncZeus.Api.Controllers.AccountController.Menu (DncZeus.Api) - Validation state: Valid
+2020-02-18 19:40:32,276 [100] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (21ms) [Parameters=[@p0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='6000000']
+SELECT * FROM DncMenu WHERE IsDeleted=0 AND Status=1
+2020-02-18 19:40:32,305 [100] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (24ms) [Parameters=[], CommandType='Text', CommandTimeout='6000000']
+SELECT [x].[Guid], [x].[Alias], [x].[BeforeCloseFun], [x].[Component], [x].[CreatedByUserGuid], [x].[CreatedByUserName], [x].[CreatedOn], [x].[Description], [x].[HideInMenu], [x].[Icon], [x].[IsDefaultRouter], [x].[IsDeleted], [x].[Level], [x].[ModifiedByUserGuid], [x].[ModifiedByUserName], [x].[ModifiedOn], [x].[Name], [x].[NotCache], [x].[ParentGuid], [x].[ParentName], [x].[Sort], [x].[Status], [x].[Url]
+FROM [DncMenu] AS [x]
+WHERE (([x].[IsDeleted] = 0) AND ([x].[Status] = 1)) AND ([x].[ParentGuid] = '00000000-0000-0000-0000-000000000000')
+2020-02-18 19:40:32,308 [100] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action method DncZeus.Api.Controllers.AccountController.Menu (DncZeus.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 53.0104ms.
+2020-02-18 19:40:32,311 [100] INFO  Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor [(null)]  - Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[DncZeus.Api.ViewModels.Rbac.DncMenu.MenuItem, DncZeus.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2020-02-18 19:40:32,315 [100] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action DncZeus.Api.Controllers.AccountController.Menu (DncZeus.Api) in 93.2541ms
+2020-02-18 19:40:32,318 [100] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 119.2993ms 200 application/json; charset=utf-8
+2020-02-18 19:40:32,616 [100] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 OPTIONS http://localhost:54321/api/v5/manage/approvalstaffback/list?api-version=5  
+2020-02-18 19:40:32,632 [100] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-02-18 19:40:32,637 [25] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 OPTIONS http://localhost:54321/api/v1/message/count  
+2020-02-18 19:40:32,642 [100] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 31.6981ms 204 
+2020-02-18 19:40:32,647 [25] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-02-18 19:40:32,650 [100] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 POST http://localhost:54321/api/v5/manage/approvalstaffback/list?api-version=5 application/json;charset=UTF-8 2
+2020-02-18 19:40:32,656 [25] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 19.6345ms 204 
+2020-02-18 19:40:32,659 [100] INFO  Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler [(null)]  - Successfully validated the token.
+2020-02-18 19:40:32,661 [102] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 GET http://localhost:54321/api/v1/message/count  
+2020-02-18 19:40:32,664 [100] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-02-18 19:40:32,665 [102] INFO  Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler [(null)]  - Successfully validated the token.
+2020-02-18 19:40:32,671 [100] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Route matched with {action = "List", controller = "ApprovalStaffBack"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult List() on controller DncZeus.Api.Controllers.Api.Sec.ApprovalStaffBackController (DncZeus.Api).
+2020-02-18 19:40:32,674 [102] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-02-18 19:40:32,676 [100] INFO  Microsoft.EntityFrameworkCore.Infrastructure [(null)]  - Entity Framework Core 2.1.14-servicing-32113 initialized 'DncZeusDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: RowNumberPaging 
+2020-02-18 19:40:32,678 [102] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Route matched with {action = "Count", controller = "Message"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Count() on controller DncZeus.Api.Controllers.Api.V1.MessageController (DncZeus.Api).
+2020-02-18 19:40:32,719 [102] INFO  Microsoft.AspNetCore.Authorization.DefaultAuthorizationService [(null)]  - Authorization was successful.
+2020-02-18 19:40:32,721 [100] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executing action method DncZeus.Api.Controllers.Api.Sec.ApprovalStaffBackController.List (DncZeus.Api) - Validation state: Valid
+2020-02-18 19:40:32,756 [102] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executing action method DncZeus.Api.Controllers.Api.V1.MessageController.Count (DncZeus.Api) - Validation state: Valid
+2020-02-18 19:40:32,758 [102] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action method DncZeus.Api.Controllers.Api.V1.MessageController.Count (DncZeus.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 0.0074ms.
+2020-02-18 19:40:32,761 [102] INFO  Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor [(null)]  - Executing ObjectResult, writing value of type 'System.Int32'.
+2020-02-18 19:40:32,765 [102] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action DncZeus.Api.Controllers.Api.V1.MessageController.Count (DncZeus.Api) in 66.7758ms
+2020-02-18 19:40:32,770 [102] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 106.3486ms 200 application/json; charset=utf-8
+2020-02-18 19:40:39,706 [101] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 OPTIONS http://localhost:54321/api/v5/manage/approvalstaffback/list2?api-version=5  
+2020-02-18 19:40:39,712 [101] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-02-18 19:40:39,715 [101] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 10.0266ms 204 
+2020-02-18 19:40:39,725 [25] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 POST http://localhost:54321/api/v5/manage/approvalstaffback/list2?api-version=5 application/json;charset=UTF-8 99
+2020-02-18 19:40:39,735 [25] INFO  Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler [(null)]  - Successfully validated the token.
+2020-02-18 19:40:39,739 [25] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-02-18 19:40:39,743 [25] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Route matched with {action = "List2", controller = "ApprovalStaffBack"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult List2(DncZeus.Api.RequestPayload.Manage.ApprovalStaffBack.ApprovalStaffBackRequestPayload) on controller DncZeus.Api.Controllers.Api.Sec.ApprovalStaffBackController (DncZeus.Api).
+2020-02-18 19:40:39,745 [25] INFO  Microsoft.EntityFrameworkCore.Infrastructure [(null)]  - Entity Framework Core 2.1.14-servicing-32113 initialized 'DncZeusDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: RowNumberPaging 
+2020-02-18 19:40:39,765 [25] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executing action method DncZeus.Api.Controllers.Api.Sec.ApprovalStaffBackController.List2 (DncZeus.Api) - Validation state: Valid
+2020-02-18 19:41:02,575 [25] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (7ms) [Parameters=[], CommandType='Text', CommandTimeout='6000000']
+SELECT [a].[Guid], [a].[address], [a].[backDate], [a].[credate], [a].[department], [a].[endPlace], [a].[isFever], [a].[isIll], [a].[isPass], [a].[isReport], [a].[isTouch], [a].[liveType], [a].[ordernum], [a].[quarantine], [a].[startPlace], [a].[status], [a].[tmpnum], [a].[type], [a].[username], [a].[vehicle], [a].[zsDate]
+FROM [ApprovalStaffBack] AS [a]
+2020-02-18 19:41:11,047 [25] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (90ms) [Parameters=[@__Trim_0='?' (Size = 4000), @__Trim_1='?' (Size = 4000), @__p_2='?' (DbType = Int32), @__p_3='?' (DbType = Int32)], CommandType='Text', CommandTimeout='6000000']
+SELECT [t].[Guid], [t].[address], [t].[backDate], [t].[credate], [t].[department], [t].[endPlace], [t].[isFever], [t].[isIll], [t].[isPass], [t].[isReport], [t].[isTouch], [t].[liveType], [t].[ordernum], [t].[quarantine], [t].[startPlace], [t].[status], [t].[tmpnum], [t].[type], [t].[username], [t].[vehicle], [t].[zsDate]
+FROM (
+    SELECT [x].[Guid], [x].[address], [x].[backDate], [x].[credate], [x].[department], [x].[endPlace], [x].[isFever], [x].[isIll], [x].[isPass], [x].[isReport], [x].[isTouch], [x].[liveType], [x].[ordernum], [x].[quarantine], [x].[startPlace], [x].[status], [x].[tmpnum], [x].[type], [x].[username], [x].[vehicle], [x].[zsDate], ROW_NUMBER() OVER(ORDER BY @@RowCount) AS [__RowNumber__]
+    FROM [ApprovalStaffBack] AS [x]
+    WHERE ((CHARINDEX(@__Trim_0, [x].[username]) > 0) OR (@__Trim_0 = N'')) OR ((CHARINDEX(@__Trim_1, [x].[department]) > 0) OR (@__Trim_1 = N''))
+) AS [t]
+WHERE ([t].[__RowNumber__] > @__p_2) AND ([t].[__RowNumber__] <= (@__p_2 + @__p_3))
+2020-02-18 19:41:34,719 [25] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (27ms) [Parameters=[@__Trim_0='?' (Size = 4000), @__Trim_1='?' (Size = 4000)], CommandType='Text', CommandTimeout='6000000']
+SELECT COUNT(*)
+FROM [ApprovalStaffBack] AS [x]
+WHERE ((CHARINDEX(@__Trim_0, [x].[username]) > 0) OR (@__Trim_0 = N'')) OR ((CHARINDEX(@__Trim_1, [x].[department]) > 0) OR (@__Trim_1 = N''))
+2020-02-18 19:41:34,726 [25] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action method DncZeus.Api.Controllers.Api.Sec.ApprovalStaffBackController.List2 (DncZeus.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 54956.6122ms.
+2020-02-18 19:41:34,748 [25] INFO  Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor [(null)]  - Executing ObjectResult, writing value of type 'DncZeus.Api.Models.Response.ResponseResultModel'.
+2020-02-18 19:41:34,758 [25] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action DncZeus.Api.Controllers.Api.Sec.ApprovalStaffBackController.List2 (DncZeus.Api) in 55013.024ms
+2020-02-18 19:41:34,769 [25] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 55035.9598ms 200 application/json; charset=utf-8
+2020-02-18 19:41:41,765 [100] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action method DncZeus.Api.Controllers.Api.Sec.ApprovalStaffBackController.List (DncZeus.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 69040.9918ms.
+2020-02-18 19:41:41,768 [100] INFO  Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor [(null)]  - Executing ObjectResult, writing value of type 'Newtonsoft.Json.Linq.JObject'.
+2020-02-18 19:41:41,771 [100] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action DncZeus.Api.Controllers.Api.Sec.ApprovalStaffBackController.List (DncZeus.Api) in 69096.1576ms
+2020-02-18 19:41:41,775 [100] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 69125.4904ms 200 application/json; charset=utf-8
+2020-02-18 19:41:41,777 [100] INFO  Microsoft.AspNetCore.Server.Kestrel [(null)]  - Connection id "0HLTKBDJPDR1E", Request id "0HLTKBDJPDR1E:00000006": the application completed without reading the entire request body.
+2020-02-18 19:42:24,240 [27] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 OPTIONS http://localhost:54321/api/v5/manage/approvalstaffback/list?api-version=5  
+2020-02-18 19:42:24,261 [27] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-02-18 19:42:24,275 [27] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 31.1659ms 204 
+2020-02-18 19:42:24,277 [101] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 POST http://localhost:54321/api/v5/manage/approvalstaffback/list?api-version=5 application/json;charset=UTF-8 2
+2020-02-18 19:42:24,280 [101] INFO  Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler [(null)]  - Successfully validated the token.
+2020-02-18 19:42:24,284 [101] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-02-18 19:42:24,290 [101] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Route matched with {action = "List", controller = "ApprovalStaffBack"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult List() on controller DncZeus.Api.Controllers.Api.Sec.ApprovalStaffBackController (DncZeus.Api).
+2020-02-18 19:42:24,293 [101] INFO  Microsoft.EntityFrameworkCore.Infrastructure [(null)]  - Entity Framework Core 2.1.14-servicing-32113 initialized 'DncZeusDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: RowNumberPaging 
+2020-02-18 19:42:24,310 [101] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executing action method DncZeus.Api.Controllers.Api.Sec.ApprovalStaffBackController.List (DncZeus.Api) - Validation state: Valid
+2020-02-18 19:42:39,312 [101] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action method DncZeus.Api.Controllers.Api.Sec.ApprovalStaffBackController.List (DncZeus.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 14999.4874ms.
+2020-02-18 19:42:39,315 [101] INFO  Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor [(null)]  - Executing ObjectResult, writing value of type 'Newtonsoft.Json.Linq.JObject'.
+2020-02-18 19:42:39,318 [101] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action DncZeus.Api.Controllers.Api.Sec.ApprovalStaffBackController.List (DncZeus.Api) in 15025.3933ms
+2020-02-18 19:42:39,321 [101] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 15044.7118ms 200 application/json; charset=utf-8
+2020-02-18 19:42:39,324 [101] INFO  Microsoft.AspNetCore.Server.Kestrel [(null)]  - Connection id "0HLTKBDJPDR1E", Request id "0HLTKBDJPDR1E:00000007": the application completed without reading the entire request body.
+2020-02-18 19:43:33,580 [101] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 OPTIONS http://localhost:54321/api/v5/manage/approvalstaffback/list2?api-version=5  
+2020-02-18 19:43:33,592 [101] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-02-18 19:43:33,594 [101] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 24.5881ms 204 
+2020-02-18 19:43:33,599 [25] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 POST http://localhost:54321/api/v5/manage/approvalstaffback/list2?api-version=5 application/json;charset=UTF-8 84
+2020-02-18 19:43:33,601 [25] INFO  Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler [(null)]  - Successfully validated the token.
+2020-02-18 19:43:33,603 [25] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-02-18 19:43:33,605 [25] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Route matched with {action = "List2", controller = "ApprovalStaffBack"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult List2(DncZeus.Api.RequestPayload.Manage.ApprovalStaffBack.ApprovalStaffBackRequestPayload) on controller DncZeus.Api.Controllers.Api.Sec.ApprovalStaffBackController (DncZeus.Api).
+2020-02-18 19:43:33,607 [25] INFO  Microsoft.EntityFrameworkCore.Infrastructure [(null)]  - Entity Framework Core 2.1.14-servicing-32113 initialized 'DncZeusDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: RowNumberPaging 
+2020-02-18 19:43:33,625 [25] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executing action method DncZeus.Api.Controllers.Api.Sec.ApprovalStaffBackController.List2 (DncZeus.Api) - Validation state: Valid
+2020-02-18 19:43:33,653 [25] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (22ms) [Parameters=[@__Trim_0='?' (Size = 4000), @__Trim_1='?' (Size = 4000), @__p_2='?' (DbType = Int32), @__p_3='?' (DbType = Int32)], CommandType='Text', CommandTimeout='6000000']
+SELECT [t].[Guid], [t].[address], [t].[backDate], [t].[credate], [t].[department], [t].[endPlace], [t].[isFever], [t].[isIll], [t].[isPass], [t].[isReport], [t].[isTouch], [t].[liveType], [t].[ordernum], [t].[quarantine], [t].[startPlace], [t].[status], [t].[tmpnum], [t].[type], [t].[username], [t].[vehicle], [t].[zsDate]
+FROM (
+    SELECT [x].[Guid], [x].[address], [x].[backDate], [x].[credate], [x].[department], [x].[endPlace], [x].[isFever], [x].[isIll], [x].[isPass], [x].[isReport], [x].[isTouch], [x].[liveType], [x].[ordernum], [x].[quarantine], [x].[startPlace], [x].[status], [x].[tmpnum], [x].[type], [x].[username], [x].[vehicle], [x].[zsDate], ROW_NUMBER() OVER(ORDER BY @@RowCount) AS [__RowNumber__]
+    FROM [ApprovalStaffBack] AS [x]
+    WHERE ((CHARINDEX(@__Trim_0, [x].[username]) > 0) OR (@__Trim_0 = N'')) OR ((CHARINDEX(@__Trim_1, [x].[department]) > 0) OR (@__Trim_1 = N''))
+) AS [t]
+WHERE ([t].[__RowNumber__] > @__p_2) AND ([t].[__RowNumber__] <= (@__p_2 + @__p_3))
+2020-02-18 19:43:33,678 [25] INFO  Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Executed DbCommand (21ms) [Parameters=[@__Trim_0='?' (Size = 4000), @__Trim_1='?' (Size = 4000)], CommandType='Text', CommandTimeout='6000000']
+SELECT COUNT(*)
+FROM [ApprovalStaffBack] AS [x]
+WHERE ((CHARINDEX(@__Trim_0, [x].[username]) > 0) OR (@__Trim_0 = N'')) OR ((CHARINDEX(@__Trim_1, [x].[department]) > 0) OR (@__Trim_1 = N''))
+2020-02-18 19:43:33,681 [25] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action method DncZeus.Api.Controllers.Api.Sec.ApprovalStaffBackController.List2 (DncZeus.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 52.887ms.
+2020-02-18 19:43:33,687 [25] INFO  Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor [(null)]  - Executing ObjectResult, writing value of type 'DncZeus.Api.Models.Response.ResponseResultModel'.
+2020-02-18 19:43:33,691 [25] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action DncZeus.Api.Controllers.Api.Sec.ApprovalStaffBackController.List2 (DncZeus.Api) in 82.7071ms
+2020-02-18 19:43:33,703 [25] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 95.5725ms 200 application/json; charset=utf-8
+2020-02-18 19:45:00,862 [1] INFO  Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager [(null)]  - User profile is available. Using 'C:\Users\June\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-02-18 19:45:01,169 [8] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 OPTIONS http://localhost:54321/api/v5/manage/approvalstaffback/list?api-version=5  
+2020-02-18 19:45:01,198 [8] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-02-18 19:45:01,204 [8] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 34.8575ms 204 
+2020-02-18 19:45:01,209 [8] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request starting HTTP/1.1 POST http://localhost:54321/api/v5/manage/approvalstaffback/list?api-version=5 application/json;charset=UTF-8 2
+2020-02-18 19:45:01,245 [8] INFO  Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler [(null)]  - Successfully validated the token.
+2020-02-18 19:45:01,247 [8] INFO  Microsoft.AspNetCore.Cors.Infrastructure.CorsService [(null)]  - Policy execution successful.
+2020-02-18 19:45:01,432 [8] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Route matched with {action = "List", controller = "ApprovalStaffBack"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult List() on controller DncZeus.Api.Controllers.Api.Sec.ApprovalStaffBackController (DncZeus.Api).
+2020-02-18 19:45:01,838 [8] INFO  Microsoft.EntityFrameworkCore.Infrastructure [(null)]  - Entity Framework Core 2.1.14-servicing-32113 initialized 'DncZeusDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: RowNumberPaging 
+2020-02-18 19:45:02,036 [8] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executing action method DncZeus.Api.Controllers.Api.Sec.ApprovalStaffBackController.List (DncZeus.Api) - Validation state: Valid
+2020-02-18 19:45:16,156 [8] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action method DncZeus.Api.Controllers.Api.Sec.ApprovalStaffBackController.List (DncZeus.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 14118.1998ms.
+2020-02-18 19:45:16,163 [8] INFO  Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor [(null)]  - Executing ObjectResult, writing value of type 'Newtonsoft.Json.Linq.JObject'.
+2020-02-18 19:45:16,173 [8] INFO  Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [(null)]  - Executed action DncZeus.Api.Controllers.Api.Sec.ApprovalStaffBackController.List (DncZeus.Api) in 14738.9542ms
+2020-02-18 19:45:16,175 [8] INFO  Microsoft.AspNetCore.Hosting.Internal.WebHost [(null)]  - Request finished in 14965.6812ms 200 application/json; charset=utf-8
+2020-02-18 19:45:16,183 [8] INFO  Microsoft.AspNetCore.Server.Kestrel [(null)]  - Connection id "0HLTKCVUBRCII", Request id "0HLTKCVUBRCII:00000002": the application completed without reading the entire request body.

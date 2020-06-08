@@ -1,0 +1,62 @@
+2020-05-26 16:59:48,909 [18] ERROR Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Failed executing DbCommand (33ms) [Parameters=[@p0='?', @p1='?', @p2='?' (DbType = DateTime2), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='Text', CommandTimeout='6000000']
+SELECT [t].[Guid], [t].[countType], [t].[credate], [t].[creuser], [t].[factoryGuid], [t].[factoryPrice], [t].[itemCode], [t].[itemName], [t].[lineGuid], [t].[ordCode], [t].[ordQty], [t].[qty], [t].[remark], [t].[sumQty], [t].[workDate]
+FROM (
+    SELECT [w].[Guid], [w].[countType], [w].[credate], [w].[creuser], [w].[factoryGuid], [w].[factoryPrice], [w].[itemCode], [w].[itemName], [w].[lineGuid], [w].[ordCode], [w].[ordQty], [w].[qty], [w].[remark], [w].[sumQty], [w].[workDate], ROW_NUMBER() OVER(ORDER BY @@RowCount) AS [__RowNumber__]
+    FROM (
+        select b.Guid,b.ordCode,b.itemCode,b.itemName,b.factoryPrice,b.ordQty,line.remark,isnull(line.qty,0) as qty,line.Guid as lineGuid,
+                                        (select sum(qty) from ManWorkshopOutLine as l where l.workshopOutGuid=b.Guid ) as sumqty
+                                        from ManWorkshopOut as b
+                                        left join (select * from ManWorkshopOutLine where  credate in (select max(credate) from [dbo].[ManWorkshopOutLine] as a where a.workDate=@p2 group by a.workshopOutGuid)) AS line ON (line.workshopOutGuid = b.Guid)
+                                        where b.factoryGuid=@p0 and b.workProcessGuid=@p1 
+    ) AS [w]
+) AS [t]
+WHERE ([t].[__RowNumber__] > @__p_1) AND ([t].[__RowNumber__] <= (@__p_1 + @__p_2))
+System.Data.SqlClient.SqlException (0x80131904): 列名 'countType' 无效。
+列名 'credate' 无效。
+列名 'creuser' 无效。
+列名 'factoryGuid' 无效。
+列名 'workDate' 无效。
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader()
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.Execute(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues)
+ClientConnectionId:5d47e355-4420-4506-b51d-6a8c6ec65815
+Error Number:207,State:1,Class:16
+2020-05-26 17:01:48,294 [27] ERROR Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Failed executing DbCommand (51ms) [Parameters=[@p0='?', @p1='?', @p2='?' (DbType = DateTime2), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='Text', CommandTimeout='6000000']
+SELECT [t].[Guid], [t].[countType], [t].[credate], [t].[creuser], [t].[factoryGuid], [t].[factoryPrice], [t].[itemCode], [t].[itemName], [t].[lineGuid], [t].[ordCode], [t].[ordQty], [t].[qty], [t].[remark], [t].[sumQty], [t].[workDate]
+FROM (
+    SELECT [w].[Guid], [w].[countType], [w].[credate], [w].[creuser], [w].[factoryGuid], [w].[factoryPrice], [w].[itemCode], [w].[itemName], [w].[lineGuid], [w].[ordCode], [w].[ordQty], [w].[qty], [w].[remark], [w].[sumQty], [w].[workDate], ROW_NUMBER() OVER(ORDER BY @@RowCount) AS [__RowNumber__]
+    FROM (
+        select b.Guid,b.factoryGuid,b.countType,b.ordCode,b.itemCode,b.itemName,b.factoryPrice,b.ordQty,b.creuser,b.credate,line.remark,isnull(line.qty,0) as qty,line.Guid as lineGuid,
+                                        (select sum(qty) from ManWorkshopOutLine as l where l.workshopOutGuid=b.Guid ) as sumqty
+                                        from ManWorkshopOut as b
+                                        left join (select * from ManWorkshopOutLine where  credate in (select max(credate) from [dbo].[ManWorkshopOutLine] as a where a.workDate=@p2 group by a.workshopOutGuid)) AS line ON (line.workshopOutGuid = b.Guid)
+                                        where b.factoryGuid=@p0 and b.workProcessGuid=@p1 
+    ) AS [w]
+) AS [t]
+WHERE ([t].[__RowNumber__] > @__p_1) AND ([t].[__RowNumber__] <= (@__p_1 + @__p_2))
+System.Data.SqlClient.SqlException (0x80131904): 列名 'workDate' 无效。
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader()
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.Execute(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues)
+ClientConnectionId:5d47e355-4420-4506-b51d-6a8c6ec65815
+Error Number:207,State:1,Class:16

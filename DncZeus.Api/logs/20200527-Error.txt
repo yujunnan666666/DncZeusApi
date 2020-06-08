@@ -1,0 +1,198 @@
+2020-05-27 14:28:39,930 [26] ERROR Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware [(null)]  - An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Headers are read-only, response has already started.
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpHeaders.ThrowHeadersReadOnlyException()
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpHeaders.Microsoft.AspNetCore.Http.IHeaderDictionary.set_Item(String key, StringValues value)
+   at Microsoft.AspNetCore.Http.Internal.DefaultHttpResponse.set_ContentType(String value)
+   at DncZeus.Api.Extensions.CustomException.ExceptionMiddleware.HandleExceptionAsync(HttpContext context, Exception exception) in D:\project\DncZeus2.0\DncZeus\DncZeus\DncZeus.Api\Extensions\CustomException\ExceptionMiddleware.cs:line 53
+   at DncZeus.Api.Extensions.CustomException.ExceptionMiddleware.InvokeAsync(HttpContext httpContext) in D:\project\DncZeus2.0\DncZeus\DncZeus\DncZeus.Api\Extensions\CustomException\ExceptionMiddleware.cs:line 37
+   at Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020-05-27 14:28:39,941 [26] ERROR Microsoft.AspNetCore.Server.Kestrel [(null)]  - Connection id "0HM020RVA9AUB", Request id "0HM020RVA9AUB:00000008": An unhandled exception was thrown by the application.
+System.InvalidOperationException: Headers are read-only, response has already started.
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpHeaders.ThrowHeadersReadOnlyException()
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpHeaders.Microsoft.AspNetCore.Http.IHeaderDictionary.set_Item(String key, StringValues value)
+   at Microsoft.AspNetCore.Http.Internal.DefaultHttpResponse.set_ContentType(String value)
+   at DncZeus.Api.Extensions.CustomException.ExceptionMiddleware.HandleExceptionAsync(HttpContext context, Exception exception) in D:\project\DncZeus2.0\DncZeus\DncZeus\DncZeus.Api\Extensions\CustomException\ExceptionMiddleware.cs:line 53
+   at DncZeus.Api.Extensions.CustomException.ExceptionMiddleware.InvokeAsync(HttpContext httpContext) in D:\project\DncZeus2.0\DncZeus\DncZeus\DncZeus.Api\Extensions\CustomException\ExceptionMiddleware.cs:line 37
+   at Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Server.IISIntegration.IISMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+2020-05-27 14:29:54,196 [31] ERROR Microsoft.EntityFrameworkCore.Database.Command [(null)]  - Failed executing DbCommand (5,053ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (Size = 4000), @p2='?' (Size = 4000)], CommandType='Text', CommandTimeout='6000000']
+
+select a.factoryGuid,a.yearPlanOutQty,b.monPlanOutQty,c.monAddDoneOutQty,d.sumPeople,e.yearAddPlanOutQty,f.yearAddDoneOutQty from(select sum(outqty) as 'yearPlanOutQty',factoryGuid from ManFactoryMonPlan  where factoryGuid=@p0 and YY=@p1 GROUP BY factoryGuid) as a
+left join (
+	select outqty as 'monPlanOutQty',factoryGuid from ManFactoryMonPlan where factoryGuid=@p0 and YY=@p1 and MM=@p2
+	) as b on (b.factoryGuid=a.factoryGuid)
+left join (
+	select sum(outline.qty) as 'monAddDoneOutQty',out.factoryGuid from ManWorkshopOut as out 
+	inner join ManWorkshopOutLine as outline on (outline.workshopOutGuid=out.Guid)
+	where out.factoryGuid=@p0 and outline.workDate BETWEEN (SELECT   DATEADD(mm, DATEDIFF(mm, 0, GETDATE()), 0)) and (SELECT   DATEADD(d, - 1, DATEADD(mm, DATEDIFF(mm, 0, GETDATE())+1, 0)))
+	group by out.factoryGuid
+) as c on (c.factoryGuid=b.factoryGuid)
+left join (
+	select cadre+logistic+worker as 'sumPeople',Guid as 'factoryGuid' from ManFactory where Guid=@p0
+) as d on(d.factoryGuid=c.factoryGuid)
+left join (
+	select sum(outqty) as 'yearAddPlanOutQty',factoryGuid from ManFactoryMonPlan where factoryGuid=@p0 and YY=@p1 and CONVERT(INT,MM)<=CONVERT(INT,@p2) GROUP BY factoryGuid
+) as e on(e.factoryGuid=d.factoryGuid)
+left join (
+	select sum(outline.qty) as 'yearAddDoneOutQty',factoryGuid from ManWorkshopOut as out 
+inner join ManWorkshopOutLine as outline on (outline.workshopOutGuid=out.Guid)
+where out.factoryGuid=@p0 and outline.workDate <=(SELECT   DATEADD(d, - 1, DATEADD(mm, DATEDIFF(mm, 0, GETDATE())+1, 0))) GROUP BY factoryGuid
+) as f on(f.factoryGuid=e.factoryGuid)
+System.Threading.ThreadAbortException: System error.
+   at Microsoft.Extensions.Logging.Logger.Log[TState](LogLevel logLevel, EventId eventId, TState state, Exception exception, Func`3 formatter)
+   at Microsoft.Extensions.Logging.LoggerMessage.<>c__DisplayClass10_0`6.<Define>b__0(ILogger logger, T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, Exception exception)
+   at Microsoft.EntityFrameworkCore.Internal.RelationalLoggerExtensions.CommandExecuted(IDiagnosticsLogger`1 diagnostics, DbCommand command, DbCommandMethod executeMethod, Guid commandId, Guid connectionId, Object methodResult, Boolean async, DateTimeOffset startTime, TimeSpan duration)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.Execute(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues)
+2020-05-27 14:29:57,466 [31] ERROR Microsoft.EntityFrameworkCore.Query [(null)]  - An exception occurred in the database while iterating the results of a query for context type 'DncZeus.Api.Entities.DncZeusDbContext'.
+System.Threading.ThreadAbortException: System error.
+   at Microsoft.Extensions.Logging.Logger.Log[TState](LogLevel logLevel, EventId eventId, TState state, Exception exception, Func`3 formatter)
+   at Microsoft.Extensions.Logging.LoggerMessage.<>c__DisplayClass10_0`6.<Define>b__0(ILogger logger, T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, Exception exception)
+   at Microsoft.EntityFrameworkCore.Internal.RelationalLoggerExtensions.CommandExecuted(IDiagnosticsLogger`1 diagnostics, DbCommand command, DbCommandMethod executeMethod, Guid commandId, Guid connectionId, Object methodResult, Boolean async, DateTimeOffset startTime, TimeSpan duration)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.Execute(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteReader(IRelationalConnection connection, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.BufferlessMoveNext(DbContext _, Boolean buffer)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext()
+System.Threading.ThreadAbortException: System error.
+   at Microsoft.Extensions.Logging.Logger.Log[TState](LogLevel logLevel, EventId eventId, TState state, Exception exception, Func`3 formatter)
+   at Microsoft.Extensions.Logging.LoggerMessage.<>c__DisplayClass10_0`6.<Define>b__0(ILogger logger, T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, Exception exception)
+   at Microsoft.EntityFrameworkCore.Internal.RelationalLoggerExtensions.CommandExecuted(IDiagnosticsLogger`1 diagnostics, DbCommand command, DbCommandMethod executeMethod, Guid commandId, Guid connectionId, Object methodResult, Boolean async, DateTimeOffset startTime, TimeSpan duration)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.Execute(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteReader(IRelationalConnection connection, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.BufferlessMoveNext(DbContext _, Boolean buffer)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext()
+2020-05-27 14:34:35,837 [7] ERROR Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware [(null)]  - An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Headers are read-only, response has already started.
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpHeaders.ThrowHeadersReadOnlyException()
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpHeaders.Microsoft.AspNetCore.Http.IHeaderDictionary.set_Item(String key, StringValues value)
+   at Microsoft.AspNetCore.Http.Internal.DefaultHttpResponse.set_ContentType(String value)
+   at DncZeus.Api.Extensions.CustomException.ExceptionMiddleware.HandleExceptionAsync(HttpContext context, Exception exception) in D:\project\DncZeus2.0\DncZeus\DncZeus\DncZeus.Api\Extensions\CustomException\ExceptionMiddleware.cs:line 53
+   at DncZeus.Api.Extensions.CustomException.ExceptionMiddleware.InvokeAsync(HttpContext httpContext) in D:\project\DncZeus2.0\DncZeus\DncZeus\DncZeus.Api\Extensions\CustomException\ExceptionMiddleware.cs:line 37
+   at Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020-05-27 14:34:35,854 [7] ERROR Microsoft.AspNetCore.Server.Kestrel [(null)]  - Connection id "0HM020VST41GU", Request id "0HM020VST41GU:00000003": An unhandled exception was thrown by the application.
+System.InvalidOperationException: Headers are read-only, response has already started.
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpHeaders.ThrowHeadersReadOnlyException()
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpHeaders.Microsoft.AspNetCore.Http.IHeaderDictionary.set_Item(String key, StringValues value)
+   at Microsoft.AspNetCore.Http.Internal.DefaultHttpResponse.set_ContentType(String value)
+   at DncZeus.Api.Extensions.CustomException.ExceptionMiddleware.HandleExceptionAsync(HttpContext context, Exception exception) in D:\project\DncZeus2.0\DncZeus\DncZeus\DncZeus.Api\Extensions\CustomException\ExceptionMiddleware.cs:line 53
+   at DncZeus.Api.Extensions.CustomException.ExceptionMiddleware.InvokeAsync(HttpContext httpContext) in D:\project\DncZeus2.0\DncZeus\DncZeus\DncZeus.Api\Extensions\CustomException\ExceptionMiddleware.cs:line 37
+   at Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Server.IISIntegration.IISMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+2020-05-27 14:36:51,564 [11] ERROR Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware [(null)]  - An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Headers are read-only, response has already started.
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpHeaders.ThrowHeadersReadOnlyException()
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpHeaders.Microsoft.AspNetCore.Http.IHeaderDictionary.set_Item(String key, StringValues value)
+   at Microsoft.AspNetCore.Http.Internal.DefaultHttpResponse.set_ContentType(String value)
+   at DncZeus.Api.Extensions.CustomException.ExceptionMiddleware.HandleExceptionAsync(HttpContext context, Exception exception) in D:\project\DncZeus2.0\DncZeus\DncZeus\DncZeus.Api\Extensions\CustomException\ExceptionMiddleware.cs:line 53
+   at DncZeus.Api.Extensions.CustomException.ExceptionMiddleware.InvokeAsync(HttpContext httpContext) in D:\project\DncZeus2.0\DncZeus\DncZeus\DncZeus.Api\Extensions\CustomException\ExceptionMiddleware.cs:line 37
+   at Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020-05-27 14:36:51,587 [11] ERROR Microsoft.AspNetCore.Server.Kestrel [(null)]  - Connection id "0HM02117EPGIM", Request id "0HM02117EPGIM:00000005": An unhandled exception was thrown by the application.
+System.InvalidOperationException: Headers are read-only, response has already started.
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpHeaders.ThrowHeadersReadOnlyException()
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpHeaders.Microsoft.AspNetCore.Http.IHeaderDictionary.set_Item(String key, StringValues value)
+   at Microsoft.AspNetCore.Http.Internal.DefaultHttpResponse.set_ContentType(String value)
+   at DncZeus.Api.Extensions.CustomException.ExceptionMiddleware.HandleExceptionAsync(HttpContext context, Exception exception) in D:\project\DncZeus2.0\DncZeus\DncZeus\DncZeus.Api\Extensions\CustomException\ExceptionMiddleware.cs:line 53
+   at DncZeus.Api.Extensions.CustomException.ExceptionMiddleware.InvokeAsync(HttpContext httpContext) in D:\project\DncZeus2.0\DncZeus\DncZeus\DncZeus.Api\Extensions\CustomException\ExceptionMiddleware.cs:line 37
+   at Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Server.IISIntegration.IISMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+2020-05-27 14:43:16,843 [23] ERROR Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware [(null)]  - An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Headers are read-only, response has already started.
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpHeaders.ThrowHeadersReadOnlyException()
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpHeaders.Microsoft.AspNetCore.Http.IHeaderDictionary.set_Item(String key, StringValues value)
+   at Microsoft.AspNetCore.Http.Internal.DefaultHttpResponse.set_ContentType(String value)
+   at DncZeus.Api.Extensions.CustomException.ExceptionMiddleware.HandleExceptionAsync(HttpContext context, Exception exception) in D:\project\DncZeus2.0\DncZeus\DncZeus\DncZeus.Api\Extensions\CustomException\ExceptionMiddleware.cs:line 53
+   at DncZeus.Api.Extensions.CustomException.ExceptionMiddleware.InvokeAsync(HttpContext httpContext) in D:\project\DncZeus2.0\DncZeus\DncZeus\DncZeus.Api\Extensions\CustomException\ExceptionMiddleware.cs:line 37
+   at Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020-05-27 14:43:16,925 [23] ERROR Microsoft.AspNetCore.Server.Kestrel [(null)]  - Connection id "0HM02117EPGIJ", Request id "0HM02117EPGIJ:0000000C": An unhandled exception was thrown by the application.
+System.InvalidOperationException: Headers are read-only, response has already started.
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpHeaders.ThrowHeadersReadOnlyException()
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpHeaders.Microsoft.AspNetCore.Http.IHeaderDictionary.set_Item(String key, StringValues value)
+   at Microsoft.AspNetCore.Http.Internal.DefaultHttpResponse.set_ContentType(String value)
+   at DncZeus.Api.Extensions.CustomException.ExceptionMiddleware.HandleExceptionAsync(HttpContext context, Exception exception) in D:\project\DncZeus2.0\DncZeus\DncZeus\DncZeus.Api\Extensions\CustomException\ExceptionMiddleware.cs:line 53
+   at DncZeus.Api.Extensions.CustomException.ExceptionMiddleware.InvokeAsync(HttpContext httpContext) in D:\project\DncZeus2.0\DncZeus\DncZeus\DncZeus.Api\Extensions\CustomException\ExceptionMiddleware.cs:line 37
+   at Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Server.IISIntegration.IISMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+2020-05-27 14:55:14,197 [8] ERROR Microsoft.EntityFrameworkCore.Query [(null)]  - An exception occurred in the database while iterating the results of a query for context type 'DncZeus.Api.Entities.DncZeusDbContext'.
+System.InvalidOperationException: An exception occurred while reading a database value for property 'FactoryWorkshopInfo.sumPeople'. The expected type was 'System.Int32' but the actual value was of type 'System.Int16'. ---> System.InvalidCastException: Unable to cast object of type 'System.Int16' to type 'System.Int32'.
+   at System.Data.SqlClient.SqlBuffer.get_Int32()
+   at System.Data.SqlClient.SqlDataReader.GetInt32(Int32 i)
+   at lambda_method(Closure , DbDataReader )
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Metadata.Internal.EntityMaterializerSource.ThrowReadValueException[TValue](Exception exception, Object value, IPropertyBase property)
+   at lambda_method(Closure , DbDataReader )
+   at Microsoft.EntityFrameworkCore.Storage.Internal.TypedRelationalValueBufferFactory.Create(DbDataReader dataReader)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.BufferlessMoveNext(DbContext _, Boolean buffer)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext()
+System.InvalidOperationException: An exception occurred while reading a database value for property 'FactoryWorkshopInfo.sumPeople'. The expected type was 'System.Int32' but the actual value was of type 'System.Int16'. ---> System.InvalidCastException: Unable to cast object of type 'System.Int16' to type 'System.Int32'.
+   at System.Data.SqlClient.SqlBuffer.get_Int32()
+   at System.Data.SqlClient.SqlDataReader.GetInt32(Int32 i)
+   at lambda_method(Closure , DbDataReader )
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Metadata.Internal.EntityMaterializerSource.ThrowReadValueException[TValue](Exception exception, Object value, IPropertyBase property)
+   at lambda_method(Closure , DbDataReader )
+   at Microsoft.EntityFrameworkCore.Storage.Internal.TypedRelationalValueBufferFactory.Create(DbDataReader dataReader)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.BufferlessMoveNext(DbContext _, Boolean buffer)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext()
